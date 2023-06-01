@@ -1,4 +1,4 @@
 const User = require('./User');
-const Thought = require('./Dog');
+const Dog = require('./Dog');
 
 module.exports = { User, Dog };
