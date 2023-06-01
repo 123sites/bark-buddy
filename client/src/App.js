@@ -67,10 +67,10 @@ function App() {
                 path="/profiles/:username" 
                 element={<Profile />}
               />
-              <Route 
+              {/* <Route 
                 path="/dogs/:dogId" 
                 element={<Dog />}
-              />
+              /> */}
             </Routes>
           </div>
           <Footer />
