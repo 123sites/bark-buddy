@@ -9,10 +9,11 @@ export const QUERY_ME = gql`
     username
     email
     savedDogs {
-      id
+      dogId
       name
       breed
       age
+      img
     }
   }
 }

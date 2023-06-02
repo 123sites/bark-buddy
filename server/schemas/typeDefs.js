@@ -6,8 +6,6 @@ const typeDefs = gql`
     username: String
     email: String
     savedDogs: [Dog]!
-
-
   }
 
   type Dog{
@@ -33,7 +31,6 @@ const typeDefs = gql`
 
   type Query {
   me: User
-
   }
 
   type Mutation {

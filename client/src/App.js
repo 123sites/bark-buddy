@@ -69,6 +69,10 @@ function App() {
                 path="/profiles/:username" 
                 element={<Profile />}
               />
+              <Route 
+                path="/search"
+                element={<Search />}
+              />
               {/* <Route 
                 path="/dogs/:dogId" 
                 element={<Dog />}
