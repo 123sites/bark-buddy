@@ -26,7 +26,6 @@ db.once('open', async () => {
 
     await User.create(userSeeds); 
     await Dog.create(petSeeds);
->>>>>>> cb8671e (changed seeds file)
 
 >>>>>>> 6393d50 (fixing error)
   } catch (err) {
