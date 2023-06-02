@@ -8,7 +8,8 @@ db.once('open', async () => {
     await Dog.deleteMany({});
     await User.deleteMany({});
 
-    await User.create(userSeeds);
+    await User.create(userSeeds); 
+    await Dog.create(dogSeeds);
 
 
 
