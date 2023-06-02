@@ -1,18 +1,22 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User} = require('../models');
+const { User } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
-    users: async () => {
-      return User.find().populate('thoughts');
-    },
     user: async (parent, { username }) => {
-      return User.findOne({ username }).populate('thoughts');
+      return User.findOne({ username }).populate('dogs');
+    },
+    dogs: async (parent, { owner }) => {
+      const params = owner ? { owner } : {};
+      return Dog.find(params).sort({ createdAt: -1 });
+    },
+    dog: async (parent, { dogId }) => {
+      return Dog.findOne({ _id: dogId });
     },
     me: async (parent, args, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user._id }).populate('thoughts');
+        return User.findOne({ _id: context.user._id }).populate('dogs');
       }
       throw new AuthenticationError('You need to be logged in!');
     },
@@ -40,6 +44,40 @@ const resolvers = {
       const token = signToken(user);
 
       return { token, user };
+    },
+    addDog: async (parent, { name, breed, age }, context) => {
+      if (context.user) {
+        const dog = await Dog.create({
+          name,
+          breed,
+          age,
+          owner: context.user.username,
+        });
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { dogs: dog._id } }
+        );
+
+        return dog;
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
+    removeDog: async (parent, { dogId }, context) => {
+      if (context.user) {
+        const dog = await Dog.findOneAndDelete({
+          _id: dogId,
+          owner: context.user.username,
+        });
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { dogs: dog._id } }
+        );
+
+        return dog;
+      }
+      throw new AuthenticationError('You need to be logged in!');
     },
   },
 };

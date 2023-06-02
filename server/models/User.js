@@ -19,13 +19,16 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
-  dogs: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: 'Dog',
+  savedDogs: [Dog],
+},
+  {
+    toJSON: {
+      virtuals: true,
     },
-  ],
-});
+  }
+
+);
+
 
 userSchema.pre('save', async function (next) {
   if (this.isNew || this.isModified('password')) {
