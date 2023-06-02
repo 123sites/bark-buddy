@@ -10,6 +10,7 @@ const Home = () => {
   return (
     <main>
      Homepage
+     {/* <DogSearch/> */}
     </main>
   );
 };
