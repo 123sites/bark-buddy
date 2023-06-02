@@ -1,6 +1,4 @@
-
-
-# ⭐ //////////////////////////////// ⭐
+🐶 Bark Buddy 🐶
 
 ![alt text](https://img.shields.io/badge/License-MIT-blue.svg)
 
@@ -13,7 +11,7 @@
 
 ## User Story 📖
 
-As a person who .............................,
+As a person who ............,
 I want to ................................,
 so I can......................
 
@@ -28,14 +26,14 @@ so I can......................
 
 ## Deployed Link 🔑
 
-You can view this through this Heroku link: 
+You can view this through this link: 
 
 ## Tests 🧪
 
 
 ## Usage &#128161;
 
-[Repository link:](https://github.com/123sites/....................)
+[Repository link:](https://github.com/123sites/bark-buddy)
 
 This can be used for....................
 
@@ -67,11 +65,9 @@ The MIT license is in the GitHub repository. Click to link to view it:
 ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=Sequelize&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)
 ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
-![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
 ![Apollo-GraphQL](https://img.shields.io/badge/-ApolloGraphQL-311C87?style=for-the-badge&logo=apollo-graphql)
 
 

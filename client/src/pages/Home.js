@@ -9,7 +9,7 @@ const Home = () => {
 
   return (
     <main>
-
+     Homepage
     </main>
   );
 };

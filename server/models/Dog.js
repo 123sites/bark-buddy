@@ -1,7 +1,13 @@
-const { Schema, model } = require('mongoose');
+const { Schema } = require('mongoose');
 // const dateFormat = require('../utils/dateFormat');
 
 const dogSchema = new Schema({
+
+    dogId: {
+        type: String,
+        require: true,
+    },
+
     name: {
         type: String,
         required: true,
@@ -16,11 +22,16 @@ const dogSchema = new Schema({
         type: Number,
         required: true,
     },
-    owner: {
-        type: Schema.Types.ObjectId,
-        ref: 'User',
-        required: true,
+
+    img: {
+        type: String,
     },
+
+    // owner: {
+    //     type: Schema.Types.ObjectId,
+    //     ref: 'User',
+    //     required: true,
+    // },
     // createdAt: {
     //     type: Date,
     //     default: Date.now,
@@ -28,6 +39,7 @@ const dogSchema = new Schema({
     //   },
 });
 
-const Dog = model('Dog', dogSchema);
+// const Dog = model('Dog', dogSchema);
+
 
 module.exports = Dog;

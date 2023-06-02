@@ -3,14 +3,14 @@ import { Navigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
 
-import { QUERY_USER, QUERY_ME } from '../utils/queries';
+import { QUERY_ME } from '../utils/queries';
 
 import Auth from '../utils/auth';
 
 const Profile = () => {
   const { username: userParam } = useParams();
 
-  const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
+  const { loading, data } = useQuery(QUERY_ME, {
     variables: { username: userParam },
   });
 
@@ -48,7 +48,7 @@ const Profile = () => {
             className="col-12 col-md-10 mb-3 p-3"
             style={{ border: '1px dotted #1a1a1a' }}
           >
- 
+
           </div>
         )}
       </div>
