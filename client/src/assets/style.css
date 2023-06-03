@@ -1,0 +1,56 @@
+
+
+.logo {
+  
+}
+
+.name {
+  color: #FAF8FA;
+}
+
+.nav {
+  background-color: #5E239D!important;
+}
+
+.btn {
+  padding: 15px 25px;
+  text-align: center;
+  cursor: pointer;
+  outline: none!important;
+  color: #5E239D!important;
+  background-color: #FAF8FA!important;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.btn:hover {background-color: #FBB94C!important}
+
+.btn:active {
+  background-color: #FBB94C!important;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.login {
+  background: #5E239D
+}
+
+img {
+  min-width: 150%;
+}
+span {
+  font-weight: bold;
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 7px;
+}
+
+.fab, .fas {
+  justify-content: space-between!important;
+  color: black;
+  margin: 10px;
+  font-size: 30px;
+}
+
+
