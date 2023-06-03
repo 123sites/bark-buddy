@@ -35,7 +35,9 @@ const Header = () => {
               <Link className="btn btn-lg my-3 mr-5 ml-3 fw-bolder" to="/signup">
                 Signup
               </Link>
-              </div>
+              <Link className="btn btn-lg my-3 mr-5 ml-3 fw-bolder" to="/search">
+                Pick a Pooch
+              </Link>
             </>
           )}
         </div>

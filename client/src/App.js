@@ -15,6 +15,7 @@ import Login from './pages/Login';
 import Profile from './pages/Profile';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Search from './pages/Search';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Construct our main GraphQL API endpoint

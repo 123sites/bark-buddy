@@ -13,11 +13,11 @@ import {
 function DogSearchResult({dog}) {
 
     return (
-      <MDBRow className='row-cols-4 row-cols-md-2 g-4' >
+      <MDBRow className='row-cols-3 row-cols-md-3 g-4' >
       <MDBCol>
         <MDBCard className='h-100'>
           <MDBCardImage
-          src={dog?.primary_photo_cropped?.large}
+          src={dog?.primary_photo_cropped?.medium}
           alt=''
           position='top'
           />
