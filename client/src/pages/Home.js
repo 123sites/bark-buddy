@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useQuery } from "@apollo/client";
 import manyDogs from "../images/manyDogs.webp";
+import DogQuiz from "../components/DogQuiz/quiz"
 
 const Home = ({ handlePageChange }) => {
   const [currentPath, setCurrentPath] = useState("");
@@ -13,8 +14,9 @@ const Home = ({ handlePageChange }) => {
   return (
     <main>
       <div className="img-fluid col mt-7">
-              <img src={manyDogs} />
-              {/* <DogSearch/> */}
+        <img src={manyDogs} />
+        {/* <DogSearch/> */}
+        <DogQuiz />
 
       </div>
     </main>
