@@ -5,7 +5,7 @@ import DogSearchList from '../components/DogSearchList';
 const Search = () => {
 
   return (
-    <div className="container">
+    <div>
       <DogSearchFilter />
       <DogSearchList />
     </div>

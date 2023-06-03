@@ -25,7 +25,7 @@ function DogSearchList() {
   const dog = {jsonData};
 
   return (
-    <div className="my-2">
+    <div>
       <h2>Bark buddies available to adopt:</h2>
       <div>
         {jsonData && (
