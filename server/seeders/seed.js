@@ -9,7 +9,7 @@ db.once('open', async () => {
     await User.deleteMany({});
 
     await User.create(userSeeds); 
-    await Dog.create(dogSeeds);
+    // await Dog.create(petSeeds);
 
   } catch (err) {
     console.error(err);
