@@ -1,5 +1,5 @@
 const db = require('../config/connection');
-const { User, Dog } = require('../models');
+const { User, Dog} = require('../models');
 const userSeeds = require('./userSeeds.json');
 const petSeeds = require('./petSeeds.json');
 
@@ -10,13 +10,6 @@ db.once('open', async () => {
 
     await User.create(userSeeds); 
     // await Dog.create(petSeeds);
-
-
-
-
-
-
-
 
   } catch (err) {
     console.error(err);
