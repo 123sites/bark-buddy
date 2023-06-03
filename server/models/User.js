@@ -1,8 +1,6 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
-const dogSchema = require('./Dog');
-
 const userSchema = new Schema({
   username: {
     type: String,
@@ -21,16 +19,13 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
-  savedDogs: [dogSchema],
-},
-  {
-    toJSON: {
-      virtuals: true,
+  dogs: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Dog',
     },
-  }
-
-);
-
+  ],
+});
 
 userSchema.pre('save', async function (next) {
   if (this.isNew || this.isModified('password')) {

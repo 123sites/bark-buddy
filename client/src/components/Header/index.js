@@ -13,11 +13,7 @@ const Header = () => {
     <header className="brandName nav mb-4 py-3">
       <div className="container-fluid flex-row justify-space-between-lg">
         <div>
-          <Link className="navLink" to="/">
-
-
-
-            
+          <Link className="text-light" to="/">
           </Link>
           <h1 className="name navbar navbar-expand-lg fw-bold ml-5">Bark Buddy</h1>
         </div>
@@ -33,14 +29,15 @@ const Header = () => {
             </>
           ) : (
             <>
-            <div>
-              <Link className="btn btn-lg m-3 fw-bolder" to="/login">
+              <Link className="btn btn-lg btn-info m-2" to="/login">
                 Login
               </Link>
               <Link className="btn btn-lg my-3 mr-5 ml-3 fw-bolder" to="/signup">
                 Signup
               </Link>
-              </div>
+              <Link className="btn btn-lg my-3 mr-5 ml-3 fw-bolder" to="/search">
+                Pick a Pooch
+              </Link>
             </>
           )}
         </div>
