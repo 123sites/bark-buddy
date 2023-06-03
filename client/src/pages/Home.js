@@ -1,16 +1,22 @@
-import React from 'react';
-import { useQuery } from '@apollo/client';
+import React, { useState, useEffect } from "react";
+import { useQuery } from "@apollo/client";
+import manyDogs from "../images/manyDogs.webp";
 
-
-
-
-
-const Home = () => {
+const Home = ({ handlePageChange }) => {
+  const [currentPath, setCurrentPath] = useState("");
+  // runs when a component renderes in the browser
+  useEffect(() => {
+    console.log(currentPath);
+    setCurrentPath(window.location.pathname);
+  }, []);
 
   return (
     <main>
-     Homepage
-     {/* <DogSearch/> */}
+      <div className="img-fluid col mt-7">
+              <img src={manyDogs} />
+              {/* <DogSearch/> */}
+
+      </div>
     </main>
   );
 };
