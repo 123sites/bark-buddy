@@ -17,6 +17,8 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
-    "pure-react-carousel": "^1.30.1"
+    "@fortawesome/fontawesome-free": "^6.4.0",
+    "mdb-react-ui-kit": "^6.1.0",
+    "react-bootstrap": "^2.7.4"
   }
 }

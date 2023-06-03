@@ -1,21 +1,36 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {
+  MDBCard,
+  MDBCardImage,
+  MDBCardBody,
+  MDBCardTitle,
+  MDBCardText,
+  MDBRow,
+  MDBCol
+} from 'mdb-react-ui-kit';
 
 function DogSearchResult({dog}) {
 
     return (
-      <div className="px-1 py-1">
-      <img 
-      alt=''
-      src={dog?.primary_photo_cropped?.large}/>
-      <h1>{dog?.name}</h1>
-      <p>Breed: {dog?.breeds?.primary}</p>
-      <p>Age: {dog?.age}</p>
-      <p>Gender: {dog?.gender}</p>
-      <button>Save</button>
-      <button>Donate</button>
-    </div>
-    )
+      <MDBRow className='row-cols-4 row-cols-md-2 g-4' >
+      <MDBCol>
+        <MDBCard className='h-100'>
+          <MDBCardImage
+          src={dog?.primary_photo_cropped?.large}
+          alt=''
+          position='top'
+          />
+          <MDBCardBody>
+            <MDBCardTitle>{dog?.name}</MDBCardTitle>
+            <MDBCardText>Breed: {dog?.breeds?.primary}</MDBCardText>
+            <MDBCardText>Age: {dog?.age}</MDBCardText>
+            <MDBCardText>Gender: {dog?.gender}</MDBCardText>
+          </MDBCardBody>
+        </MDBCard>
+      </MDBCol>
+    </MDBRow>
+    );
 }
 
 export default DogSearchResult;
