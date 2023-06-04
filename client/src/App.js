@@ -13,6 +13,7 @@ import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Profile from './pages/Profile';
+import Videos from './pages/Videos'; 
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -80,10 +81,7 @@ function App() {
                 path="/favorites"
                 element={<Favorites />}
               />
-              {/* <Route 
-                path="/dogs/:dogId" 
-                element={<Dog />}
-              /> */}
+
             </Routes>
           </div>
           <Footer />

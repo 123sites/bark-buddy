@@ -46,13 +46,13 @@ const Header = () => {
               <Link className="link m-4 fw-bolder" to="/me">
                 {Auth.getProfile().data.username}'s Profile
               </Link>
-              <button className="btn btn-lg m-2 fw-bolder" onClick={logout}>
-                Logout
-              </button>
-              <a className="btn btn-lg m-2" href='/search'>
+              <a className="link m-2" href='/logout'>
+                logout
+              </a>
+              <a className="link m-2" href='/search'>
                 Pick a Pooch
               </a>
-              <a className="btn btn-lg m-2" href='/favorites'>
+              <a className="link m-2" href='/favorites'>
                 Favorite Pooches
               </a>
             </>
@@ -73,14 +73,11 @@ const Header = () => {
               <Link className="link m-4 fw-bolder" to="/me">
                 Find a Shelter
               </Link>
-              <Link className="btn btn-lg m-2 fw-bolder" to="/login">
+              <Link className="link m-2 fw-bolder" to="/login">
                 Login
               </Link>
-              <Link
-                className="btn btn-lg my-3 mr-5 ml-3 fw-bolder"
-                to="/signup"
-              >
-                Signup
+              <Link className="link m-2 fw-bolder" to="/signup">
+                signup
               </Link>
             </>
           )}
