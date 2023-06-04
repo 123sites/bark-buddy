@@ -15,7 +15,6 @@ const Favorites = () => {
     const { loading, data } = useQuery(QUERY_ME);
     const [removeDog] = useMutation(REMOVE_DOG);
     const userData = data?.me || {};
-    console.log('line 18');
 
     const handleRemoveDog = async (dogId) => {
         try {
