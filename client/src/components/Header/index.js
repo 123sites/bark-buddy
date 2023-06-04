@@ -47,6 +47,9 @@ const Header = () => {
               <Link className="btn btn-lg my-3 mr-5 ml-3 fw-bolder" to="/favorites">
                 Favorite Pooches
               </Link>
+              <Link className="btn btn-lg my-3 mr-5 ml-3 fw-bolder" to="/quiz">
+                Breed Quiz
+              </Link>
             </>
           )}
         </div>

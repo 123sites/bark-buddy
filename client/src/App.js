@@ -18,6 +18,7 @@ import Footer from './components/Footer';
 import Search from './pages/Search';
 import Favorites from './pages/Favorites';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Quiz from './pages/Quiz';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -48,36 +49,42 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
-        <Header />
+          <Header />
           <div className="container">
             <Routes>
-              <Route 
+              <Route
                 path="/"
                 element={<Home />}
               />
-              <Route 
-                path="/login" 
+              <Route
+                path="/login"
                 element={<Login />}
               />
-              <Route 
-                path="/signup" 
+              <Route
+                path="/signup"
                 element={<Signup />}
               />
-              <Route 
-                path="/me" 
+              <Route
+                path="/me"
                 element={<Profile />}
               />
-              <Route 
-                path="/profiles/:username" 
+              <Route
+                path="/profiles/:username"
                 element={<Profile />}
               />
-              <Route 
+              <Route
                 path="/search"
                 element={<Search />}
               />
-                 <Route 
+              <Route
                 path="/favorites"
                 element={<Favorites />}
+
+              />
+              <Route
+                path="/quiz"
+                element={<Quiz />}
+
               />
               {/* <Route 
                 path="/dogs/:dogId" 
