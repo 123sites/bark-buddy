@@ -26,6 +26,12 @@ const Header = () => {
               <button className="btn btn-lg m-2 " onClick={logout}>
                 Logout
               </button>
+              <a className="btn btn-lg m-2" href='/search'>
+                Pick a Pooch
+              </a>
+              <a className="btn btn-lg m-2" href='/favorites'>
+                Favorite Pooches
+              </a>
             </>
           ) : (
             <>
@@ -37,6 +43,9 @@ const Header = () => {
               </Link>
               <Link className="btn btn-lg my-3 mr-5 ml-3 fw-bolder" to="/search">
                 Pick a Pooch
+              </Link>
+              <Link className="btn btn-lg my-3 mr-5 ml-3 fw-bolder" to="/favorites">
+                Favorite Pooches
               </Link>
             </>
           )}
