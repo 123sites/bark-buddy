@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useQuery } from "@apollo/client";
 import manyDogs from "../images/manyDogs.webp";
+import DogQuiz from "../components/DogQuiz/quiz"
 
 const Home = ({ handlePageChange }) => {
   const [currentPath, setCurrentPath] = useState("");

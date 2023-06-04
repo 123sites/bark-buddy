@@ -26,21 +26,18 @@ function DogSearchList() {
 
   return (
     <div>
-      <h2>Bark buddies available to adopt:</h2>
-      <div>
+     <h2>Bark buddies available to adopt:</h2>
         {jsonData && (
-          <ul>
+          <div>
             {jsonData.map(item => (
               <DogSearchResult key={item.id} dog={item}>
-                
               </DogSearchResult>
             ))}
-          </ul>
+          </div>
         )}
         <DogSearchResult
             dog={jsonData}
           />
-      </div>
     </div>
   )
 };

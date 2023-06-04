@@ -17,6 +17,7 @@ import Profile from './pages/Profile';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Search from './pages/Search';
+import Favorites from './pages/Favorites';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Construct our main GraphQL API endpoint
@@ -74,6 +75,10 @@ function App() {
               <Route 
                 path="/search"
                 element={<Search />}
+              />
+                 <Route 
+                path="/favorites"
+                element={<Favorites />}
               />
               {/* <Route 
                 path="/dogs/:dogId" 
