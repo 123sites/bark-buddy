@@ -17,12 +17,13 @@ function DogSearchFilter(item) {
 
     return (
         <div>
-            <h2>Search all available dogs</h2>
-
-            <button>Submit</button>
 
         </div>
     );
 }
 
 export default DogSearchFilter;
+
+{<h2></h2>}
+
+{<button>Submit</button>}
