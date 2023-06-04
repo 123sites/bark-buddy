@@ -7,20 +7,19 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-import Dog from './pages/Dog'
 import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Profile from './pages/Profile';
-import Videos from './pages/Videos'; 
+import Videos from './pages/Videos';
+// import Shelter from './pages/Shelters';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Search from './pages/Search';
 import Favorites from './pages/Favorites';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import Quiz from './pages/Quiz';
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -53,35 +52,21 @@ function App() {
         <Header />
           <div className="container">
             <Routes>
-              <Route 
-                path="/"
-                element={<Home />}
-              />
-              <Route 
-                path="/login" 
-                element={<Login />}
-              />
-              <Route 
-                path="/signup" 
-                element={<Signup />}
-              />
-              <Route 
-                path="/me" 
-                element={<Profile />}
-              />
-              <Route 
-                path="/profiles/:username" 
-                element={<Profile />}
-              />
-              <Route 
-                path="/search"
-                element={<Search />}
-              />
-                 <Route 
-                path="/favorites"
-                element={<Favorites />}
-              />
+              <Route path="/" element={<Home />}/>
+              <Route path="/login" element={<Login />}/>
+              <Route path="/signup" element={<Signup />}/>
+              <Route path="/me" element={<Profile />}/>
+              <Route path="/profiles/:username" element={<Profile />}/>
+              <Route path="/search" element={<Search />}/>
+              <Route path="/favorites" element={<Favorites />}/>
+              <Route path="/quiz" element={<Quiz />}/>
+              <Route path="/videos" element = {<Videos />}/>
+              {/* <Route path="/shelter" element = {<Shelter />}/> */}
 
+              {/* <Route 
+                path="/dogs/:dogId" 
+                element={<Dog />}
+              /> */}
             </Routes>
           </div>
           <Footer />
