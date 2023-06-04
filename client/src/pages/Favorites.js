@@ -15,12 +15,15 @@ const Favorites = () => {
     const { loading, data } = useQuery(QUERY_ME);
     const [removeDog] = useMutation(REMOVE_DOG);
     const userData = data?.me || {};
-    console.log('line 18');
 
-    const handleRemoveDog = async (dogId) => {
+    const handleRemoveDog = async (event) => {
+        console.log(event.target);
+
+        const dogId = event.target.getAttribute('data-id');
+        
         try {
-            await removeDog({ variables: { dogId } });
-            removeDogId(dogId);
+            await removeDog({ variables: { dogId:dogId } });
+            //removeDogId(dogId);
         } catch (err) {
             console.log(err);
         }
@@ -54,11 +57,13 @@ const Favorites = () => {
                                         variant='top' />
                                     ) : null}
                                     <Card.Body>
-                                        <Card.Title>{dog?.name}</Card.Title>
+                                        <Card.Title>{dog?._id}</Card.Title>
                                         <Card.Text>Breed: {dog?.breeds?.primary}</Card.Text>
                                         <Card.Text>Age: {dog?.age}</Card.Text>
                                         <Card.Text>Gender: {dog?.gender}</Card.Text>
-                                        <Button className='btn-danger' onClick={() => handleRemoveDog(dog?._id)}>
+                                        <Button className='btn-danger' 
+                                        data-id={dog?._id}
+                                        onClick={(event) => handleRemoveDog(event)}>
                                             Remove pooch from Favorites
                                         </Button>
                                     </Card.Body>

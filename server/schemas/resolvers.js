@@ -67,17 +67,20 @@ const resolvers = {
     },
     removeDog: async (parent, { dogId }, context) => {
       if (context.user) {
-        const dog = await Dog.findOneAndDelete({
+        /*const dog = await Dog.findOneAndDelete({
           _id: dogId,
           owner: context.user.username,
-        });
+        });*/
 
-        await User.findOneAndUpdate(
+        return User.findOneAndUpdate(
           { _id: context.user._id },
-          { $pull: { dogs: dog._id } }
+          { 
+            $pull: { 
+              'dogs': dogId 
+              },
+            },
+          { new: true}
         );
-
-        return dog;
       }
       throw new AuthenticationError('You need to be logged in!');
     },

@@ -58,7 +58,7 @@ const Header = () => {
             </>
           ) : (
             <>
-              {/* <Link className="link m-4 fw-bolder" to="/home">
+              <Link className="link m-4 fw-bolder" to="/home">
                 Home
               </Link>
               <Link className="link m-4 fw-bolder" to="/search">
@@ -81,7 +81,7 @@ const Header = () => {
                 to="/signup"
               >
                 Signup
-              </Link> */}
+              </Link>
             </>
           )}
         </div>

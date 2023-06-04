@@ -54,7 +54,7 @@ mutation Mutation($name: String!, $breeds: String!, $gender: String!, $age: Stri
   }
 }
 `;
-
+/*
 export const REMOVE_DOG = gql`
 mutation removeDog($dogId: ID!) {
     removeDog(dogId: $dogId) {
@@ -70,5 +70,16 @@ mutation removeDog($dogId: ID!) {
       }
     }
   }
-`;
+`;*/
 
+
+export const REMOVE_DOG = gql`
+mutation Mutation($dogId: ID!) {
+  removeDog(dogId: $dogId) {
+    username
+    dogs {
+      _id
+    }
+  }
+}
+`;
