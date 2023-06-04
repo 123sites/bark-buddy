@@ -1,8 +1,9 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import '../../assets/style.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "../../assets/style.css";
+import Logo from "../../images/logo.png";
 
-import Auth from '../../utils/auth';
+import Auth from "../../utils/auth";
 
 const Header = () => {
   const logout = (event) => {
@@ -10,34 +11,71 @@ const Header = () => {
     Auth.logout();
   };
   return (
-    <header className="brandName nav mb-4 py-3">
-      <div className="container-fluid flex-row justify-space-between-lg">
+    <header className="nav mb-4 py-3">
+      <div className="container-fluid flex-row justify-space-between">
         <div>
-          <Link className="text-light" to="/">
+          <Link className="navbar-brand text-light" to="/">
+            <img src={Logo} className="logo" alt=""></img>
+            <h1 className="name navbar-expand-lg fw-bold ml-5">Bark Buddy</h1>
           </Link>
-          <h1 className="name navbar navbar-expand-lg fw-bold ml-5">Bark Buddy</h1>
         </div>
         <div>
+          {/* Not need to be logged-in */}
+          <Link className="link m-4 fw-bolder" to="/Videos">
+            Videos
+          </Link>
+
+          {/* MUST be logged-in */}
           {Auth.loggedIn() ? (
             <>
-              <Link className="btn btn-lg m-2" to="/me">
-                {Auth.getProfile().data.username}'s profile
+              <Link className="link m-4 fw-bolder" to="/favorites">
+                Favorites
               </Link>
-              <button className="btn btn-lg m-2 " onClick={logout}>
+              <Link className="link m-4 fw-bolder" to="/search">
+                Pick A Pooch
+              </Link>
+              <Link className="link m-4 fw-bolder" to="/quiz">
+                Dog Quiz
+              </Link>
+              <Link className="link m-4 fw-bolder" to="/me">
+                Shelter Donation
+              </Link>
+              <Link className="link m-4 fw-bolder" to="/me">
+                Find a Shelter
+              </Link>
+              <Link className="link m-4 fw-bolder" to="/me">
+                {Auth.getProfile().data.username}'s Profile
+              </Link>
+              <button className="btn btn-lg m-2 fw-bolder" onClick={logout}>
                 Logout
               </button>
             </>
           ) : (
             <>
-              <Link className="btn btn-lg btn-info m-2" to="/login">
-                Login
+              {/* <Link className="link m-4 fw-bolder" to="/home">
+                Home
               </Link>
-              <Link className="btn btn-lg my-3 mr-5 ml-3 fw-bolder" to="/signup">
-                Signup
-              </Link>
-              <Link className="btn btn-lg my-3 mr-5 ml-3 fw-bolder" to="/search">
+              <Link className="link m-4 fw-bolder" to="/search">
                 Pick a Pooch
               </Link>
+              <Link className="link m-4 fw-bolder" to="/quiz">
+                Dog Quiz
+              </Link>
+              <Link className="link m-4 fw-bolder" to="/me">
+                Shelter Donation
+              </Link>
+              <Link className="link m-4 fw-bolder" to="/me">
+                Find a Shelter
+              </Link>
+              <Link className="btn btn-lg m-2 fw-bolder" to="/login">
+                Login
+              </Link>
+              <Link
+                className="btn btn-lg my-3 mr-5 ml-3 fw-bolder"
+                to="/signup"
+              >
+                Signup
+              </Link> */}
             </>
           )}
         </div>
