@@ -57,7 +57,7 @@ const Favorites = () => {
                                         variant='top' />
                                     ) : null}
                                     <Card.Body>
-                                        <Card.Title>{dog?._id}</Card.Title>
+                                        <Card.Title>{dog?.name}</Card.Title>
                                         <Card.Text>Breed: {dog?.breeds?.primary}</Card.Text>
                                         <Card.Text>Age: {dog?.age}</Card.Text>
                                         <Card.Text>Gender: {dog?.gender}</Card.Text>
