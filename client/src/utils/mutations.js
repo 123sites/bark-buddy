@@ -50,6 +50,7 @@ mutation Mutation($name: String!, $breeds: String!, $gender: String!, $age: Stri
     breeds
     gender
     name
+    photos
   }
 }
 `;
