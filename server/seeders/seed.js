@@ -1,15 +1,16 @@
 const db = require('../config/connection');
 const { User, Dog } = require('../models');
 const userSeeds = require('./userSeeds.json');
-const dogSeeds = require('./petSeeds.json');
+const dogSeeds = require('./dogSeeds.json');
 
 db.once('open', async () => {
   try {
+
     // await Dog.deleteMany({});
     await User.deleteMany({});
 
     await User.create(userSeeds);
-    // await Dog.create(dogSeeds);
+    await Dog.create(dogSeeds);
 
 
 
@@ -17,6 +18,12 @@ db.once('open', async () => {
 
 
 
+
+    //await Dog.deleteMany({});
+    await User.deleteMany({});
+
+    await User.create(userSeeds);
+    await Dog.create(petSeeds);
 
   } catch (err) {
     console.error(err);

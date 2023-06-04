@@ -6,3 +6,13 @@ import { useQuery } from '@apollo/client';
 import { QUERY_DOG } from '../utils/queries';
 
 
+const Dog = () => {
+
+  return (
+    <main>
+
+    </main>
+  );
+};
+
+export default Dog;

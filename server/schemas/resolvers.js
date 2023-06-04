@@ -1,19 +1,19 @@
 const { AuthenticationError } = require('apollo-server-express');
-const { User } = require('../models');
+const { User, Dog } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
-    user: async (parent, { username }) => {
-      return User.findOne({ username }).populate('dogs');
-    },
-    dogs: async (parent, { owner }) => {
-      const params = owner ? { owner } : {};
-      return Dog.find(params).sort({ createdAt: -1 });
-    },
-    dog: async (parent, { dogId }) => {
-      return Dog.findOne({ _id: dogId });
-    },
+    // user: async (parent, { username }) => {
+    //   return User.findOne({ username }).populate('dogs');
+    // },
+    // dogs: async (parent, { owner }) => {
+    //   const params = owner ? { owner } : {};
+    //   return Dog.find(params).sort({ createdAt: -1 });
+    // },
+    // dog: async (parent, { dogId }) => {
+    //   return Dog.findOne({ _id: dogId });
+    // },
     me: async (parent, args, context) => {
       if (context.user) {
         return User.findOne({ _id: context.user._id }).populate('dogs');
@@ -45,12 +45,14 @@ const resolvers = {
 
       return { token, user };
     },
-    addDog: async (parent, { name, breed, age }, context) => {
+    addDog: async (parent, { name, breeds, age, gender, photos }, context) => {
       if (context.user) {
         const dog = await Dog.create({
           name,
-          breed,
+          breeds,
           age,
+          gender, 
+          photos,
           owner: context.user.username,
         });
 
