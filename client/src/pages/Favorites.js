@@ -30,6 +30,7 @@ const Favorites = () => {
         
         try {
             await removeDog({ variables: { dogId:dogId } });
+            window.location.reload(); // React way?
             //removeDogId(dogId);
             //const updatedFavorites = [...favorites].filter((dog) => dog._id !== dogId);
             ////console.log(updatedFavorites);
