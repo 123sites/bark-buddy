@@ -59,6 +59,7 @@ function App() {
               <Route path="/profiles/:username" element={<Profile />} />
               <Route path="/search" element={<Search />} />
               <Route path="/favorites" element={<Favorites />} />
+              <Route path="/quiz" element={<Quiz />} />
               <Route path="/videos" element={<Videos />} />
               {/* <Route 
                 path="/dogs/:dogId" 
