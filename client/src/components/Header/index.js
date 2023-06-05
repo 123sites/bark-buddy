@@ -15,35 +15,36 @@ const Header = () => {
       <div className="container-fluid flex-row justify-space-between">
         <div>
           <Link className="navbar-brand text-light" to="/">
-            <img src={Logo} className="logo" alt=""></img>
-            <h1 className="name navbar-expand-lg fw-bold ml-5">Bark Buddy</h1>
+            <img src={Logo} className="logo" 
+            alt="Bark Buddy logo with a glowing heart and paw in the middle"></img>
+            <h1 className="name navbar-expand-lg fw-bold ml-5 mt-1">Bark Buddy</h1>
           </Link>
         </div>
-        <div>
+        <div className="mt-3">
           {/* Not need to be logged-in */}
-          <Link className="link m-4 fw-bolder" to="/Videos">
+          <Link className="link mx-3 fw-bolder" to="/videos">
             Videos
           </Link>
 
           {/* MUST be logged-in */}
           {Auth.loggedIn() ? (
             <>
-              <Link className="link m-4 fw-bolder" to="/favorites">
+              <Link className="link mx-3 fw-bolder" to="/favorites">
                 Favorites
               </Link>
-              <Link className="link m-4 fw-bolder" to="/search">
+              <Link className="link mx-3 fw-bolder" to="/search">
                 Pick A Pooch
               </Link>
-              <Link className="link m-4 fw-bolder" to="/quiz">
+              <Link className="link mx-3 fw-bolder" to="/quiz">
                 Dog Quiz
               </Link>
-              <Link className="link m-4 fw-bolder" to="/me">
+              <Link className="link mx-3 fw-bolder" to="/me">
                 Shelter Donation
               </Link>
-              <Link className="link m-4 fw-bolder" to="/me">
+              <Link className="link mx-3 fw-bolder" to="/me">
                 Find a Shelter
               </Link>
-              <Link className="link m-4 fw-bolder" to="/me">
+              <Link className="link mx-3 fw-bolder" to="/me">
                 {Auth.getProfile().data.username}'s Profile
               </Link>
               <a className="link m-2" href='/logout'>
