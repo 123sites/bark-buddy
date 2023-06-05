@@ -16,7 +16,7 @@ const Videos = ({ handlePageChange }) => {
         <h1 className="vTitles fw-bold shadow-lg">Helpful YouTube Channels and Videos</h1>
         <div className="vContainer rounded fs-5 fw-bold">
         {/* Information */}
-        <p className="fw-bold fs-5 p-2 shadow-lg">
+        <p className="fw-bold fs-5 p-3 shadow-lg">
           These videos and channels will help you in your journey to find the
           right dog for you and your family! Also, there are videos that will
           help you to care for your new pet!</p>
