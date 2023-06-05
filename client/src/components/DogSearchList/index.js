@@ -20,6 +20,7 @@ function DogSearchList() {
 
   const { loading, data } = useQuery(QUERY_DOGS);
 
+  // for filters to try
   /*const { loading, data } = useQuery(QUERY_DOGS, {
     variables: {
       age: 'Adult', // Replace with the desired age description to filter by
@@ -74,17 +75,20 @@ function DogSearchList() {
         </select>
       </div>
 
+      <div>
+        <Container>
+          <h3 className='pt-4'>Bark buddies available to adopt:</h3>
+        </Container>
+      </div>
+
       <Container>
-        <h3 className='pt-4'>Bark buddies available to adopt:</h3>
         <Row>
           {dogData && (
             <Col>
               <div className='h-100'>
                 {dogData?.dogs?.map(item => (
-
                   <DogSearchResult key={item.id} dog={item}>
                   </DogSearchResult>
-
                 ))}
               </div>
             </Col>
