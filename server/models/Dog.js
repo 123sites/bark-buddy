@@ -13,7 +13,7 @@ const dogSchema = new Schema({
         required: true,
         trim: true,
     },
-    breeds: {
+    breed: {
         type: String,
         required: true,
         trim: true,
@@ -23,7 +23,7 @@ const dogSchema = new Schema({
         required: true,
     },
 
-    photos: {
+    profile_pic: {
         type: String,
     },
 

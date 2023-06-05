@@ -5,6 +5,7 @@
         "url": "https://www.petfinder.com/dog/tip-64813385/ri/warren/paws-new-england-ri77/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Terrier",
         "breeds": {
             "primary": "Terrier",
             "secondary": null,
@@ -74,12 +75,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64813385/6/?bust=1685644355"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64813385/1/?bust=1685644353&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64813385/1/?bust=1685644353&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64813385/1/?bust=1685644353&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64813385/1/?bust=1685644353"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64813385/1/?bust=1685644353",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2023-06-01T18:22:32+0000",
@@ -115,6 +111,7 @@
         "url": "https://www.petfinder.com/dog/louie-64813384/ri/warren/paws-new-england-ri77/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Terrier",
         "breeds": {
             "primary": "Terrier",
             "secondary": null,
@@ -184,12 +181,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64813384/6/?bust=1685644426"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64813384/1/?bust=1685644359&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64813384/1/?bust=1685644359&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64813384/1/?bust=1685644359&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64813384/1/?bust=1685644359"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64813384/1/?bust=1685644359",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2023-06-01T18:22:32+0000",
@@ -225,6 +217,7 @@
         "url": "https://www.petfinder.com/dog/hubbell-64806309/ri/warren/paws-new-england-ri77/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Flat-Coated Retriever",
         "breeds": {
             "primary": "Flat-Coated Retriever",
             "secondary": null,
@@ -294,12 +287,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64806309/6/?bust=1685586817"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64806309/1/?bust=1685586816&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64806309/1/?bust=1685586816&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64806309/1/?bust=1685586816&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64806309/1/?bust=1685586816"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64806309/1/?bust=1685586816",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2023-06-01T02:23:33+0000",
@@ -335,6 +323,7 @@
         "url": "https://www.petfinder.com/dog/pepper-boy-64806310/ri/warren/paws-new-england-ri77/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Scottish Terrier",
         "breeds": {
             "primary": "Scottish Terrier",
             "secondary": null,
@@ -392,12 +381,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64806310/4/?bust=1685586822"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64806310/1/?bust=1685586820&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64806310/1/?bust=1685586820&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64806310/1/?bust=1685586820&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64806310/1/?bust=1685586820"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64806310/1/?bust=1685586820",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2023-06-01T02:23:34+0000",
@@ -433,6 +417,7 @@
         "url": "https://www.petfinder.com/dog/tyson-64800614/ri/warren/paws-new-england-ri77/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Labrador Retriever",
         "breeds": {
             "primary": "Labrador Retriever",
             "secondary": null,
@@ -496,12 +481,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64800614/5/?bust=1685565208"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64800614/1/?bust=1685565207&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64800614/1/?bust=1685565207&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64800614/1/?bust=1685565207&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64800614/1/?bust=1685565207"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64800614/1/?bust=1685565207",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2023-05-31T20:23:25+0000",
@@ -537,6 +517,7 @@
         "url": "https://www.petfinder.com/dog/juniper-64796243/ri/warren/paws-new-england-ri77/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Golden Retriever",
         "breeds": {
             "primary": "Golden Retriever",
             "secondary": null,
@@ -606,12 +587,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64796243/6/?bust=1685550805"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64796243/1/?bust=1685550804&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64796243/1/?bust=1685550804&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64796243/1/?bust=1685550804&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64796243/1/?bust=1685550804"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64796243/1/?bust=1685550804",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2023-05-31T16:23:23+0000",
@@ -647,6 +623,7 @@
         "url": "https://www.petfinder.com/dog/ben-nevis-special-needs-64789842/ri/warren/paws-new-england-ri77/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"West Highland White Terrier / Westie",
         "breeds": {
             "primary": "West Highland White Terrier / Westie",
             "secondary": null,
@@ -716,12 +693,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64789842/6/?bust=1685493123"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64789842/1/?bust=1685493123&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64789842/1/?bust=1685493123&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64789842/1/?bust=1685493123&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64789842/1/?bust=1685493123"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64789842/1/?bust=1685493123",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2023-05-31T00:22:01+0000",
@@ -757,6 +729,7 @@
         "url": "https://www.petfinder.com/dog/sadie-mae-64788129/ri/warren/paws-new-england-ri77/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Hound",
         "breeds": {
             "primary": "Hound",
             "secondary": null,
@@ -820,12 +793,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64788129/5/?bust=1685485978"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64788129/1/?bust=1685485977&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64788129/1/?bust=1685485977&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64788129/1/?bust=1685485977&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64788129/1/?bust=1685485977"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64788129/1/?bust=1685485977",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2023-05-30T22:22:55+0000",
@@ -861,6 +829,7 @@
         "url": "https://www.petfinder.com/dog/incredible-indy-64780326/ri/warren/paws-new-england-ri77/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Pit Bull Terrier",
         "breeds": {
             "primary": "Pit Bull Terrier",
             "secondary": "Great Dane",
@@ -924,12 +893,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64780326/5/?bust=1685457197"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64780326/1/?bust=1685457197&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64780326/1/?bust=1685457197&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64780326/1/?bust=1685457197&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64780326/1/?bust=1685457197"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64780326/1/?bust=1685457197",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2023-05-30T14:23:10+0000",
@@ -965,6 +929,7 @@
         "url": "https://www.petfinder.com/dog/lee-lee-64764600/ri/warren/paws-new-england-ri77/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Pit Bull Terrier",
         "breeds": {
             "primary": "Pit Bull Terrier",
             "secondary": null,
@@ -1028,12 +993,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64764600/5/?bust=1685248359"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64764600/1/?bust=1685248356&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64764600/1/?bust=1685248356&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64764600/1/?bust=1685248356&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64764600/1/?bust=1685248356"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64764600/1/?bust=1685248356",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2023-05-28T04:22:34+0000",
@@ -1069,6 +1029,7 @@
         "url": "https://www.petfinder.com/dog/simone-64764599/ri/warren/paws-new-england-ri77/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Australian Shepherd",
         "breeds": {
             "primary": "Australian Shepherd",
             "secondary": null,
@@ -1138,12 +1099,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64764599/6/?bust=1685320353"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64764599/1/?bust=1685493121&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64764599/1/?bust=1685493121&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64764599/1/?bust=1685493121&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64764599/1/?bust=1685493121"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64764599/1/?bust=1685493121",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2023-05-28T04:22:34+0000",
@@ -1179,6 +1135,7 @@
         "url": "https://www.petfinder.com/dog/woody-woof-64753880/ri/warren/paws-new-england-ri77/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Terrier",
         "breeds": {
             "primary": "Terrier",
             "secondary": null,
@@ -1242,12 +1199,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64753880/5/?bust=1685171156"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64753880/1/?bust=1685170927&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64753880/1/?bust=1685170927&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64753880/1/?bust=1685170927&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64753880/1/?bust=1685170927"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64753880/1/?bust=1685170927",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2023-05-27T02:34:22+0000",
@@ -1283,6 +1235,7 @@
         "url": "https://www.petfinder.com/dog/pumpkin-spice-local-64741555/ri/warren/paws-new-england-ri77/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Poodle",
         "breeds": {
             "primary": "Poodle",
             "secondary": null,
@@ -1352,12 +1305,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64741555/6/?bust=1685673260"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64741555/1/?bust=1685673263&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64741555/1/?bust=1685673263&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64741555/1/?bust=1685673263&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64741555/1/?bust=1685673263"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64741555/1/?bust=1685673263",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2023-05-26T02:21:31+0000",
@@ -1393,6 +1341,7 @@
         "url": "https://www.petfinder.com/dog/hazel-local-foster-64730570/ri/warren/paws-new-england-ri77/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Terrier",
         "breeds": {
             "primary": "Terrier",
             "secondary": null,
@@ -1462,12 +1411,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64730570/6/?bust=1685661760"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64730570/1/?bust=1685661788&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64730570/1/?bust=1685661788&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64730570/1/?bust=1685661788&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64730570/1/?bust=1685661788"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64730570/1/?bust=1685661788",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2023-05-25T21:06:01+0000",
@@ -1503,6 +1447,7 @@
         "url": "https://www.petfinder.com/dog/shaw-64730569/ri/warren/paws-new-england-ri77/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Terrier",
         "breeds": {
             "primary": "Terrier",
             "secondary": null,
@@ -1572,12 +1517,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64730569/6/?bust=1685661585"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64730569/1/?bust=1685661654&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64730569/1/?bust=1685661654&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64730569/1/?bust=1685661654&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64730569/1/?bust=1685661654"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64730569/1/?bust=1685661654",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2023-05-25T21:06:02+0000",
@@ -1613,6 +1553,7 @@
         "url": "https://www.petfinder.com/dog/palmer-64715702/ri/warren/paws-new-england-ri77/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Pomeranian",
         "breeds": {
             "primary": "Pomeranian",
             "secondary": null,
@@ -1670,12 +1611,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64715702/4/?bust=1685586822"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64715702/1/?bust=1685586821&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64715702/1/?bust=1685586821&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64715702/1/?bust=1685586821&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64715702/1/?bust=1685586821"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64715702/1/?bust=1685586821",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2023-05-25T02:23:02+0000",
@@ -1711,6 +1647,7 @@
         "url": "https://www.petfinder.com/dog/jack-64695605/ri/warren/paws-new-england-ri77/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Pit Bull Terrier",
         "breeds": {
             "primary": "Cattle Dog",
             "secondary": "Pit Bull Terrier",
@@ -1780,12 +1717,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64695605/6/?bust=1685550809"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64695605/1/?bust=1685550805&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64695605/1/?bust=1685550805&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64695605/1/?bust=1685550805&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64695605/1/?bust=1685550805"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64695605/1/?bust=1685550805",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2023-05-24T14:24:25+0000",
@@ -1821,6 +1753,7 @@
         "url": "https://www.petfinder.com/dog/luanna-64693048/ri/warren/paws-new-england-ri77/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Chihuahua",
         "breeds": {
             "primary": "Chihuahua",
             "secondary": null,
@@ -1890,12 +1823,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64693048/6/?bust=1685586816"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64693048/1/?bust=1685586815&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64693048/1/?bust=1685586815&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64693048/1/?bust=1685586815&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64693048/1/?bust=1685586815"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64693048/1/?bust=1685586815",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2023-05-24T04:22:57+0000",
@@ -1931,6 +1859,7 @@
         "url": "https://www.petfinder.com/dog/hamburger-64653692/ri/warren/paws-new-england-ri77/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Hound",
         "breeds": {
             "primary": "Hound",
             "secondary": "Pit Bull Terrier",
@@ -1994,12 +1923,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64653692/5/?bust=1685457196"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64653692/1/?bust=1685457197&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64653692/1/?bust=1685457197&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64653692/1/?bust=1685457197&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64653692/1/?bust=1685457197"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64653692/1/?bust=1685457197",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2023-05-23T04:21:55+0000",
@@ -2035,6 +1959,7 @@
         "url": "https://www.petfinder.com/dog/french-fries-64653693/ri/warren/paws-new-england-ri77/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Hound",
         "breeds": {
             "primary": "Hound",
             "secondary": "Pit Bull Terrier",
@@ -2098,12 +2023,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64653693/5/?bust=1685457258"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64653693/1/?bust=1685451536&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64653693/1/?bust=1685451536&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64653693/1/?bust=1685451536&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64653693/1/?bust=1685451536"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64653693/1/?bust=1685451536",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2023-05-23T04:21:55+0000",
@@ -2139,6 +2059,7 @@
         "url": "https://www.petfinder.com/dog/nena-61091321/az/phoenix/citizens-for-north-phoenix-strays-az01/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Jack Russell Terrier",
         "breeds": {
             "primary": "Jack Russell Terrier",
             "secondary": "Australian Cattle Dog / Blue Heeler",
@@ -2216,12 +2137,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/61091321/6/?bust=1678988396"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/61091321/1/?bust=1678988392&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/61091321/1/?bust=1678988392&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/61091321/1/?bust=1678988392&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/61091321/1/?bust=1678988392"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/61091321/1/?bust=1678988392",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2023-03-16T17:39:58+0000",
@@ -2257,6 +2173,7 @@
         "url": "https://www.petfinder.com/dog/whiskey-60519558/az/phoenix/citizens-for-north-phoenix-strays-az01/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Dachshund",
         "breeds": {
             "primary": "Dachshund",
             "secondary": "Chihuahua",
@@ -2317,12 +2234,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/60519558/4/?bust=1678062483"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/60519558/2/?bust=1678062481&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/60519558/2/?bust=1678062481&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/60519558/2/?bust=1678062481&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/60519558/2/?bust=1678062481"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/60519558/2/?bust=1678062481",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2023-03-06T00:28:08+0000",
@@ -2358,6 +2270,7 @@
         "url": "https://www.petfinder.com/dog/angie-60022835/az/phoenix/citizens-for-north-phoenix-strays-az01/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Chihuahua",
         "breeds": {
             "primary": "Chihuahua",
             "secondary": "Rat Terrier",
@@ -2425,12 +2338,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/60022835/5/?bust=1676946649"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/60022835/1/?bust=1676946645&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/60022835/1/?bust=1676946645&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/60022835/1/?bust=1676946645&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/60022835/1/?bust=1676946645"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/60022835/1/?bust=1676946645",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2023-02-21T02:30:51+0000",
@@ -2466,6 +2374,7 @@
         "url": "https://www.petfinder.com/dog/archie-58776579/az/phoenix/citizens-for-north-phoenix-strays-az01/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Tibetan Spaniel",
         "breeds": {
             "primary": "Tibetan Spaniel",
             "secondary": "Dachshund",
@@ -2535,12 +2444,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/58776579/6/?bust=1667767245"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/58776579/1/?bust=1667767241&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/58776579/1/?bust=1667767241&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/58776579/1/?bust=1667767241&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/58776579/1/?bust=1667767241"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/58776579/1/?bust=1667767241",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2022-11-06T20:40:49+0000",
@@ -2576,6 +2480,7 @@
         "url": "https://www.petfinder.com/dog/rocky-road-58776048/az/phoenix/citizens-for-north-phoenix-strays-az01/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Pug",
         "breeds": {
             "primary": "Pug",
             "secondary": null,
@@ -2649,12 +2554,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/58776048/6/?bust=1680816640"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/58776048/1/?bust=1667763620&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/58776048/1/?bust=1667763620&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/58776048/1/?bust=1667763620&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/58776048/1/?bust=1667763620"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/58776048/1/?bust=1667763620",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2022-11-06T19:40:26+0000",
@@ -2690,6 +2590,7 @@
         "url": "https://www.petfinder.com/dog/obi-58546378/az/phoenix/citizens-for-north-phoenix-strays-az01/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Pit Bull Terrier",
         "breeds": {
             "primary": "Pit Bull Terrier",
             "secondary": "Labrador Retriever",
@@ -2764,12 +2665,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/58546378/6/?bust=1665902457"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/58546378/2/?bust=1665902454&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/58546378/2/?bust=1665902454&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/58546378/2/?bust=1665902454&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/58546378/2/?bust=1665902454"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/58546378/2/?bust=1665902454",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2022-10-16T06:40:59+0000",
@@ -2805,6 +2701,7 @@
         "url": "https://www.petfinder.com/dog/rory-63351298/az/queen-creek/central-arizona-animal-rescue-az347/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Shepherd",
         "breeds": {
             "primary": "Shepherd",
             "secondary": null,
@@ -2856,12 +2753,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/63351298/3/?bust=1685311863"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/63351298/1/?bust=1685311862&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/63351298/1/?bust=1685311862&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/63351298/1/?bust=1685311862&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/63351298/1/?bust=1685311862"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/63351298/1/?bust=1685311862",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2023-04-24T21:48:22+0000",
@@ -2897,6 +2789,7 @@
         "url": "https://www.petfinder.com/dog/casey-63351297/az/queen-creek/central-arizona-animal-rescue-az347/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Shepherd",
         "breeds": {
             "primary": "Shepherd",
             "secondary": null,
@@ -2948,12 +2841,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/63351297/3/?bust=1685311855"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/63351297/1/?bust=1685311854&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/63351297/1/?bust=1685311854&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/63351297/1/?bust=1685311854&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/63351297/1/?bust=1685311854"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/63351297/1/?bust=1685311854",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2023-05-21T17:30:29+0000",
@@ -2989,6 +2877,7 @@
         "url": "https://www.petfinder.com/dog/cohen-63351173/az/queen-creek/central-arizona-animal-rescue-az347/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Shepherd",
         "breeds": {
             "primary": "Shepherd",
             "secondary": null,
@@ -3040,12 +2929,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/63351173/3/?bust=1685311783"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/63351173/1/?bust=1685311779&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/63351173/1/?bust=1685311779&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/63351173/1/?bust=1685311779&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/63351173/1/?bust=1685311779"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/63351173/1/?bust=1685311779",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2023-04-24T21:32:50+0000",
@@ -3081,6 +2965,7 @@
         "url": "https://www.petfinder.com/dog/lucy-60413990/az/queen-creek/central-arizona-animal-rescue-az347/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Mixed Breed",
         "breeds": {
             "primary": "Mixed Breed",
             "secondary": null,
@@ -3132,12 +3017,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/60413990/3/?bust=1685311861"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/60413990/1/?bust=1685311861&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/60413990/1/?bust=1685311861&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/60413990/1/?bust=1685311861&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/60413990/1/?bust=1685311861"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/60413990/1/?bust=1685311861",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2023-03-04T07:36:42+0000",
@@ -3173,6 +3053,7 @@
         "url": "https://www.petfinder.com/dog/staple-aka-baby-59467587/az/queen-creek/central-arizona-animal-rescue-az347/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Mixed Breed",
         "breeds": {
             "primary": "Mixed Breed",
             "secondary": null,
@@ -3224,12 +3105,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59467587/3/?bust=1685311831"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59467587/1/?bust=1685311831&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59467587/1/?bust=1685311831&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59467587/1/?bust=1685311831&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59467587/1/?bust=1685311831"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59467587/1/?bust=1685311831",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2023-06-03T17:53:07+0000",
@@ -3265,6 +3141,7 @@
         "url": "https://www.petfinder.com/dog/post-it-59361065/az/queen-creek/central-arizona-animal-rescue-az347/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Mixed Breed",
         "breeds": {
             "primary": "Mixed Breed",
             "secondary": null,
@@ -3316,12 +3193,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59361065/3/?bust=1685311794"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59361065/1/?bust=1685311791&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59361065/1/?bust=1685311791&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59361065/1/?bust=1685311791&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59361065/1/?bust=1685311791"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59361065/1/?bust=1685311791",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2023-01-06T07:00:39+0000",
@@ -3357,6 +3229,7 @@
         "url": "https://www.petfinder.com/dog/note-pad-59232108/az/queen-creek/central-arizona-animal-rescue-az347/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Mixed Breed",
         "breeds": {
             "primary": "Mixed Breed",
             "secondary": null,
@@ -3408,12 +3281,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232108/3/?bust=1685311848"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232108/1/?bust=1685311848&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232108/1/?bust=1685311848&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232108/1/?bust=1685311848&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232108/1/?bust=1685311848"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232108/1/?bust=1685311848",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2022-12-22T01:46:38+0000",
@@ -3449,6 +3317,7 @@
         "url": "https://www.petfinder.com/dog/paper-59232112/az/queen-creek/central-arizona-animal-rescue-az347/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Mixed Breed",
         "breeds": {
             "primary": "Mixed Breed",
             "secondary": null,
@@ -3500,12 +3369,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232112/3/?bust=1685311852"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232112/1/?bust=1685311849&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232112/1/?bust=1685311849&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232112/1/?bust=1685311849&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232112/1/?bust=1685311849"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232112/1/?bust=1685311849",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2022-12-22T01:46:38+0000",
@@ -3541,6 +3405,7 @@
         "url": "https://www.petfinder.com/dog/frito-59232113/az/queen-creek/central-arizona-animal-rescue-az347/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Belgian Shepherd / Malinois",
         "breeds": {
             "primary": "Belgian Shepherd / Malinois",
             "secondary": null,
@@ -3592,12 +3457,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232113/3/?bust=1685311795"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232113/1/?bust=1685311793&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232113/1/?bust=1685311793&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232113/1/?bust=1685311793&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232113/1/?bust=1685311793"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232113/1/?bust=1685311793",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2022-12-22T01:46:38+0000",
@@ -3633,6 +3493,7 @@
         "url": "https://www.petfinder.com/dog/highlighter-59232116/az/queen-creek/central-arizona-animal-rescue-az347/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Mixed Breed",
         "breeds": {
             "primary": "Mixed Breed",
             "secondary": null,
@@ -3684,12 +3545,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232116/3/?bust=1685311837"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232116/1/?bust=1685311839&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232116/1/?bust=1685311839&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232116/1/?bust=1685311839&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232116/1/?bust=1685311839"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232116/1/?bust=1685311839",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2022-12-22T01:46:38+0000",
@@ -3725,6 +3581,7 @@
         "url": "https://www.petfinder.com/dog/thumb-tack-59232115/az/queen-creek/central-arizona-animal-rescue-az347/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Mixed Breed",
         "breeds": {
             "primary": "Mixed Breed",
             "secondary": null,
@@ -3776,12 +3633,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232115/3/?bust=1685311846"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232115/1/?bust=1685311845&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232115/1/?bust=1685311845&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232115/1/?bust=1685311845&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232115/1/?bust=1685311845"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232115/1/?bust=1685311845",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2022-12-22T01:46:38+0000",
@@ -3817,6 +3669,7 @@
         "url": "https://www.petfinder.com/dog/marker-59232114/az/queen-creek/central-arizona-animal-rescue-az347/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Mixed Breed",
         "breeds": {
             "primary": "Mixed Breed",
             "secondary": null,
@@ -3868,12 +3721,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232114/3/?bust=1685311841"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232114/1/?bust=1685311838&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232114/1/?bust=1685311838&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232114/1/?bust=1685311838&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232114/1/?bust=1685311838"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59232114/1/?bust=1685311838",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2022-12-22T01:46:38+0000",
@@ -3909,6 +3757,7 @@
         "url": "https://www.petfinder.com/dog/vanilla-ice-58074289/az/queen-creek/central-arizona-animal-rescue-az347/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Australian Cattle Dog / Blue Heeler",
         "breeds": {
             "primary": "Australian Cattle Dog / Blue Heeler",
             "secondary": "Husky",
@@ -3960,12 +3809,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/58074289/3/?bust=1685311779"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/58074289/1/?bust=1685311777&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/58074289/1/?bust=1685311777&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/58074289/1/?bust=1685311777&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/58074289/1/?bust=1685311777"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/58074289/1/?bust=1685311777",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2022-10-11T21:18:31+0000",
@@ -4001,6 +3845,7 @@
         "url": "https://www.petfinder.com/dog/chandler-58059271/az/queen-creek/central-arizona-animal-rescue-az347/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Mixed Breed",
         "breeds": {
             "primary": "Mixed Breed",
             "secondary": null,
@@ -4052,12 +3897,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/58059271/3/?bust=1685311876"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/58059271/1/?bust=1685311937&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/58059271/1/?bust=1685311937&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/58059271/1/?bust=1685311937&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/58059271/1/?bust=1685311937"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/58059271/1/?bust=1685311937",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2022-10-10T21:02:30+0000",
@@ -4093,6 +3933,7 @@
         "url": "https://www.petfinder.com/dog/harold-56790532/az/queen-creek/central-arizona-animal-rescue-az347/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"German Shepherd Dog",
         "breeds": {
             "primary": "German Shepherd Dog",
             "secondary": null,
@@ -4144,12 +3985,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56790532/3/?bust=1685311821"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56790532/1/?bust=1685311819&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56790532/1/?bust=1685311819&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56790532/1/?bust=1685311819&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56790532/1/?bust=1685311819"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/56790532/1/?bust=1685311819",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2022-08-24T04:07:26+0000",
@@ -4185,6 +4021,7 @@
         "url": "https://www.petfinder.com/dog/ridley-55076890/az/queen-creek/central-arizona-animal-rescue-az347/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"German Shepherd Dog",
         "breeds": {
             "primary": "German Shepherd Dog",
             "secondary": null,
@@ -4236,12 +4073,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/55076890/3/?bust=1685311789"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/55076890/1/?bust=1685311787&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/55076890/1/?bust=1685311787&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/55076890/1/?bust=1685311787&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/55076890/1/?bust=1685311787"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/55076890/1/?bust=1685311787",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2022-03-23T00:21:13+0000",
@@ -4277,6 +4109,7 @@
         "url": "https://www.petfinder.com/dog/sandy-54744548/az/queen-creek/central-arizona-animal-rescue-az347/?referrer_id=03452fd4-a0d0-48fe-a86b-ee493431e23e",
         "type": "Dog",
         "species": "Dog",
+        "breed":"Rottweiler",
         "breeds": {
             "primary": "Rottweiler",
             "secondary": "Labrador Retriever",
@@ -4328,12 +4161,7 @@
                 "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/54744548/3/?bust=1685311847"
             }
         ],
-        "primary_photo_cropped": {
-            "small": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/54744548/1/?bust=1685311846&width=300",
-            "medium": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/54744548/1/?bust=1685311846&width=450",
-            "large": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/54744548/1/?bust=1685311846&width=600",
-            "full": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/54744548/1/?bust=1685311846"
-        },
+        "profile_pic": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/54744548/1/?bust=1685311846",
         "videos": [],
         "status": "adoptable",
         "status_changed_at": "2022-02-24T21:51:24+0000",

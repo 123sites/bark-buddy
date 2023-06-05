@@ -9,34 +9,42 @@ import { QUERY_DOGS } from '../../utils/queries';
 
 function DogSearchList() {
 
-  const [jsonData, setJsonData] = useState(null);
+  //const [jsonData, setJsonData] = useState(null);
 
-  useEffect(() => {
+  /*useEffect(() => {
     // Fetch the JSON data
     fetch('./data.json')
       .then(response => response.json())
       .then(data => setJsonData(data))
       .catch(error => console.error(error));
-  }, []);
-
+  }, []);*/
 
   const { loading, data } = useQuery(QUERY_DOGS);
 
-  const dog = {jsonData};
+  useEffect(() => {
+
+  })
+
+  const dogData = data || {};
+ 
+
+  //console.log(data);
+  //console.log(jsonData);
+  //const dog = {jsonData};
 
   return (
     <div>
      <h2>Bark buddies available to adopt:</h2>
-        {jsonData && (
+        {dogData && (
           <div>
-            {jsonData.map(item => (
+            {dogData?.dogs?.map(item => (
               <DogSearchResult key={item.id} dog={item}>
               </DogSearchResult>
             ))}
           </div>
         )}
         <DogSearchResult
-            dog={jsonData}
+            dog={dogData}
           />
     </div>
   )

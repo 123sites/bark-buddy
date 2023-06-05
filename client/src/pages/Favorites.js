@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { removeDogId } from '../utils/localStorage';
 import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_ME } from '../utils/queries';
@@ -15,15 +15,25 @@ const Favorites = () => {
     const { loading, data } = useQuery(QUERY_ME);
     const [removeDog] = useMutation(REMOVE_DOG);
     const userData = data?.me || {};
+    //console.log(userData);
+    //const[favorites, setFavorites] = useState([]);
+    //console.log(favorites);
+
+   /* useEffect(() => {
+        setFavorites(userData?.dogs);
+    }, [userData]);*/
 
     const handleRemoveDog = async (event) => {
-        console.log(event.target);
-
+        //console.log(event.target);
+        //favorites = userData?.dogs;
         const dogId = event.target.getAttribute('data-id');
         
         try {
             await removeDog({ variables: { dogId:dogId } });
             //removeDogId(dogId);
+            //const updatedFavorites = [...favorites].filter((dog) => dog._id !== dogId);
+            ////console.log(updatedFavorites);
+            //setFavorites(updatedFavorites);
         } catch (err) {
             console.log(err);
         }
@@ -47,18 +57,18 @@ const Favorites = () => {
                     : 'No pooches saved to Favorites yet'}
                 </h2>
                 <Row>
-                    {userData.dogs?.map((dog) => {
+                    {userData?.dogs.map((dog) => {
                         return (
                             <Col md="4">
                                 <Card key={dog?._id}>
-                                    {dog?.photos ? (
-                                        <Card.Img src={dog?.photos} 
+                                    {dog?.profile_pic ? (
+                                        <Card.Img src={dog?.profile_pic} 
                                         alt='doggy' 
                                         variant='top' />
                                     ) : null}
                                     <Card.Body>
                                         <Card.Title>{dog?.name}</Card.Title>
-                                        <Card.Text>Breed: {dog?.breeds?.primary}</Card.Text>
+                                        <Card.Text>Breed: {dog?.breed}</Card.Text>
                                         <Card.Text>Age: {dog?.age}</Card.Text>
                                         <Card.Text>Gender: {dog?.gender}</Card.Text>
                                         <Button className='btn-danger' 

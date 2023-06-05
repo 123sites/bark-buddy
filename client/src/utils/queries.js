@@ -9,10 +9,10 @@ export const QUERY_USER = gql`
       dogs {
         _id
         name
-        breeds
+        breed
         age
         gender
-        photos
+        profile_pic
       }
     }
   }
@@ -28,10 +28,10 @@ export const QUERY_ME = gql`
     dogs {
       _id
       name
-      breeds
+      breed
       age
       gender
-      photos
+      profile_pic
     }
   }
 }
@@ -43,10 +43,10 @@ export const QUERY_DOGS = gql`
   dogs {
     _id
     name
-    breeds
+    breed
     age
     gender
-    photos
+    profile_pic
   }
 }
 `;
@@ -56,10 +56,10 @@ export const QUERY_SINGLE_DOG = gql`
     dog(dogId: $dogId) {
       _id
       name
-      breeds
+      breed
       age
       gender
-      photos
+      profile_pic
     }
   }
 `;
