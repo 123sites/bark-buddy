@@ -15,50 +15,53 @@ const Header = () => {
       <div className="container-fluid flex-row justify-space-between">
         <div>
           <Link className="navbar-brand text-light" to="/">
-            <img src={Logo} className="logo" alt=""></img>
-            <h1 className="name navbar-expand-lg fw-bold ml-5">Bark Buddy</h1>
+            <img
+              src={Logo}
+              className="logo"
+              alt="Bark Buddy logo with a glowing heart and paw in the middle"
+            ></img>
+            <h1 className="name navbar-expand-lg fw-bold ml-5 mt-1">
+              Bark Buddy
+            </h1>
           </Link>
         </div>
+
         <div>
           {/* Not need to be logged-in */}
           <Link className="link m-4 fw-bolder" to="/Videos">
             Videos
           </Link>
-
-          {/* MUST be logged-in */}
+          {/* Need to be logged-in */}
           {Auth.loggedIn() ? (
             <>
-              <Link className="link m-4 fw-bolder" to="/favorites">
+              <Link className="link m-4 fw-bolder" to="/">
+                Home
+              </Link>
+              <Link className="link mx-3 fw-bolder" to="/favorites">
                 Favorites
               </Link>
-              <Link className="link m-4 fw-bolder" to="/search">
+              <Link className="link mx-3 fw-bolder" to="/search">
                 Pick A Pooch
               </Link>
-              <Link className="link m-4 fw-bolder" to="/quiz">
+              <Link className="link mx-3 fw-bolder" to="/quiz">
                 Dog Quiz
               </Link>
-              <Link className="link m-4 fw-bolder" to="/me">
+              <Link className="link mx-3 fw-bolder" to="/me">
                 Shelter Donation
               </Link>
-              <Link className="link m-4 fw-bolder" to="/me">
+              <Link className="link mx-3 fw-bolder" to="/me">
                 Find a Shelter
               </Link>
-              <Link className="link m-4 fw-bolder" to="/me">
+              <Link className="link mx-3 fw-bolder" to="/me">
                 {Auth.getProfile().data.username}'s Profile
               </Link>
-              <button className="btn btn-lg m-2 fw-bolder" onClick={logout}>
-                Logout
+              <button className="mx-3 fw-bolder" onClick={logout}>
+                logout
               </button>
-              <a className="btn btn-lg m-2" href='/search'>
-                Pick a Pooch
-              </a>
-              <a className="btn btn-lg m-2" href='/favorites'>
-                Favorite Pooches
-              </a>
             </>
           ) : (
             <>
-              <Link className="link m-4 fw-bolder" to="/home">
+              <Link className="link m-4 fw-bolder" to="/">
                 Home
               </Link>
               <Link className="link m-4 fw-bolder" to="/search">
@@ -67,20 +70,21 @@ const Header = () => {
               <Link className="link m-4 fw-bolder" to="/quiz">
                 Dog Quiz
               </Link>
+              <Link className="link m-4 fw-bolder" to="/videos">
+                Videos
+              </Link>
+
               <Link className="link m-4 fw-bolder" to="/me">
                 Shelter Donation
               </Link>
               <Link className="link m-4 fw-bolder" to="/me">
                 Find a Shelter
               </Link>
-              <Link className="btn btn-lg m-2 fw-bolder" to="/login">
+              <Link className="link m-2 fw-bolder" to="/login">
                 Login
               </Link>
-              <Link
-                className="btn btn-lg my-3 mr-5 ml-3 fw-bolder"
-                to="/signup"
-              >
-                Signup
+              <Link className="link m-2 fw-bolder" to="/signup">
+                signup
               </Link>
             </>
           )}
