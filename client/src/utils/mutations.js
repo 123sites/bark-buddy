@@ -43,14 +43,14 @@ mutation addDog($dogData: DogData!) {
 `;*/
 
 export const ADD_DOG = gql`
-mutation Mutation($name: String!, $breeds: String!, $gender: String!, $age: String!, $photos: String!) {
-  addDog(name: $name, breeds: $breeds, gender: $gender, age: $age, photos: $photos) {
+mutation Mutation($name: String!, $breed: String!, $gender: String!, $age: String!, $profile_pic: String!) {
+  addDog(name: $name, breed: $breed, gender: $gender, age: $age, profile_pic: $profile_pic) {
     _id
     age
-    breeds
+    breed
     gender
     name
-    photos
+    profile_pic
   }
 }
 `;

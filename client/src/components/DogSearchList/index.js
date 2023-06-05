@@ -9,34 +9,53 @@ import { QUERY_DOGS } from '../../utils/queries';
 
 function DogSearchList() {
 
-  const [jsonData, setJsonData] = useState(null);
-
-  useEffect(() => {
-    // Fetch the JSON data
-    fetch('./data.json')
-      .then(response => response.json())
-      .then(data => setJsonData(data))
-      .catch(error => console.error(error));
-  }, []);
-
-
   const { loading, data } = useQuery(QUERY_DOGS);
 
-  const dog = {jsonData};
+  /*const { loading, data } = useQuery(QUERY_DOGS, {
+    variables: {
+      age: 'Adult', // Replace with the desired age description to filter by
+    },
+  });*/
+
+  useEffect(() => {
+
+  })
+
+  const dogData = data || {};
 
   return (
     <div>
+      <select id="dropdown1">
+        <option value="noFilter">Choose Age</option>
+        <option value="option1">Baby</option>
+        <option value="option2">Young</option>
+        <option value="option3">Adult</option>
+      </select>
+
+      <select id="dropdown2">
+        <option value="">Choose Gender</option>
+        <option value="option1">Male</option>
+        <option value="option2">Female</option>
+      </select>
+
+      <select id="dropdown3">
+        <option value="">Choose Breed</option>
+        <option value="option1">Terrier</option>
+        <option value="option2">Mixed Bred</option>
+        <option value="option3">Golden Retriever</option>
+      </select>
+
      <h2>Bark buddies available to adopt:</h2>
-        {jsonData && (
+        {dogData && (
           <div>
-            {jsonData.map(item => (
+            {dogData?.dogs?.map(item => (
               <DogSearchResult key={item.id} dog={item}>
               </DogSearchResult>
             ))}
           </div>
         )}
         <DogSearchResult
-            dog={jsonData}
+            dog={dogData}
           />
     </div>
   )
