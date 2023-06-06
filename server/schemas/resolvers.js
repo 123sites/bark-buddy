@@ -52,12 +52,11 @@ const resolvers = {
           age,
           gender, 
           profile_pic,
-          //owner: context.user.username,
         });
 
         await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $addToSet: { dogs: dog._id } }
+          { $addToSet: { dogs: dog._id } },
         );
 
         return dog;

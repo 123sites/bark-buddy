@@ -13,12 +13,13 @@ import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Videos from "./pages/Videos";
 // import Shelter from './pages/Shelters';
-
+import { ThemeProvider } from "../src/components/Theme/themeContext"; // willis
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Search from "./pages/Search";
 import Favorites from "./pages/Favorites";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 import Quiz from "./pages/Quiz";
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -47,30 +48,35 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <Router>
-        <div className="flex-column justify-flex-start min-100-vh">
-          <Header />
-          <div className="container">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/signup" element={<Signup />} />
-              <Route path="/me" element={<Profile />} />
-              <Route path="/profiles/:username" element={<Profile />} />
-              <Route path="/search" element={<Search />} />
-              <Route path="/favorites" element={<Favorites />} />
-              <Route path="/quiz" element={<Quiz />} />
-              <Route path="/videos" element={<Videos />} />
-
-              {/* <Route 
+      <ThemeProvider>
+        {" "}
+        {/* willis */}
+        <Router>
+          <div className="flex-column justify-flex-start min-100-vh">
+            <Header />
+            <div className="container">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<Signup />} />
+                <Route path="/me" element={<Profile />} />
+                <Route path="/profiles/:username" element={<Profile />} />
+                <Route path="/search" element={<Search />} />
+                <Route path="/favorites" element={<Favorites />} />
+                <Route path="/quiz" element={<Quiz />} />
+                <Route path="/videos" element={<Videos />} /> {/* willis */}
+                {/* <Route path="/shelter" element = {<Shelter />}/> */}
+                {/* <Route 
                 path="/dogs/:dogId" 
                 element={<Dog />}
               /> */}
-            </Routes>
+              </Routes>
+            </div>
+            <Footer />
           </div>
-          <Footer />
-        </div>
-      </Router>
+        </Router>
+      </ThemeProvider>{" "}
+      {/* willis */}
     </ApolloProvider>
   );
 }
