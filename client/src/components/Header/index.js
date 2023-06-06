@@ -54,12 +54,6 @@ const Header = () => {
                 <button className="btn btn-lg m-2 fw-bolder" onClick={logout}>
                   Logout
                 </button>
-                <a className="btn btn-lg m-2" href='/search'>
-                  Pick a Pooch
-                </a>
-                <a className="btn btn-lg m-2" href='/favorites'>
-                  Favorite Pooches
-                </a>
               </>
             ) : (
               <>

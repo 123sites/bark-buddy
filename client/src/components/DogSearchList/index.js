@@ -36,6 +36,7 @@ function DogSearchList({ userData, refetchUser }) {
 
   return (
     <>
+
       <div>
         <select id="dropdown1">
           <option value="ageFilter">Choose Age</option>
@@ -73,6 +74,10 @@ function DogSearchList({ userData, refetchUser }) {
           <option value="option16">Belgian Shepherd</option>
           <option value="option16">Australian Cattle Dog</option>
         </select>
+      </div>
+
+      <div>
+        <button>Clear all filters</button>
       </div>
 
 

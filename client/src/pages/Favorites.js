@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { removeDogId } from '../utils/localStorage';
 import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_ME } from '../utils/queries';
 import { REMOVE_DOG } from '../utils/mutations';
@@ -23,17 +22,11 @@ const Favorites = () => {
     }, []);
 
     const handleRemoveDog = async (event) => {
-        //console.log(event.target);
-        //favorites = userData?.dogs;
         const dogId = event.target.getAttribute('data-id');
 
         try {
             await removeDog({ variables: { dogId: dogId } });
-            refetch(); // React way?
-            //removeDogId(dogId);
-            //const updatedFavorites = [...favorites].filter((dog) => dog._id !== dogId);
-            ////console.log(updatedFavorites);
-            //setFavorites(updatedFavorites);
+            refetch(); 
         } catch (err) {
             console.log(err);
         }
