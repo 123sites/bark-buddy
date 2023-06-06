@@ -27,32 +27,105 @@ const Header = () => {
         </div>
 
         <div>
-          {/* Not need to be logged-in */}
-          <Link className="link m-4 fw-bolder" to="/Videos">
-            Videos
-          </Link>
-          {/* Need to be logged-in */}
-          {Auth.loggedIn() ? (
-            <>
+          <ul className="nav nav-tabs">
+            <li className="nav-item">
+              {/* <a className="nav-link active" aria-current="page" href="#">Active</a> */}
               <Link className="link m-4 fw-bolder" to="/">
                 Home
               </Link>
-              <Link className="link mx-3 fw-bolder" to="/favorites">
+            </li>
+            <li className="nav-item">
+              {/* <a className="nav-link disabled">Disabled</a> */}
+              <Link className="link m-4 fw-bolder" to="/Videos">
+                Videos
+              </Link>
+            </li>
+
+            {/* PROFILE TAB */}
+            <li className="nav-item dropdown">
+              <Link
+                className="arrow dropdown-toggle mx-3 fw-bolder"
+                to="/me"
+                data-bs-toggle="dropdown"
+                role="button"
+                aria-expanded="false"
+              ></Link>
+              {/* <a
+                className="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a> */}
+              <ul className="dropdown-menu">
+                <li>
+                  {/* <a className="dropdown-item" href="#">
+                    Action
+                  </a> */}
+                  <Link className="ddText fw-bolder mx-3" to="/favorites">
+                    Favorites
+                  </Link>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="#">
+                    Donate
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="#">
+                    Account Settings
+                  </a>
+                </li>
+
+                {/* SEARCH TAB */}
+                <li>
+                  <hr className="dropdown-divider" />{" "}
+                </li>
+                <li>
+                  <a className="dropdown-item" href="#">
+                    Separated link
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                Link
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          {/* Not need to be logged-in */}
+          {/* <Link className="link m-4 fw-bolder" to="/">
+                Home
+              </Link> */}
+          {/* <Link className="link m-4 fw-bolder" to="/Videos">
+            Videos
+          </Link> */}
+          {/* Need to be logged-in */}
+          {/* {Auth.loggedIn() ? (
+            <>
+              <Link className="mx-3 fw-bolder" to="/favorites">
                 Favorites
               </Link>
-              <Link className="link mx-3 fw-bolder" to="/search">
+              <Link className="mx-3 fw-bolder" to="/search">
                 Pick A Pooch
               </Link>
-              <Link className="link mx-3 fw-bolder" to="/quiz">
+              <Link className="mx-3 fw-bolder" to="/quiz">
                 Dog Quiz
               </Link>
-              <Link className="link mx-3 fw-bolder" to="/me">
+              <Link className="mx-3 fw-bolder" to="/me">
                 Shelter Donation
               </Link>
-              <Link className="link mx-3 fw-bolder" to="/me">
+              <Link className="mx-3 fw-bolder" to="/me">
                 Find a Shelter
               </Link>
-              <Link className="link mx-3 fw-bolder" to="/me">
+              <Link className="mx-3 fw-bolder" to="/me">
                 {Auth.getProfile().data.username}'s Profile
               </Link>
               <button className="mx-3 fw-bolder" onClick={logout}>
@@ -61,9 +134,6 @@ const Header = () => {
             </>
           ) : (
             <>
-              <Link className="link m-4 fw-bolder" to="/">
-                Home
-              </Link>
               <Link className="link m-4 fw-bolder" to="/search">
                 Pick a Pooch
               </Link>
@@ -87,7 +157,7 @@ const Header = () => {
                 signup
               </Link>
             </>
-          )}
+          )} */}
         </div>
       </div>
     </header>

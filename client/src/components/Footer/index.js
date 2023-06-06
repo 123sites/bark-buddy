@@ -25,7 +25,7 @@ const Footer = () => {
       >
         <i className="fas fa-envelope"></i>
       </a>
-      <h4 className="my-3 fw-bold fs-7">
+      <h4 className="made my-3 fw-bolder fs-7">
         Made with{" "}
         <span
           className="emoji"

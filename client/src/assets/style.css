@@ -1,8 +1,40 @@
+:root {
+  /* main body */
+  --bg-snow: #FAF8FA;
+  /* colors: */
+  --brand-primary: #5E239D;
+  --brand-secondary: #8A4FFF;
+  --brand-tertiary: #ff3d3d;
+  --border: #FBB94C;
+  /* font */
+  --font-primary: #5E239D;
+  --font-secondary: #FAF8FA;
+  --font-tertiary: black;
+  /* cards */
+  --cards: #FBB94C;
+  /* buttons */
+  --btn: #faf8fa;
+  --btn-font: #5E239D;
+  --btn-shadow: #666;
+  /* active buttons */
+  --btn-active-bgwhite: #FAF8FA;
+  --btn-active-bgorange: #FBB94C;
+  --btn-active-font: #5E239D;
+  /* hover buttons */
+  --btn-hover-bgwhite: #FAF8FA;
+  --btn-hover-bgorange: #FBB94C;
+  --btn-hover-font: #5E239D;
+}
+
 h1,
 .name {
-  color: #FAF8FA;
+  color: var(--bg-snow);
   text-decoration: none;
   font-size: 55px;
+}
+
+.made {
+  color: var(--font-primary)
 }
 
 span {
@@ -18,7 +50,7 @@ li {
 }
 
 p {
-  color: #5E239D !important;
+  color: var(--brand-primary) !important;
 }
 
 .logo {
@@ -27,7 +59,7 @@ p {
 }
 
 .nav {
-  background-color: #5E239D !important;
+  background-color: var(--brand-primary) !important;
 }
 
 .btn {
@@ -35,25 +67,25 @@ p {
   text-align: center;
   cursor: pointer;
   outline: none !important;
-  color: #5E239D !important;
-  background-color: #FAF8FA !important;
+  color: var(--brand-primary) !important;
+  background-color: var(--button) !important;
   border: none;
   border-radius: 15px;
-  box-shadow: 0 9px #999;
+  box-shadow: 0 9px var(--btn-shadow);
 }
 
 .btn:hover {
-  background-color: #FBB94C !important
+  background-color: var(--btn-hover) !important
 }
 
 .btn:active {
-  background-color: #FBB94C !important;
-  box-shadow: 0 5px #666;
+  background-color: var(--btn-active) !important;
+  box-shadow: 0 5px var(--btn-shadow);
   transform: translateY(4px);
 }
 
 .login {
-  background: #5E239D;
+  background: var(--brand-primary);
 
 }
 
@@ -63,70 +95,80 @@ p {
 
 .videos {
   text-decoration: none !important;
-  color: #5E239D !important;
+  color: var(--font-primary) !important;
 }
 
 .videos:hover {
   text-decoration: none !important;
-  background-color: #FAF8FA !important;
-  color: #5E239D !important;
+  background-color: var(--btn-active-bgwhite) !important;
+  color: var(--btn-hover-font) !important;
   border-radius: 15px;
   padding: 7px;
 }
 
 .vContainer {
-  background-color: #FBB94C !important;
-  color: #5E239D !important;
-}
-
-.link:hover {
-  background-color: #FAF8FA !important;
-  color: #5E239D !important;
-  border: none;
-  border-radius: 15px;
-  padding: 7px;
+  background-color: var(--cards) !important;
+  color: var(--brand-primary) !important;
 }
 
 .link {
-  color: #FAF8FA !important;
+  color: var(--font-secondary) !important;
   font-size: 20px;
   text-decoration: none;
   letter-spacing: 2px;
 }
 
 .link:hover {
-  background-color: #FAF8FA !important;
-  color: #5E239D !important;
+  background-color: var(--btn) !important;
+  color: var(--btn-font) !important;
   border: none;
   border-radius: 15px;
   padding: 7px;
 }
 
 .link:active {
-  color: #5E239D !important;
+  color: var(--btn-active-font) !important;
   padding: 7px;
-  background-color: #FAF8FA !important;
+  background-color: var() !important;
   border: none;
   border-radius: 15px;
+}
+
+.arrow {
+  color: var(--font-secondary)
+}
+
+.arrow:active {
+  color: var(--btn-active-bgorange)
+}
+
+.ddText {
+  color: var(--font-primary);
+  text-decoration: none;
+}
+
+.ddText:active {
+  color: var(--font-primary);
+  text-decoration: none;
 }
 
 .fab,
 .fas {
   justify-content: space-between !important;
-  color: black;
+  color: var(--font-primary);
   margin: 10px;
   font-size: 30px;
 }
 
 .vTitles {
-  background-color: #5E239D !important;
-  color: #FAF8FA !important;
+  background-color: var(--brand-primary) !important;
+  color: var(--font-secondary) !important;
   border-radius: 5px;
   padding: 6px;
 }
 
 .vText {
-  background-color: #5E239D !important;
-  color: #FAF8FA !important;
+  background-color: var(--brand-primary) !important;
+  color: var(--font-secondary) !important;
   border-radius: 5px;
 }
