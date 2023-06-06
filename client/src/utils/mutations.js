@@ -43,7 +43,7 @@ mutation addDog($dogData: DogData!) {
 `;*/
 
 export const ADD_DOG = gql`
-mutation Mutation($name: String!, $breed: String!, $gender: String!, $age: String!, $profile_pic: String!) {
+mutation addDog($name: String!, $breed: String!, $gender: String!, $age: String!, $profile_pic: String!) {
   addDog(name: $name, breed: $breed, gender: $gender, age: $age, profile_pic: $profile_pic) {
     _id
     age
@@ -74,7 +74,7 @@ mutation removeDog($dogId: ID!) {
 
 
 export const REMOVE_DOG = gql`
-mutation Mutation($dogId: ID!) {
+mutation removeDog($dogId: ID!) {
   removeDog(dogId: $dogId) {
     username
     dogs {
