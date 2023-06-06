@@ -42,10 +42,10 @@ const Header = () => {
                 <Link className="link m-4 fw-bolder" to="/quiz">
                   Dog Quiz
                 </Link>
-                <Link className="link m-4 fw-bolder" to="/me">
+                <Link className="link m-4 fw-bolder" to="/donation">
                   Shelter Donation
                 </Link>
-                <Link className="link m-4 fw-bolder" to="/me">
+                <Link className="link m-4 fw-bolder" to="/shelter">
                   Find a Shelter
                 </Link>
                 <Link className="link m-4 fw-bolder" to="/me">

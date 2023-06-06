@@ -12,7 +12,7 @@ import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Videos from "./pages/Videos";
-// import Shelter from './pages/Shelters';
+import Shelters from './pages/Shelter';
 import { ThemeProvider } from '../src/components/Theme/themeContext'; // willis
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -21,6 +21,7 @@ import Favorites from './pages/Favorites';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import Quiz from './pages/Quiz';
+
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -64,7 +65,7 @@ function App() {
                 <Route path="/favorites" element={<Favorites />} />
                 <Route path="/quiz" element={<Quiz />} />
                 <Route path="/videos" element={<Videos />} /> {/* willis */}
-                {/* <Route path="/shelter" element = {<Shelter />}/> */}
+                <Route path="/shelter" element={<Shelters />} /> {/*Faz*/}
 
                 {/* <Route 
                 path="/dogs/:dogId" 
