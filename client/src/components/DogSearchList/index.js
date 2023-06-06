@@ -76,7 +76,7 @@ function DogSearchList() {
       </div>
 
 
-      </div>
+      <div>
       <Container>
           <h3 className='pt-4'>Bark buddies available to adopt:</h3>
         </Container>
