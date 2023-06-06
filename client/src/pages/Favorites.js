@@ -61,7 +61,7 @@ const Favorites = () => {
                     {userData?.dogs.map((dog) => {
                         return (
                             <Col md="4">
-                                <Card key={dog?._id}>
+                                <Card key={dog?._id} className='h-100'>
                                     {dog?.profile_pic ? (
                                         <Card.Img src={dog?.profile_pic} 
                                         alt='doggy' 

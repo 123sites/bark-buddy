@@ -60,6 +60,7 @@ function App() {
               <Route path="/search" element={<Search />} />
               <Route path="/favorites" element={<Favorites />} />
               <Route path="/videos" element={<Videos />} />
+              <Route path="/quiz" element={<Quiz />} />
               {/* <Route 
                 path="/dogs/:dogId" 
                 element={<Dog />}
