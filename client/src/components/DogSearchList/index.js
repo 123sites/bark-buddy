@@ -16,7 +16,7 @@ import {
   Row
 } from 'react-bootstrap';
 
-function DogSearchList() {
+function DogSearchList({ userData, refetchUser }) {
 
   const { loading, data } = useQuery(QUERY_DOGS);
 
@@ -77,19 +77,19 @@ function DogSearchList() {
 
 
       <div>
-      <Container>
+        <Container>
           <h3 className='pt-4'>Bark buddies available to adopt:</h3>
         </Container>
       </div>
 
-    
+
       <Container>
         <Row>
           {dogData && (
             <Col>
               <div className='h-100'>
                 {dogData?.dogs?.map(item => (
-                  <DogSearchResult key={item.id} dog={item}>
+                  <DogSearchResult key={item.id} dog={item} userData={userData} refetchUser={refetchUser}>
                   </DogSearchResult>
                 ))}
               </div>
