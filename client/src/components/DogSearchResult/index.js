@@ -72,7 +72,6 @@ function DogSearchResult({ dog }) {
   return (
     <>
       <Container>
-        <Row>
           <Col md="4">
             <Card className='h-100' key={dog?.id}>
               <Card.Img src={dog?.profile_pic}
@@ -108,7 +107,6 @@ function DogSearchResult({ dog }) {
 
             </Card>
           </Col>
-        </Row>
       </Container>
     </>
   );

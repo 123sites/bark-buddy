@@ -20,6 +20,7 @@ export default function WebpageContainer() {
   const handlePageChange = (page) => setCurrentPage(page);
   const changePage = (page) => setCurrentPage(page);
   const renderPage = () => {
+
     if (currentPage === 'Dog') {
       return <Dog handlePageChange = {handlePageChange} currentPage='dog'/>;
     }
