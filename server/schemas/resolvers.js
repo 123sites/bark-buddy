@@ -7,10 +7,9 @@ const resolvers = {
     // user: async (parent, { username }) => {
     //   return User.findOne({ username }).populate('dogs');
     // },
-    // dogs: async (parent, { owner }) => {
-    //   const params = owner ? { owner } : {};
-    //   return Dog.find(params).sort({ createdAt: -1 });
-    // },
+    dogs: async () => {
+      return Dog.find();
+    },
     // dog: async (parent, { dogId }) => {
     //   return Dog.findOne({ _id: dogId });
     // },
@@ -45,20 +44,19 @@ const resolvers = {
 
       return { token, user };
     },
-    addDog: async (parent, { name, breeds, age, gender, photos }, context) => {
+    addDog: async (parent, { name, breed, age, gender, profile_pic }, context) => {
       if (context.user) {
-        const dog = await Dog.create({
+        const dog = await Dog.findOne({
           name,
-          breeds,
+          breed,
           age,
           gender, 
-          photos,
-          owner: context.user.username,
+          profile_pic,
         });
 
         await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $addToSet: { dogs: dog._id } }
+          { $addToSet: { dogs: dog._id } },
         );
 
         return dog;
