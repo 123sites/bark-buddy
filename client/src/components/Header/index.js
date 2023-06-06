@@ -17,7 +17,7 @@ const Header = () => {
     <div className={`header ${theme}`}>
       {" "}
       {/*willis*/}
-      <header className="nav mb-4 py-3">
+      <nav className="top navbar sticky-top mb-4 py-3">
         <div className="container-fluid flex-row justify-space-between">
           <div>
             <Link className="navbar-brand text-light" to="/">
@@ -25,87 +25,129 @@ const Header = () => {
               <h1 className="name navbar-expand-lg fw-bold ml-5">Bark Buddy</h1>
             </Link>
           </div>
+          <div className="row">
+            {/* Not logged-in, dog search */}
+            <div className="container-fluid row">
+              <form className="d-flex" role="search">
+                <input
+                  className="form-control me-2 fs-6 fw-bold text-center"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button className="search" type="submit">
+                  Search for a dog{" "}
+                </button>
+              </form>
 
-          <li>
-            <Link className="link m-4 fw-bolder" to="/">
-              Home
-            </Link>
-          </li>
-
-          <li className="nav-item">
-            {/* <a className="nav-link disabled">Disabled</a> */}
-            <Link className="link m-4 fw-bolder" to="/Videos">
-              Videos
-            </Link>
-          </li>
-
-          {/* PROFILE TAB */}
-          <li className="nav-item dropdown">
-            <Link
-              className="arrow dropdown-toggle mx-3 fw-bolder"
-              to="/me"
-              data-bs-toggle="dropdown"
-              role="button"
-              aria-expanded="false"
-            >
-              {/* getProfile()'s Profile */}
-            </Link>
-          </li>
-          {/* <Link className="link m-4 fw-bolder" to="/me">
-                {Auth.getProfile().data.username}'s Profile
-              </Link>
-            </Link>
-          </li> */}
-          {/* <a
-                className="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-                href="#"
-                role="button"
-                aria-expanded="false"
-              >
-                Dropdown
-              </a> */}
-          <ul className="dropdown-menu">
-            <li>
-              {/* <a className="dropdown-item" href="#">
+              <ul>
+                <li>
+                  <Link className="link m-4 fw-bolder" to="/">
+                    Home
+                  </Link>
+                </li>
+                {/* Logged-in only, Profile Tab */}
+                {/* <a className="nav-link disabled">Disabled</a> */}
+              </ul>
+              <li className="nav-item dropdown profileTab">
+                <a
+                  className="nav-link dropdown-toggle tabBox fs-4 fw-bolder"
+                  to="/profile"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Profile
+                </a>
+                <ul className="dropdown-menu">
+                  <li className="dropdown-item">
+                    <Link
+                      className="dropdown-toggle arrow mx-3 fw-bolder"
+                      to="/me"
+                      data-bs-toggle="dropdown"
+                      role="button"
+                      aria-expanded="false"
+                    >
+                      {/* getProfile()'s Profile */}
+                    </Link>
+                  </li>
+                  <li>
+                    {/* <a className="dropdown-item" href="#">
                     Action
                   </a> */}
-              <Link className="ddText fw-bolder mx-3" to="/favorites">
-                Favorites
-              </Link>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">
-                Donate
-              </a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">
-                Account Settings
-              </a>
-            </li>
+                    <Link
+                      className="dropdown-item ddText fw-bolder mx-3"
+                      to="/favorites"
+                    >
+                      Favorites
+                    </Link>
+                  </li>
+                  <li>
+                    {/* <a className="dropdown-item" href="#">
+                    Action
+                  </a> */}
+                    <Link
+                      className="dropdown-item ddText fw-bolder mx-3"
+                      to="/dog"
+                    >
+                      Pick A Pooch
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="dropdown-item ddText fw-bolder mx-3"
+                      to="/shelter"
+                    >
+                      Find a Shelter
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="dropdown-item ddText fw-bolder mx-3"
+                      to="/donate"
+                    >
+                      Shelter Donation
+                    </Link>
+                  </li>
+                  <li>
+                    <a
+                      className="dropdown-item ddText fw-bolder mx-3"
+                      to="/profile"
+                    >
+                      Account Settings
+                    </a>
+                  </li>
+                </ul>
+              </li>
 
-            {/* SEARCH TAB */}
-            <li>
-              <hr className="dropdown-divider" />{" "}
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">
-                Separated link
-              </a>
-            </li>
-
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Link
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link disabled">Disabled</a>
-            </li>
-          </ul>
+              {/* /// Right-side /// */}
+              <ul>
+                {/* Not logged-in */}
+                <li>
+                  <Link className="link m-4 fw-bolder" to="/quiz">
+                    Dog Quiz
+                  </Link>
+                </li>
+                {/* Not logged-in */}
+                <li>
+                  <Link className="link m-4 fw-bolder" to="/videos">
+                    Videos
+                  </Link>
+                </li>
+              </ul>
+              {/* <div className="link m-4 fw-bolder" onClick={signup}>
+            signup
+          </button>{" "}
+          <div className="link m-4 fw-bolder" onClick={login}>
+            login
+          </button>{" "}  */}
+              <div className="link m-4 fw-bolder" onClick={logout}>
+                logout
+              </div>
+            </div>
+          </div>
         </div>
-      </header>
+      </nav>
       <div>
         <button onClick={toggleTheme}>
           {theme === "light" ? (

@@ -14,7 +14,11 @@ const Home = ({ handlePageChange }) => {
   return (
     <main>
       <div className="img-fluid col mt-7">
-        <img src={manyDogs} className="manyDogs" alt="Many dogs all around a lady." />
+        <img
+          src={manyDogs}
+          className="manyDogs"
+          alt="Many dogs all around a Ani."
+        />
         {/* <DogSearch/> */}
       </div>
     </main>

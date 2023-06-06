@@ -4,7 +4,7 @@
   /* colors: */
   --brand-primary: #5E239D;
   --brand-secondary: #8A4FFF;
-  --brand-tertiary: #ff3d3d;
+  --brand-tertiary: #de3c4b;
   --border: #FBB94C;
   /* font */
   --font-primary: #5E239D;
@@ -58,7 +58,7 @@ p {
   font-size: 30;
 }
 
-.nav {
+.top {
   background-color: var(--brand-primary) !important;
 }
 
@@ -86,7 +86,6 @@ p {
 
 .login {
   background: var(--brand-primary);
-
 }
 
 .manyDogs {
@@ -119,37 +118,66 @@ p {
 }
 
 .link:hover {
-  background-color: var(--btn) !important;
-  color: var(--btn-font) !important;
+  color: var(--btn-active-bgorange) !important;
   border: none;
   border-radius: 15px;
   padding: 7px;
 }
 
 .link:active {
-  color: var(--btn-active-font) !important;
+  color: var(--btn-active-bgorange) !important;
   padding: 7px;
-  background-color: var() !important;
   border: none;
   border-radius: 15px;
 }
 
-.arrow {
-  color: var(--font-secondary)
+.profileTab {
+  color: var(--font-secondary);
 }
 
-.arrow:active {
-  color: var(--btn-active-bgorange)
+.profileTab:active,
+.profileTab:hover {
+  color: var(--btn-active-bgorange) !important;
 }
+
+/* .tabBox {
+  color: var(--font-primary)
+} */
 
 .ddText {
-  color: var(--font-primary);
+  color: var(--font-secondary);
   text-decoration: none;
+}
+
+.ddText:hover {
+  color: var(--btn-active-bgorange);
+  background-color: var(--btn-active-bgorange);
+  text-decoration: none;
+  border: none;
+  border-radius: 15px;
+  padding: 7px;
 }
 
 .ddText:active {
-  color: var(--font-primary);
+  background-color: var(--btn-active-bgorange);
   text-decoration: none;
+  border: none;
+  border-radius: 15px;
+  padding: 7px;
+}
+
+.search {
+  letter-spacing: 2px;
+  background-color: var(--brand-tertiary);
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+  outline: none !important;
+  color: var(--font-secondary);
+  border: none;
+  font-weight: bolder;
+  border-radius: 12px;
+  box-shadow: 0 9px var(--btn-shadow);
 }
 
 .fab,
