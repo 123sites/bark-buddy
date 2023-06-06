@@ -97,7 +97,6 @@ function DogSearchResult({ dog, userData, refetchUser }) {
 
             {Auth.loggedIn() && (
               <Button
-                // disabled={savedDogIds?.some((savedDogId) => savedDogId === dog._id)}
                 disabled={userData?.dogs?.some((savedDog) => savedDog._id === dog._id)}
                 className='btn-info'
                 data-name={dog?.name}
@@ -107,9 +106,6 @@ function DogSearchResult({ dog, userData, refetchUser }) {
                 data-id={dog?._id}
                 data-profile_pic={dog?.profile_pic}
                 onClick={(event) => handleSaveDog(event)}>
-                {/* {savedDogIds?.some((savedDogId) => savedDogId === dog._id)
-                  ? 'Pooch saved to Favorites already'
-                  : 'Save to Favorite Pooches'} */}
                 {userData?.dogs.some((savedDog) => savedDog._id === dog._id)
                   ? 'Pooch saved to Favorites already'
                   : 'Save to Favorite Pooches'}

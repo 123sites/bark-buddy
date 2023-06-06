@@ -22,13 +22,6 @@ const Favorites = () => {
         refetch();
     }, []);
 
-    //const[favorites, setFavorites] = useState([]);
-    //console.log(favorites);
-
-    /* useEffect(() => {
-         setFavorites(userData?.dogs);
-     }, [userData]);*/
-
     const handleRemoveDog = async (event) => {
         //console.log(event.target);
         //favorites = userData?.dogs;
@@ -36,7 +29,7 @@ const Favorites = () => {
 
         try {
             await removeDog({ variables: { dogId: dogId } });
-            window.location.reload(); // React way?
+            refetch(); // React way?
             //removeDogId(dogId);
             //const updatedFavorites = [...favorites].filter((dog) => dog._id !== dogId);
             ////console.log(updatedFavorites);
