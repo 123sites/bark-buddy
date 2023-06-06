@@ -75,12 +75,14 @@ function DogSearchList() {
         </select>
       </div>
 
-      <div>
-        <Container>
+
+      </div>
+      <Container>
           <h3 className='pt-4'>Bark buddies available to adopt:</h3>
         </Container>
       </div>
 
+    
       <Container>
         <Row>
           {dogData && (
