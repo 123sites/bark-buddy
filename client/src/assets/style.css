@@ -14,8 +14,9 @@
   --cards: #FBB94C;
   /* buttons */
   --btn: #faf8fa;
+  --btn: #5E239D;
   --btn-font: #5E239D;
-  --btn-shadow: #666;
+  --btn-shadow: #7e7c80;
   /* active buttons */
   --btn-active-bgwhite: #FAF8FA;
   --btn-active-bgorange: #FBB94C;
@@ -132,7 +133,7 @@ p {
 }
 
 .profileTab {
-  color: var(--font-secondary);
+  color: var(--font-secondary) !important;
 }
 
 .profileTab:active,
@@ -140,44 +141,47 @@ p {
   color: var(--btn-active-bgorange) !important;
 }
 
-/* .tabBox {
-  color: var(--font-primary)
-} */
-
 .ddText {
-  color: var(--font-secondary);
+  color: var(--font-primary) !important;
   text-decoration: none;
+  letter-spacing: 1px;
 }
 
 .ddText:hover {
-  color: var(--btn-active-bgorange);
-  background-color: var(--btn-active-bgorange);
+  color: var(--brand-tertiary) !important;
   text-decoration: none;
   border: none;
   border-radius: 15px;
-  padding: 7px;
+  padding: 18px !important;
+  margin: 7px !important;
 }
 
 .ddText:active {
-  background-color: var(--btn-active-bgorange);
+  color: var(--brand-tertiary) !important;
   text-decoration: none;
   border: none;
   border-radius: 15px;
-  padding: 7px;
 }
 
-.search {
+.searchBox {
   letter-spacing: 2px;
-  background-color: var(--brand-tertiary);
-  padding: 10px 20px;
-  text-align: center;
-  cursor: pointer;
-  outline: none !important;
+  border-radius: 7px;
+}
+
+.searchBtn {
   color: var(--font-secondary);
-  border: none;
-  font-weight: bolder;
-  border-radius: 12px;
+  background-color: var(--btn-bg);
+  letter-spacing: 1px;
+  border-radius: 7px;
   box-shadow: 0 9px var(--btn-shadow);
+}
+
+.searchBtn:active {
+  color: var(--btn-hover-bgorange);
+}
+
+.searchBtn:hover {
+  color: var(--btn-active-bgorange);
 }
 
 .fab,
