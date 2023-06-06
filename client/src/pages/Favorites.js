@@ -15,7 +15,7 @@ const Favorites = () => {
     const [removeDog] = useMutation(REMOVE_DOG);
     const userData = data?.me || {};
 
-    console.log("data: ", data);
+    //console.log("data: ", data);
 
     useEffect(() => {
         refetch();
