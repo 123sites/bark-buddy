@@ -25,72 +25,85 @@ const Header = () => {
               <h1 className="name navbar-expand-lg fw-bold ml-5">Bark Buddy</h1>
             </Link>
           </div>
-          <div>
-            {/* Not need to be logged-in */}
+
+          <li>
+            <Link className="link m-4 fw-bolder" to="/">
+              Home
+            </Link>
+          </li>
+
+          <li className="nav-item">
+            {/* <a className="nav-link disabled">Disabled</a> */}
             <Link className="link m-4 fw-bolder" to="/Videos">
               Videos
             </Link>
+          </li>
 
-            {/* MUST be logged-in */}
-            {Auth.loggedIn() ? (
-              <>
-                <Link className="link m-4 fw-bolder" to="/favorites">
-                  Favorites
-                </Link>
-                <Link className="link m-4 fw-bolder" to="/search">
-                  Pick A Pooch
-                </Link>
-                <Link className="link m-4 fw-bolder" to="/quiz">
-                  Dog Quiz
-                </Link>
-                <Link className="link m-4 fw-bolder" to="/me">
-                  Shelter Donation
-                </Link>
-                <Link className="link m-4 fw-bolder" to="/me">
-                  Find a Shelter
-                </Link>
-                <Link className="link m-4 fw-bolder" to="/me">
-                  {Auth.getProfile().data.username}'s Profile
-                </Link>
-                <button className="btn btn-lg m-2 fw-bolder" onClick={logout}>
-                  Logout
-                </button>
-                <a className="btn btn-lg m-2" href="/search">
-                  Pick a Pooch
-                </a>
-                <a className="btn btn-lg m-2" href="/favorites">
-                  Favorite Pooches
-                </a>
-              </>
-            ) : (
-              <>
-                <Link className="link m-4 fw-bolder" to="/home">
-                  Home
-                </Link>
-                <Link className="link m-4 fw-bolder" to="/search">
-                  Pick a Pooch
-                </Link>
-                <Link className="link m-4 fw-bolder" to="/quiz">
-                  Dog Quiz
-                </Link>
-                <Link className="link m-4 fw-bolder" to="/me">
-                  Shelter Donation
-                </Link>
-                <Link className="link m-4 fw-bolder" to="/me">
-                  Find a Shelter
-                </Link>
-                <Link className="btn btn-lg m-2 fw-bolder" to="/login">
-                  Login
-                </Link>
-                <Link
-                  className="btn btn-lg my-3 mr-5 ml-3 fw-bolder"
-                  to="/signup"
-                >
-                  Signup
-                </Link>
-              </>
-            )}
-          </div>
+          {/* PROFILE TAB */}
+          <li className="nav-item dropdown">
+            <Link
+              className="arrow dropdown-toggle mx-3 fw-bolder"
+              to="/me"
+              data-bs-toggle="dropdown"
+              role="button"
+              aria-expanded="false"
+            >
+              {/* getProfile()'s Profile */}
+            </Link>
+          </li>
+          {/* <Link className="link m-4 fw-bolder" to="/me">
+                {Auth.getProfile().data.username}'s Profile
+              </Link>
+            </Link>
+          </li> */}
+          {/* <a
+                className="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a> */}
+          <ul className="dropdown-menu">
+            <li>
+              {/* <a className="dropdown-item" href="#">
+                    Action
+                  </a> */}
+              <Link className="ddText fw-bolder mx-3" to="/favorites">
+                Favorites
+              </Link>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">
+                Donate
+              </a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">
+                Account Settings
+              </a>
+            </li>
+
+            {/* SEARCH TAB */}
+            <li>
+              <hr className="dropdown-divider" />{" "}
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">
+                Separated link
+              </a>
+            </li>
+
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                Link
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
         </div>
       </header>
       <div>
@@ -107,3 +120,73 @@ const Header = () => {
 };
 
 export default Header;
+
+{
+  /* Not need to be logged-in */
+}
+{
+  /* <Link className="link m-4 fw-bolder" to="/">
+                Home
+              </Link> */
+}
+{
+  /* <Link className="link m-4 fw-bolder" to="/Videos">
+            Videos
+          </Link> */
+}
+{
+  /* Need to be logged-in */
+}
+{
+  /* {Auth.loggedIn() ? (
+            <>
+              <Link className="mx-3 fw-bolder" to="/favorites">
+                Favorites
+              </Link>
+              <Link className="mx-3 fw-bolder" to="/search">
+                Pick A Pooch
+              </Link>
+              <Link className="mx-3 fw-bolder" to="/quiz">
+                Dog Quiz
+              </Link>
+              <Link className="mx-3 fw-bolder" to="/me">
+                Shelter Donation
+              </Link>
+              <Link className="mx-3 fw-bolder" to="/me">
+                Find a Shelter
+              </Link>
+              <Link className="mx-3 fw-bolder" to="/me">
+                {Auth.getProfile().data.username}'s Profile
+              </Link>
+              <button className="mx-3 fw-bolder" onClick={logout}>
+                logout
+              </button>
+            </>
+          ) : (
+            <>
+              <Link className="link m-4 fw-bolder" to="/search">
+                Pick a Pooch
+              </Link>
+              <Link className="link m-4 fw-bolder" to="/quiz">
+                Dog Quiz
+              </Link>
+              <Link className="link m-4 fw-bolder" to="/videos">
+                Videos
+              </Link>
+
+
+              <Link className="link m-4 fw-bolder" to="/me">
+                Shelter Donation
+              </Link>
+              <Link className="link m-4 fw-bolder" to="/me">
+                Find a Shelter
+              </Link>
+              <Link className="link m-2 fw-bolder" to="/login">
+                Login
+              </Link>
+              <Link className="link m-2 fw-bolder" to="/signup">
+                signup
+              </Link>
+            </>
+          )} */
+}
