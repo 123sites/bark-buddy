@@ -10,30 +10,14 @@ import {
   Col
 } from 'react-bootstrap';
 
-// import { saveDogIds, getSavedDogIds } from "../../utils/localStorage";
 import { useMutation } from '@apollo/client';
 import { useQuery } from '@apollo/client';
 import { ADD_DOG } from "../../utils/mutations";
 import { QUERY_DOGS } from "../../utils/queries";
 
 function DogSearchResult({ dog, userData, refetchUser }) {
-  // create state for holding returned api data
-  //const [searchedDogs, setSearchedDogs] = useState([]);
-
-  // create state for holding saved dogId values
-  // const [savedDogIds, setSavedDogIds] = useState(userData?.dogs.map(x => x._id));//getSavedDogIds()
-  // useEffect(() => {
-  //   setSavedDogIds(userData?.dogs.map(x => x._id));
-  // }, [userData]);
 
   const [saveDog] = useMutation(ADD_DOG);
-  // const [dogQuery] = useQuery(QUERY_DOGS);
-
-
-  // set up useEffect hook to save 'savedDogIds' list to localStorage on component unmount
-  // useEffect(() => {
-  //   return () => saveDogIds(savedDogIds);
-  // });
 
   // create function to handle saving a dog to the database
   const handleSaveDog = async (event) => {
@@ -44,9 +28,7 @@ function DogSearchResult({ dog, userData, refetchUser }) {
     const gender = event.target.getAttribute('data-gender');
     const breed = event.target.getAttribute('data-breed');
     const profile_pic = event.target.getAttribute('data-profile_pic');
-    // find the dog in 'searchedDogs' state by the matching id
-    //const dogId = event.target.getAttribute('data-id');
-
+  
     // get token
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
@@ -55,7 +37,6 @@ function DogSearchResult({ dog, userData, refetchUser }) {
     }
 
     try {
-      //console.log(dogToSave);
       await saveDog({
         variables: {
           name: name,
@@ -68,17 +49,13 @@ function DogSearchResult({ dog, userData, refetchUser }) {
 
       refetchUser();
 
-      // if dog successfully saved to user account, save dog id to state
-      //console.log(dogId);
-      //setSavedDogIds([dogId]);
     } catch (err) {
       console.log(err);
     }
   };
 
-  console.log("userData: ", userData);
-  // console.log("savedDogIds: ", savedDogIds);
-  console.log("dog._id: ", dog._id);
+  //console.log("userData: ", userData);
+  //console.log("dog._id: ", dog._id);
   return (
     <>
       <Container>
@@ -97,7 +74,6 @@ function DogSearchResult({ dog, userData, refetchUser }) {
 
             {Auth.loggedIn() && (
               <Button
-                // disabled={savedDogIds?.some((savedDogId) => savedDogId === dog._id)}
                 disabled={userData?.dogs?.some((savedDog) => savedDog._id === dog._id)}
                 className='btn-info'
                 data-name={dog?.name}
@@ -107,9 +83,6 @@ function DogSearchResult({ dog, userData, refetchUser }) {
                 data-id={dog?._id}
                 data-profile_pic={dog?.profile_pic}
                 onClick={(event) => handleSaveDog(event)}>
-                {/* {savedDogIds?.some((savedDogId) => savedDogId === dog._id)
-                  ? 'Pooch saved to Favorites already'
-                  : 'Save to Favorite Pooches'} */}
                 {userData?.dogs.some((savedDog) => savedDog._id === dog._id)
                   ? 'Pooch saved to Favorites already'
                   : 'Save to Favorite Pooches'}
