@@ -104,7 +104,7 @@ const Header = () => {
                   <li>
                     <Link
                       className="dropdown-item ddText fw-bolder mx-3"
-                      to="/donate"
+                      to="/donation"
                     >
                       Shelter Donation
                     </Link>
