@@ -10,25 +10,30 @@ import {
   Col
 } from 'react-bootstrap';
 
-import { saveDogIds, getSavedDogIds } from "../../utils/localStorage";
+// import { saveDogIds, getSavedDogIds } from "../../utils/localStorage";
 import { useMutation } from '@apollo/client';
 import { useQuery } from '@apollo/client';
 import { ADD_DOG } from "../../utils/mutations";
 import { QUERY_DOGS } from "../../utils/queries";
 
-function DogSearchResult({ dog }) {
+function DogSearchResult({ dog, userData, refetchUser }) {
   // create state for holding returned api data
   //const [searchedDogs, setSearchedDogs] = useState([]);
 
   // create state for holding saved dogId values
-  const [savedDogIds, setSavedDogIds] = useState(getSavedDogIds());//getSavedDogIds()
+  // const [savedDogIds, setSavedDogIds] = useState(userData?.dogs.map(x => x._id));//getSavedDogIds()
+  // useEffect(() => {
+  //   setSavedDogIds(userData?.dogs.map(x => x._id));
+  // }, [userData]);
+
   const [saveDog] = useMutation(ADD_DOG);
   // const [dogQuery] = useQuery(QUERY_DOGS);
 
+
   // set up useEffect hook to save 'savedDogIds' list to localStorage on component unmount
-  useEffect(() => {
-    return () => saveDogIds(savedDogIds);
-  });
+  // useEffect(() => {
+  //   return () => saveDogIds(savedDogIds);
+  // });
 
   // create function to handle saving a dog to the database
   const handleSaveDog = async (event) => {
@@ -61,6 +66,8 @@ function DogSearchResult({ dog }) {
         }
       })
 
+      refetchUser();
+
       // if dog successfully saved to user account, save dog id to state
       //console.log(dogId);
       //setSavedDogIds([dogId]);
@@ -69,44 +76,51 @@ function DogSearchResult({ dog }) {
     }
   };
 
+  console.log("userData: ", userData);
+  // console.log("savedDogIds: ", savedDogIds);
+  console.log("dog._id: ", dog._id);
   return (
     <>
       <Container>
-          <Col md="4">
-            <Card className='h-100' key={dog?.id}>
-              <Card.Img src={dog?.profile_pic}
-                alt='doggy'
-                variant='top'
-              />
-              <Card.Body>
-                <Card.Title>{dog?.name}</Card.Title>
-                <Card.Text>Breed: {dog?.breed}</Card.Text>
-                <Card.Text>Age: {dog?.age}</Card.Text>
-                <Card.Text>Gender: {dog?.gender}</Card.Text>
-              </Card.Body>
+        <Col md="4">
+          <Card className='h-100' key={dog?.id}>
+            <Card.Img src={dog?.profile_pic}
+              alt='doggy'
+              variant='top'
+            />
+            <Card.Body>
+              <Card.Title>{dog?.name}</Card.Title>
+              <Card.Text>Breed: {dog?.breed}</Card.Text>
+              <Card.Text>Age: {dog?.age}</Card.Text>
+              <Card.Text>Gender: {dog?.gender}</Card.Text>
+            </Card.Body>
 
-              {Auth.loggedIn() && (
-                <Button
-                  disabled={savedDogIds?.some((savedDogId) => savedDogId === dog.id)}
-                  className='btn-info'
-                  data-name={dog?.name}
-                  data-breed={dog?.breed}
-                  data-gender={dog?.gender}
-                  data-age={dog?.age}
-                  data-id={dog?.id}
-                  data-profile_pic={dog?.profile_pic}
-                  onClick={(event) => handleSaveDog(event)}>
-                  {savedDogIds?.some((savedDogId) => savedDogId === dog.id)
-                    ? 'Pooch saved to Favorites already'
-                    : 'Save to Favorite Pooches'}
-                </Button>
-              )}
-              {Auth.loggedIn() && (
-                <Button className='btn-info'>Adopt</Button>
-              )}
+            {Auth.loggedIn() && (
+              <Button
+                // disabled={savedDogIds?.some((savedDogId) => savedDogId === dog._id)}
+                disabled={userData?.dogs?.some((savedDog) => savedDog._id === dog._id)}
+                className='btn-info'
+                data-name={dog?.name}
+                data-breed={dog?.breed}
+                data-gender={dog?.gender}
+                data-age={dog?.age}
+                data-id={dog?._id}
+                data-profile_pic={dog?.profile_pic}
+                onClick={(event) => handleSaveDog(event)}>
+                {/* {savedDogIds?.some((savedDogId) => savedDogId === dog._id)
+                  ? 'Pooch saved to Favorites already'
+                  : 'Save to Favorite Pooches'} */}
+                {userData?.dogs.some((savedDog) => savedDog._id === dog._id)
+                  ? 'Pooch saved to Favorites already'
+                  : 'Save to Favorite Pooches'}
+              </Button>
+            )}
+            {Auth.loggedIn() && (
+              <Button className='btn-info'>Adopt</Button>
+            )}
 
-            </Card>
-          </Col>
+          </Card>
+        </Col>
       </Container>
     </>
   );
