@@ -23,14 +23,6 @@ import Favorites from "./pages/Favorites";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import Quiz from "./pages/Quiz";
-import { ThemeProvider } from "../src/components/Theme/themeContext"; // willis
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Search from "./pages/Search";
-import Favorites from "./pages/Favorites";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "@fortawesome/fontawesome-svg-core/styles.css";
-import Quiz from "./pages/Quiz";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -63,7 +55,7 @@ function App() {
         {" "}
         {/* willis */}
         <Router>
-          <div className="flex-column justify-flex-start min-100-vh">
+          <div className="justify-flex-start min-100-vh">
             <Header />
             <div className="container">
               <Routes>
