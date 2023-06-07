@@ -192,6 +192,12 @@ p {
   font-size: 30px;
 }
 
+.homeBox {
+  background-color: var(--border);
+  border-radius: 5px;
+  padding: 6px;
+}
+
 .vTitles {
   background-color: var(--brand-primary) !important;
   color: var(--font-secondary) !important;

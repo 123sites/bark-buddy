@@ -18,7 +18,7 @@ const Header = () => {
       <div className="container-fluid">
         <Link className="navbar-brand text-light" to="/">
           <img src={Logo} className="logo" alt=""></img>
-          <h1 className="name navbar-expand-lg fw-bold">Bark Buddy</h1>
+          <h1 className="name navbar-expand-lg ml-2 fw-bold">Bark Buddy</h1>
         </Link>
         <button
           className="navbar-toggler"
@@ -31,11 +31,13 @@ const Header = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarScroll">
-          <ul
-            className="navbar-nav me-auto mx-3 my-lg-0 navbar-nav-scroll"
-            // style="--bs-scroll-height: 100px;" THIS CREATES AN ERROR!
-          >
+
+        <div
+          className="d-inline-block collapse navbar-collapse justify-content-center"
+          id="navbarScroll"
+        >
+          <ul className="navbar-nav my-lg-0 navbar-nav-scroll">
+            {/* <ul className="navbar-nav me-auto mx-3 my-lg-0 navbar-nav-scroll"> */}
             <li className="nav-item">
               <Link className="nav-link link text-center fw-bolder" to="/">
                 Home
@@ -50,8 +52,24 @@ const Header = () => {
               </Link>
             </li>
             <li className="nav-item">
+              <Link
+                className="nav-link link text-center fw-bolder"
+                to="/search"
+              >
+                Pick A Pooch
+              </Link>
+            </li>
+            <li className="nav-item">
               <Link className="nav-link link text-center fw-bolder" to="/quiz">
                 Dog Quiz
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                className="nav-link link text-center fw-bolder"
+                to="/shelter"
+              >
+                Find a Shelter
               </Link>
             </li>
             <li className="nav-item">
@@ -64,7 +82,7 @@ const Header = () => {
             </li>
             <li className="nav-item dropdown">
               <a
-                className="nav-link link fw-bold fs-5 dropdown-toggle"
+                className="nav-link link fw-bold fs-6 dropdown-toggle"
                 href="#"
                 role="button"
                 data-bs-toggle="dropdown"
@@ -86,27 +104,6 @@ const Header = () => {
                 <li>
                   {" "}
                   <Link
-                    className="dropdown-item ddText fw-bolder mx-3"
-                    to="/dog"
-                  >
-                    Pick A Pooch
-                  </Link>
-                </li>
-                <li>
-                  {" "}
-                  <Link
-                    className="dropdown-item ddText fw-bolder mx-3"
-                    to="/shelter"
-                  >
-                    Find a Shelter
-                  </Link>
-                </li>
-                <li>
-                  <hr className="dropdown-divider" />
-                </li>
-                <li>
-                  {" "}
-                  <Link
                     className="dropdown-item ddText mx-3 fw-bolder"
                     to="/me"
                   >
@@ -117,33 +114,32 @@ const Header = () => {
               </ul>
             </li>
           </ul>
-          <form className="flex-direction-row align-items-end" role="search">
-            <input
-              className="form-control-lg searchBox fw-bold text-center"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button
-              className="searchBtn col-3 btn-outline-warning px-5 fw-bold fs-7"
-              type="submit"
-            >
-              Pick A Pooch
-            </button>
-          </form>
-          <div className="link col-1 m-3 fw-bolder" onClick={logout}>
+        </div>
+        <div className="d-inline-flex mr-5 align-items-center justify-content:flex-end">
+          <div>
+            <Link className="link btn-lg m-2 fw-bolder" to="/login">
+              Login
+            </Link>
+          </div>
+
+          <div>
+            <Link className="link btn-lg my-3 mr-1 ml-3 fw-bolder" to="/signup">
+              Signup
+            </Link>
+          </div>
+          <div className="link col-1 mr-5 pr-5 fw-bolder" onClick={logout}>
             {" "}
             logout
           </div>
-        </div>
-        <div className="mr-3 ml-0">
-          <button onClick={toggleTheme}>
-            {theme === "light" ? (
-              <FontAwesomeIcon icon={faMoon} />
-            ) : (
-              <FontAwesomeIcon icon={faSun} />
-            )}
-          </button>
+          <div className="d-inline-block pl-3 ml-4">
+            <button onClick={toggleTheme}>
+              {theme === "light" ? (
+                <FontAwesomeIcon icon={faMoon} />
+              ) : (
+                <FontAwesomeIcon icon={faSun} />
+              )}
+            </button>
+          </div>
         </div>
       </div>
     </nav>
