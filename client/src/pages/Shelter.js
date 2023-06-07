@@ -115,7 +115,7 @@ const DogShelterSearch = () => {
                         <form onSubmit={handleSearch}>
                             <input
                                 className="form-input"
-                                placeholder="City, State, or Zip Code."
+                                placeholder="Please enter a State or Zip Code"
                                 name="search"
                                 type="text"
                                 value={searchTerm}
