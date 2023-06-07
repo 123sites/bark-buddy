@@ -6,32 +6,45 @@ const DogShelterSearch = () => {
     const [searchResults, setSearchResults] = useState([]);
     const [accessToken, setAccessToken] = useState('');
 
-    const token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJSZUloaXhRTnM0aDdDWnN5VXhETXhVQ3dGVWNHU2R1WUZIUWlBVmE0MjE0c0dnMnRLWiIsImp0aSI6IjM2NWY1ZTAzYmI0YzQ4NzhmNDJlMmE3NWFlNmY3ODhlNDcyOTIyNDU1NTA0OGY5MmJmYWE0ZWQyN2I2ZjkzMzYxYTBmYTIyYjY2NWMxYmY3IiwiaWF0IjoxNjg2MDMwNzkxLCJuYmYiOjE2ODYwMzA3OTEsImV4cCI6MTY4NjAzNDM5MSwic3ViIjoiIiwic2NvcGVzIjpbXX0.JuDsZyqgslaL0NdbHMDN84-i50TlqG_dNjkWJCEiG_t75dboabnNlPDRU2qKGP6kiuX7gCVzpIsjEG8uCD6vwhC_6-dCtmEF8fNt68ZlGvKXXMA8yN3U-z5uXmX716Swjws_897dOm_PCtdJ_g9xTiYqcF_X3T43g6HhaPSUHFo4LffS3ZAJ74t6eFQfagRGD54agA9sMU_9ck0MmZ_m9y76hcN9Z8p5sofLnW7r8nWQZ26fjmcdHrphueoBGwpj-NWmEzVdYl0SYT12uTj3hbL_K72ewlOG6qZpG25YSsxM2OigsPM_cfhZnSVMo2zWEl_N5av-qojVatV5mOFtOQ';
-
     useEffect(() => {
         getAccessToken();
     }, []);
 
     const getAccessToken = async () => {
         try {
-            const response = await fetch(
+            const tokenResponse = await fetch(
                 'https://api.petfinder.com/v2/oauth2/token',
                 {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json',
+                        'Content-Type': 'application/x-www-form-urlencoded',
                     },
-                    body: JSON.stringify({
-                        grant_type: 'client_credentials',
-                        client_id: 'ReIhixQNs4h7CZsyUxDMxUCwFUcGSduYFHQiAVa4214sGg2tKZ',
-                        client_secret: 'YnQdc5zjbjeV6B6JoupSGeqH90qgqfQsfTNuDF4B',
-                    }),
+                    body: 'grant_type=client_credentials&client_id=ReIhixQNs4h7CZsyUxDMxUCwFUcGSduYFHQiAVa4214sGg2tKZ&client_secret=YnQdc5zjbjeV6B6JoupSGeqH90qgqfQsfTNuDF4B',
                 }
             );
 
-            if (response.ok) {
-                const data = await response.json();
-                setAccessToken(data.access_token);
+            if (tokenResponse.ok) {
+                const tokenData = await tokenResponse.json();
+                setAccessToken(tokenData.access_token);
+                console.log('Access Token:', tokenData.access_token);
+
+                const searchResponse = await fetch(
+                    `https://api.petfinder.com/v2/organizations`,
+                    {
+                        method: 'GET',
+                        headers: {
+                            Authorization: `Bearer ${tokenData.access_token}`,
+                        },
+                    }
+                );
+
+                if (searchResponse.ok) {
+                    const searchData = await searchResponse.json();
+                    setSearchResults(searchData.organizations);
+                    console.log('Search Results:', searchData.organizations);
+                } else {
+                    throw new Error('Search request failed');
+                }
             } else {
                 throw new Error('Access token request failed');
             }
@@ -46,7 +59,7 @@ const DogShelterSearch = () => {
                 `https://api.petfinder.com/v2/organizations?location=${searchTerm}`,
                 {
                     headers: {
-                        Authorization: `Bearer ${token}`,
+                        Authorization: `Bearer ${accessToken}`,
                     },
                 }
             );
@@ -57,7 +70,6 @@ const DogShelterSearch = () => {
             } else {
                 throw new Error('Request failed');
             }
-            console.log(response);
         } catch (error) {
             console.error(error);
         }
@@ -93,10 +105,10 @@ const DogShelterSearch = () => {
 
                         {searchResults.length > 0 ? (
                             <ul>
-                                {searchResults.map((organization) => (
-                                    <li key={organization.location}>
-                                        <h2>{organization.name}</h2>
-                                        <p>{organization.address}</p>
+                                {searchResults.map((organizations) => (
+                                    <li key={organizations.location}>
+                                        <h2>{organizations.name}</h2>
+                                        <p>{organizations.address}</p>
                                     </li>
                                 ))}
                             </ul>

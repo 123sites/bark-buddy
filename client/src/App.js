@@ -13,6 +13,8 @@ import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Videos from "./pages/Videos";
 import Shelters from './pages/Shelter';
+// import Shelter from './pages/Shelters';
+import Donate from "./pages/ShelterDonate";
 import { ThemeProvider } from '../src/components/Theme/themeContext'; // willis
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -66,6 +68,9 @@ function App() {
                 <Route path="/quiz" element={<Quiz />} />
                 <Route path="/videos" element={<Videos />} /> {/* willis */}
                 <Route path="/shelter" element={<Shelters />} /> {/*Faz*/}
+
+                {/* <Route path="/shelter" element = {<Shelter />}/> */}
+                <Route path="/donation" element={<Donate />} />
 
                 {/* <Route 
                 path="/dogs/:dogId" 
