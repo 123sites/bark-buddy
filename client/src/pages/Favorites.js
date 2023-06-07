@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_ME } from '../utils/queries';
 import { REMOVE_DOG } from '../utils/mutations';
+import Auth from '../utils/auth';
 import {
     Container,
     Card,
@@ -21,6 +22,7 @@ const Favorites = () => {
         refetch();
     }, []);
 
+
     const handleRemoveDog = async (event) => {
         const dogId = event.target.getAttribute('data-id');
 
@@ -31,6 +33,10 @@ const Favorites = () => {
             console.log(err);
         }
     };
+
+    if (!Auth.loggedIn()){
+        window.location.assign('/');
+    }
 
     if (loading) {
         return <h2>Loading...</h2>;
