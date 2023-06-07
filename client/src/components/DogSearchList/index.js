@@ -20,79 +20,130 @@ function DogSearchList({ userData, refetchUser }) {
 
   const { loading, data } = useQuery(QUERY_DOGS);
 
-  // for filters to try
-  /*const { loading, data } = useQuery(QUERY_DOGS, {
-    variables: {
-      age: 'Adult', // Replace with the desired age description to filter by
-    },
-  });*/
-
+  let [dogData, setDogData] = useState([]);
   useEffect(() => {
-
+    setDogData(data);
   })
 
-  const dogData = data || {};
+  //let dogData = data || {};
+
   //console.log(dogData.dogs);
+  const breeds = [...new Map(dogData?.dogs?.map((dog) => [dog.breed, dog])).values()];
+  //console.log(breeds);
+
+  const ages = [...new Map(dogData?.dogs?.map((dog) => [dog.age, dog])).values()];
+  //console.log(ages);
+
+  const genders = [...new Map(dogData?.dogs?.map((dog) => [dog.gender, dog])).values()];
+ //console.log(genders);
+
+  const handleInputBreed = (event) => {
+    console.log(event.target.value);
+    const targettedAttribute = event.target.value;
+    dogData = dogData?.dogs?.filter((dog) => { return targettedAttribute === dog.breed });
+    console.log(dogData);
+  }
+
+  const handleInputAge = (event) => {
+    console.log(event.target.value);
+    const targettedAttribute = event.target.value;
+    dogData = dogData?.dogs?.filter((dog) => { return targettedAttribute === dog.age });
+    console.log(dogData);
+  }
+
+  const handleInputGender = (event) => {
+    console.log(event.target.value);
+    const targettedAttribute = event.target.value;
+    dogData = dogData?.dogs?.filter((dog) => { return targettedAttribute === dog.gender });
+    console.log(dogData);
+  }
 
   return (
     <>
+    <Row>
+      <Col md={3}>
+        <div>
 
-      <div>
-        <select id="dropdown1">
-          <option value="ageFilter">Choose Age</option>
-          <option value="option1">Baby</option>
-          <option value="option2">Young</option>
-          <option value="option3">Adult</option>
-        </select>
+          <br></br>
+          <select
+            onChange={handleInputBreed}
+            id="breedFilter">
+            <option>Choose breed</option>
+            {breeds?.map((dog) => {
+              return (
+                <option value={dog.breed}>
+                  {dog.breed}
+                </option>
+              )
+            })}
+          </select>
 
-        <select id="dropdown2">
-          <option value="genderFilter">Choose Gender</option>
-          <option value="option1">Male</option>
-          <option value="option2">Female</option>
-        </select>
+          <br></br>
 
-        <select id="dropdown3">
-          <option value="breedFilter">Choose Breed</option>
-          <option value="option1">Terrier</option>
-          <option value="option2">Mixed Breed</option>
-          <option value="option3">Golden Retriever</option>
-          <option value="option4">German Shepherd</option>
-          <option value="option5">Rottweiler</option>
-          <option value="option6">Scottish Terrier</option>
-          <option value="option7">Labrador Retriever</option>
-          <option value="option8">Westie</option>
-          <option value="option9">Hound</option>
-          <option value="option10">Pit Bull Terrier</option>
-          <option value="option11">Australian Shepherd</option>
-          <option value="option12">Poodle</option>
-          <option value="option13">Pomeranian</option>
-          <option value="option14">Chihuahua</option>
-          <option value="option15">Jack Russell Terrier</option>
-          <option value="option16">Dachshund</option>
-          <option value="option16">Tibetan Spaniel</option>
-          <option value="option16">Pug</option>
-          <option value="option16">Belgian Shepherd</option>
-          <option value="option16">Australian Cattle Dog</option>
-        </select>
-      </div>
+          <select
+            onChange={handleInputAge}
+            id="ageFilter">
+            <option>Choose age</option>
+            {ages?.map((dog) => {
+              return (
+                <option value={dog.age}>
+                  {dog.age}
+                </option>
+              )
+            })}
+          </select>
 
-      <div>
-        <button>Clear all filters</button>
-      </div>
+          <br></br>
 
+          <select
+            onChange={handleInputGender}
+            id="genderFilter">
+            <option>Choose gender</option>
+            {genders?.map((dog) => {
+              return (
+                <option value={dog.gender}>
+                  {dog.gender}
+                </option>
+              )
+            })}
+          </select>
 
-      <div>
+        </div>
+
+        <div>
+          <button>Clear all filters</button>
+        </div>
+      </Col>
+
+      <Col md={9}>
+        <div>
+          <Container>
+            <h3 className='pt-4'>Bark buddies available to adopt:</h3>
+          </Container>
+        </div>
+
         <Container>
-          <h3 className='pt-4'>Bark buddies available to adopt:</h3>
+          <Row>
+            {dogData && dogData?.dogs?.map((item) => (
+              <Col key={item.id} md="4">
+                    <DogSearchResult dog={item} userData={userData} refetchUser={refetchUser} />
+                  </Col>
+            ))}
+          </Row>
         </Container>
-      </div>
+      </Col>
+</Row>
+    </>
+  )
+};
 
-
+export default DogSearchList;
+/*
       <Container>
         <Row>
           {dogData && (
             <Col>
-              <div className='h-100'>
+              <div>
                 {dogData?.dogs?.map(item => (
                   <DogSearchResult key={item.id} dog={item} userData={userData} refetchUser={refetchUser}>
                   </DogSearchResult>
@@ -102,9 +153,4 @@ function DogSearchList({ userData, refetchUser }) {
           )}
         </Row>
       </Container>
-
-    </>
-  )
-};
-
-export default DogSearchList;
+*/
