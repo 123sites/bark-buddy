@@ -54,12 +54,17 @@ function DogSearchResult({ dog, userData, refetchUser }) {
     }
   };
 
+  const handleAdoptSubmit = async (event) => {
+    event.preventDefault();
+
+  };
+
   //console.log("userData: ", userData);
   //console.log("dog._id: ", dog._id);
   return (
     <>
       <Container>
-        <Col md="4">
+        <Col>
           <Card className='h-100' key={dog?.id}>
             <Card.Img src={dog?.profile_pic}
               alt='doggy'
@@ -70,8 +75,8 @@ function DogSearchResult({ dog, userData, refetchUser }) {
               <Card.Text>Breed: {dog?.breed}</Card.Text>
               <Card.Text>Age: {dog?.age}</Card.Text>
               <Card.Text>Gender: {dog?.gender}</Card.Text>
-            </Card.Body>
 
+              </Card.Body>
             {Auth.loggedIn() && (
               <Button
                 disabled={userData?.dogs?.some((savedDog) => savedDog._id === dog._id)}
@@ -89,7 +94,8 @@ function DogSearchResult({ dog, userData, refetchUser }) {
               </Button>
             )}
             {Auth.loggedIn() && (
-              <Button className='btn-info'>Adopt</Button>
+              <Button className='btn-info'
+              onClick={handleAdoptSubmit}>Adopt</Button>
             )}
 
           </Card>
