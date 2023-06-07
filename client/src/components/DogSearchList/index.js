@@ -114,14 +114,15 @@ function DogSearchList({ userData, refetchUser }) {
         </div>
 
         <div>
-          <button>Clear all filters</button>
+          <button >Clear all filters</button>
         </div>
       </Col>
 
       <Col md={9}>
         <div>
           <Container>
-            <h3 className='pt-4'>Bark buddies available to adopt:</h3>
+            <h3 className='pt-2'>Bark buddies available to adopt:</h3>
+            <br></br>
           </Container>
         </div>
 

@@ -50,7 +50,7 @@ const Favorites = () => {
                 </Container>
             </div>
             <Container>
-                <h2 className='pt-5'>
+                <h2 className='pt-3'>
                     {userData.dogs?.length
                         ? `Viewing ${userData.dogs.length} saved ${userData.dogs.length === 1 ? 'dog' : 'dogs'}:`
                         : 'No pooches saved to Favorites yet'}
