@@ -20,10 +20,10 @@ function DogSearchList({ userData, refetchUser }) {
 
   const { loading, data } = useQuery(QUERY_DOGS);
 
-  let [dogData, setDogData] = useState([]);
+  let [dogData, setDogData] = useState(data);
   useEffect(() => {
     setDogData(data);
-  })
+  }, [data]);
 
   //let dogData = data || {};
 
@@ -40,21 +40,24 @@ function DogSearchList({ userData, refetchUser }) {
   const handleInputBreed = (event) => {
     console.log(event.target.value);
     const targettedAttribute = event.target.value;
-    dogData = dogData?.dogs?.filter((dog) => { return targettedAttribute === dog.breed });
-    console.log(dogData);
+    const newDogArray = dogData?.dogs?.filter((dog) => { return targettedAttribute === dog.breed });
+    setDogData({dogs: newDogArray});
+    console.log(dogData.dogs);
   }
 
   const handleInputAge = (event) => {
     console.log(event.target.value);
     const targettedAttribute = event.target.value;
-    dogData = dogData?.dogs?.filter((dog) => { return targettedAttribute === dog.age });
+    const newDogArray = dogData?.dogs?.filter((dog) => { return targettedAttribute === dog.age });
+    setDogData({dogs: newDogArray});
     console.log(dogData);
   }
 
   const handleInputGender = (event) => {
     console.log(event.target.value);
     const targettedAttribute = event.target.value;
-    dogData = dogData?.dogs?.filter((dog) => { return targettedAttribute === dog.gender });
+    const newDogArray = dogData?.dogs?.filter((dog) => { return targettedAttribute === dog.gender });
+    setDogData({dogs: newDogArray});
     console.log(dogData);
   }
 
