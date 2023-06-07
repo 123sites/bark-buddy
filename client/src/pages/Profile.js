@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
-import { useQuery } from '@apollo/client';
-// import PaymentComponent from '../components/Payments/Stripe'; // Willis
+import { useMutation, useQuery } from '@apollo/client';
+import { UPDATE_USER } from '../utils/mutations';
 import { QUERY_ME } from '../utils/queries';
 import Auth from '../utils/auth';
 
@@ -18,7 +18,9 @@ const Profile = () => {
   const [newUsername, setNewUsername] = useState('');  // Willis
   const [newPassword, setNewPassword] = useState('');  // Willis
   const [newEmail, setNewEmail] = useState(''); // Willis
-  const [paymentMethod, setPaymentMethod] = useState(''); // Willis
+
+  const [updateUser, { error }] = useMutation(UPDATE_USER);
+
 
   const handleUsernameChange = (event) => {
     setNewUsername(event.target.value);
@@ -32,32 +34,20 @@ const Profile = () => {
     setNewEmail(event.target.value);
   };
 
-  const handlePaymentMethodChange = (event) => {
-    setPaymentMethod(event.target.value);
-  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-// Call a function or make an API request to update each parameter
- if (newUsername) {
-  try {
-    const response = await fetch('/api/update-username', {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ username: newUsername }),
-    });
-
-    if (response.ok) {
-      console.log('Username updated successfully!');
-    } else {
-      console.log('Failed to update username.');
-    }
-  } catch (error) {
-    console.error('An error occurred while updating the username:', error);
-  }
+    // Call a function or make an API request to update each parameter
+    if (newUsername) {
+      try {
+        const { data } = await updateUser({
+          variables: { username: newUsername },
+        });
+        console.log('Username updated successfully!', data);
+      } catch (error) {
+        console.error('Failed to update username:', error);
+      }
     }
 
     if (newPassword) {
@@ -68,14 +58,10 @@ const Profile = () => {
       console.log('Updating email address:', newEmail);
     }
 
-    if (paymentMethod) {
-      console.log('Saving payment method:', paymentMethod);
-    }
-
     setNewUsername('');
     setNewPassword('');
     setNewEmail('');
-    setPaymentMethod('');
+
   };
 
 
@@ -120,11 +106,6 @@ const Profile = () => {
               <label>
                 New Email Address:
                 <input type="email" value={newEmail} onChange={handleEmailChange} />
-              </label>
-              <br />
-              <label>
-                Payment Method:
-                <input type="text" value={paymentMethod} onChange={handlePaymentMethodChange} />
               </label>
               <br />
               <button type="submit">Save Changes</button>
