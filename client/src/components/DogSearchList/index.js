@@ -7,58 +7,150 @@ import Auth from '../../utils/auth';
 import DogSearchResult from '../DogSearchResult';
 import { QUERY_DOGS } from '../../utils/queries';
 
-function DogSearchList() {
+import {
+  Container,
+  Col,
+  Form,
+  Button,
+  Card,
+  Row
+} from 'react-bootstrap';
+
+function DogSearchList({ userData, refetchUser }) {
 
   const { loading, data } = useQuery(QUERY_DOGS);
 
-  /*const { loading, data } = useQuery(QUERY_DOGS, {
-    variables: {
-      age: 'Adult', // Replace with the desired age description to filter by
-    },
-  });*/
-
+  let [dogData, setDogData] = useState([]);
   useEffect(() => {
-
+    setDogData(data);
   })
 
-  const dogData = data || {};
+  //let dogData = data || {};
+
+  //console.log(dogData.dogs);
+  const breeds = [...new Map(dogData?.dogs?.map((dog) => [dog.breed, dog])).values()];
+  //console.log(breeds);
+
+  const ages = [...new Map(dogData?.dogs?.map((dog) => [dog.age, dog])).values()];
+  //console.log(ages);
+
+  const genders = [...new Map(dogData?.dogs?.map((dog) => [dog.gender, dog])).values()];
+ //console.log(genders);
+
+  const handleInputBreed = (event) => {
+    console.log(event.target.value);
+    const targettedAttribute = event.target.value;
+    dogData = dogData?.dogs?.filter((dog) => { return targettedAttribute === dog.breed });
+    console.log(dogData);
+  }
+
+  const handleInputAge = (event) => {
+    console.log(event.target.value);
+    const targettedAttribute = event.target.value;
+    dogData = dogData?.dogs?.filter((dog) => { return targettedAttribute === dog.age });
+    console.log(dogData);
+  }
+
+  const handleInputGender = (event) => {
+    console.log(event.target.value);
+    const targettedAttribute = event.target.value;
+    dogData = dogData?.dogs?.filter((dog) => { return targettedAttribute === dog.gender });
+    console.log(dogData);
+  }
 
   return (
-    <div>
-      <select id="dropdown1">
-        <option value="noFilter">Choose Age</option>
-        <option value="option1">Baby</option>
-        <option value="option2">Young</option>
-        <option value="option3">Adult</option>
-      </select>
+    <>
+    <Row>
+      <Col md={3}>
+        <div>
 
-      <select id="dropdown2">
-        <option value="">Choose Gender</option>
-        <option value="option1">Male</option>
-        <option value="option2">Female</option>
-      </select>
+          <br></br>
+          <select
+            onChange={handleInputBreed}
+            id="breedFilter">
+            <option>Choose breed</option>
+            {breeds?.map((dog) => {
+              return (
+                <option value={dog.breed}>
+                  {dog.breed}
+                </option>
+              )
+            })}
+          </select>
 
-      <select id="dropdown3">
-        <option value="">Choose Breed</option>
-        <option value="option1">Terrier</option>
-        <option value="option2">Mixed Bred</option>
-        <option value="option3">Golden Retriever</option>
-      </select>
+          <br></br>
 
-     <h2>Bark buddies available to adopt:</h2>
-        {dogData && (
-          <div>
-            {dogData?.dogs?.map(item => (
-              <DogSearchResult key={item.id} dog={item}>
-              </DogSearchResult>
+          <select
+            onChange={handleInputAge}
+            id="ageFilter">
+            <option>Choose age</option>
+            {ages?.map((dog) => {
+              return (
+                <option value={dog.age}>
+                  {dog.age}
+                </option>
+              )
+            })}
+          </select>
+
+          <br></br>
+
+          <select
+            onChange={handleInputGender}
+            id="genderFilter">
+            <option>Choose gender</option>
+            {genders?.map((dog) => {
+              return (
+                <option value={dog.gender}>
+                  {dog.gender}
+                </option>
+              )
+            })}
+          </select>
+
+        </div>
+
+        <div>
+          <button>Clear all filters</button>
+        </div>
+      </Col>
+
+      <Col md={9}>
+        <div>
+          <Container>
+            <h3 className='pt-4'>Bark buddies available to adopt:</h3>
+          </Container>
+        </div>
+
+        <Container>
+          <Row>
+            {dogData && dogData?.dogs?.map((item) => (
+              <Col key={item.id} md="4">
+                    <DogSearchResult dog={item} userData={userData} refetchUser={refetchUser} />
+                  </Col>
             ))}
-          </div>
-        )}
-        <DogSearchResult
-            dog={dogData}
-          />
-    </div>
+          </Row>
+        </Container>
+      </Col>
+</Row>
+    </>
   )
 };
 
 export default DogSearchList;
+/*
+      <Container>
+        <Row>
+          {dogData && (
+            <Col>
+              <div>
+                {dogData?.dogs?.map(item => (
+                  <DogSearchResult key={item.id} dog={item} userData={userData} refetchUser={refetchUser}>
+                  </DogSearchResult>
+                ))}
+              </div>
+            </Col>
+          )}
+        </Row>
+      </Container>
+*/
