@@ -26,7 +26,7 @@ const DogShelterSearch = () => {
             if (response.ok) {
                 const data = await response.json();
                 setAccessToken(data.access_token);
-                console.log('Access Token:', data.access_token);
+                // console.log('Access Token:', data.access_token);
             } else {
                 throw new Error('Access token request failed');
             }
@@ -47,7 +47,7 @@ const DogShelterSearch = () => {
                 searchQuery = `location=${searchTerm}`;
             } else {
                 // Assume searchTerm is either a city or state
-                searchQuery = `location=${searchTerm}&state=${searchTerm}`;
+                searchQuery = `city=${searchTerm}&state=${searchTerm}`;
             }
 
             const response = await fetch(
@@ -80,11 +80,11 @@ const DogShelterSearch = () => {
         }
 
         if (address2) {
-            fullAddress += `, ${address2}`;
+            fullAddress += ` ${address2}`;
         }
 
         if (city) {
-            fullAddress += `, ${city}`;
+            fullAddress += ` ${city}`;
         }
 
         if (state) {
@@ -96,7 +96,7 @@ const DogShelterSearch = () => {
         }
 
         if (country) {
-            fullAddress += `, ${country}`;
+            fullAddress += ` ${country}`;
         }
 
         return fullAddress;
@@ -115,7 +115,7 @@ const DogShelterSearch = () => {
                         <form onSubmit={handleSearch}>
                             <input
                                 className="form-input"
-                                placeholder="City, State, or ZipCode."
+                                placeholder="City, State, or Zip Code."
                                 name="search"
                                 type="text"
                                 value={searchTerm}
