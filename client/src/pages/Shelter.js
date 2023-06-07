@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 
 const DogShelterSearch = () => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -12,39 +11,22 @@ const DogShelterSearch = () => {
 
     const getAccessToken = async () => {
         try {
-            const tokenResponse = await fetch(
+            const response = await fetch(
                 'https://api.petfinder.com/v2/oauth2/token',
                 {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded',
                     },
-                    body: 'grant_type=client_credentials&client_id=ReIhixQNs4h7CZsyUxDMxUCwFUcGSduYFHQiAVa4214sGg2tKZ&client_secret=YnQdc5zjbjeV6B6JoupSGeqH90qgqfQsfTNuDF4B',
+                    body:
+                        'grant_type=client_credentials&client_id=ReIhixQNs4h7CZsyUxDMxUCwFUcGSduYFHQiAVa4214sGg2tKZ&client_secret=YnQdc5zjbjeV6B6JoupSGeqH90qgqfQsfTNuDF4B',
                 }
             );
 
-            if (tokenResponse.ok) {
-                const tokenData = await tokenResponse.json();
-                setAccessToken(tokenData.access_token);
-                console.log('Access Token:', tokenData.access_token);
-
-                const searchResponse = await fetch(
-                    `https://api.petfinder.com/v2/organizations`,
-                    {
-                        method: 'GET',
-                        headers: {
-                            Authorization: `Bearer ${tokenData.access_token}`,
-                        },
-                    }
-                );
-
-                if (searchResponse.ok) {
-                    const searchData = await searchResponse.json();
-                    setSearchResults(searchData.organizations);
-                    console.log('Search Results:', searchData.organizations);
-                } else {
-                    throw new Error('Search request failed');
-                }
+            if (response.ok) {
+                const data = await response.json();
+                setAccessToken(data.access_token);
+                console.log('Access Token:', data.access_token);
             } else {
                 throw new Error('Access token request failed');
             }
@@ -53,10 +35,23 @@ const DogShelterSearch = () => {
         }
     };
 
-    const handleSearch = async () => {
+    const handleSearch = async (event) => {
+        event.preventDefault();
+
         try {
+            let searchQuery = '';
+
+            // Check if searchTerm is a valid zip code
+            const zipCodePattern = /^\d{5}(?:[-\s]\d{4})?$/;
+            if (zipCodePattern.test(searchTerm)) {
+                searchQuery = `location=${searchTerm}`;
+            } else {
+                // Assume searchTerm is either a city or state
+                searchQuery = `location=${searchTerm}&state=${searchTerm}`;
+            }
+
             const response = await fetch(
-                `https://api.petfinder.com/v2/organizations?location=${searchTerm}`,
+                `https://api.petfinder.com/v2/organizations?${searchQuery}`,
                 {
                     headers: {
                         Authorization: `Bearer ${accessToken}`,
@@ -68,11 +63,43 @@ const DogShelterSearch = () => {
                 const data = await response.json();
                 setSearchResults(data.organizations);
             } else {
-                throw new Error('Request failed');
+                throw new Error('Search request failed');
             }
         } catch (error) {
             console.error(error);
         }
+    };
+
+
+    const getFullAddress = (address) => {
+        const { address1, address2, city, state, postcode, country } = address;
+        let fullAddress = '';
+
+        if (address1) {
+            fullAddress += address1;
+        }
+
+        if (address2) {
+            fullAddress += `, ${address2}`;
+        }
+
+        if (city) {
+            fullAddress += `, ${city}`;
+        }
+
+        if (state) {
+            fullAddress += `, ${state}`;
+        }
+
+        if (postcode) {
+            fullAddress += `, ${postcode}`;
+        }
+
+        if (country) {
+            fullAddress += `, ${country}`;
+        }
+
+        return fullAddress;
     };
 
     const handleChange = (event) => {
@@ -105,16 +132,19 @@ const DogShelterSearch = () => {
 
                         {searchResults.length > 0 ? (
                             <ul>
-                                {searchResults.map((organizations) => (
-                                    <li key={organizations.location}>
-                                        <h2>{organizations.name}</h2>
-                                        <p>{organizations.address}</p>
+
+
+                                {searchResults.map((organization) => (
+                                    <li key={organization.id}>
+                                        <h2>{organization.name}</h2>
+                                        <p>{getFullAddress(organization.address)}</p>
                                     </li>
                                 ))}
                             </ul>
                         ) : (
                             <p>No results found.</p>
                         )}
+
                     </div>
                 </div>
             </div>
