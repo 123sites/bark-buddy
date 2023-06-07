@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 //import { Link } from "react-router-dom";
 import Auth from '../../utils/auth';
 
@@ -7,7 +7,9 @@ import {
   Card,
   Button,
   Row,
-  Col
+  Col,
+  Modal,
+  Form
 } from 'react-bootstrap';
 
 import { useMutation } from '@apollo/client';
@@ -28,7 +30,7 @@ function DogSearchResult({ dog, userData, refetchUser }) {
     const gender = event.target.getAttribute('data-gender');
     const breed = event.target.getAttribute('data-breed');
     const profile_pic = event.target.getAttribute('data-profile_pic');
-  
+
     // get token
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
@@ -54,9 +56,17 @@ function DogSearchResult({ dog, userData, refetchUser }) {
     }
   };
 
-  const handleAdoptSubmit = async (event) => {
-    event.preventDefault();
+  const [showModal, setShowModal] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
+  const handleModal = () => {
+    setShowModal(!showModal);
+    setSubmitted(false);
+  };
+
+  const handleSubmit = () => {
+    handleModal();
+    setSubmitted(true);
   };
 
   //console.log("userData: ", userData);
@@ -76,7 +86,7 @@ function DogSearchResult({ dog, userData, refetchUser }) {
               <Card.Text>Age: {dog?.age}</Card.Text>
               <Card.Text>Gender: {dog?.gender}</Card.Text>
 
-              </Card.Body>
+            </Card.Body>
             {Auth.loggedIn() && (
               <Button
                 disabled={userData?.dogs?.some((savedDog) => savedDog._id === dog._id)}
@@ -93,11 +103,56 @@ function DogSearchResult({ dog, userData, refetchUser }) {
                   : 'Save to Favorite Pooches'}
               </Button>
             )}
-            {Auth.loggedIn() && (
-              <Button className='btn-info'
-              onClick={handleAdoptSubmit}>Adopt</Button>
-            )}
 
+            <div>
+              {Auth.loggedIn() && (
+                <Button className='btn-info'
+                  onClick={handleModal} variant="primary" block>Adopt</Button>
+              )}
+            </div>
+            <Modal show={showModal} onHide={handleModal}>
+              <Modal.Header closeButton>
+                <Modal.Title>Adoption Form</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                <Form>
+                  <Form.Group controlId="formName">
+                    <Form.Label>Name</Form.Label>
+                    <Form.Control type="text" placeholder="Enter your full name" />
+                  </Form.Group>
+                  <Form.Group controlId="formEmail">
+                    <Form.Label>Email</Form.Label>
+                    <Form.Control type="text" placeholder="Enter your email address" />
+                  </Form.Group>
+                  <Form.Group controlId="formPhone">
+                    <Form.Label>Phone</Form.Label>
+                    <Form.Control type="text" placeholder="What is the best phone number to reach you?" />
+                  </Form.Group>
+                </Form>
+              </Modal.Body>
+              <Modal.Footer>
+                <Button variant="secondary" onClick={handleModal}>
+                  Close
+                </Button>
+                <Button variant="primary" onClick={handleSubmit}>
+                  Submit
+                </Button>
+              </Modal.Footer>
+            </Modal>
+
+            <Modal show={submitted} onHide={() => setSubmitted(false)}>
+              <Modal.Header closeButton>
+                <Modal.Title>Thank You!</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>
+                <p>Thank you for filling out the form. A rescue team member will reach out to you shortly!</p>
+              </Modal.Body>
+              <Modal.Footer>
+                <Button variant="secondary" onClick={() => setSubmitted(false)}>
+                  Close
+                </Button>
+              </Modal.Footer>
+            </Modal>
           </Card>
         </Col>
       </Container>

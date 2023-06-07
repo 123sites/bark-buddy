@@ -46,7 +46,7 @@ const Favorites = () => {
         <>
             <div>
                 <Container>
-                    <h1>Your favorite pooches</h1>
+                    <h1 className='pt-3'>Your favorite pooches</h1>
                 </Container>
             </div>
             <Container>

@@ -67,6 +67,12 @@ function DogSearchList({ userData, refetchUser }) {
       <Col md={3}>
         <div>
 
+        <div>
+          <Container>
+            <h3 className='pt-4'>Filters</h3>
+          </Container>
+        </div>
+
           <br></br>
           <select
             onChange={handleInputBreed}
@@ -121,7 +127,7 @@ function DogSearchList({ userData, refetchUser }) {
       <Col md={9}>
         <div>
           <Container>
-            <h3 className='pt-2'>Bark buddies available to adopt:</h3>
+            <h3 className='pt-4'>Bark buddies available to adopt:</h3>
             <br></br>
           </Container>
         </div>
@@ -142,19 +148,3 @@ function DogSearchList({ userData, refetchUser }) {
 };
 
 export default DogSearchList;
-/*
-      <Container>
-        <Row>
-          {dogData && (
-            <Col>
-              <div>
-                {dogData?.dogs?.map(item => (
-                  <DogSearchResult key={item.id} dog={item} userData={userData} refetchUser={refetchUser}>
-                  </DogSearchResult>
-                ))}
-              </div>
-            </Col>
-          )}
-        </Row>
-      </Container>
-*/

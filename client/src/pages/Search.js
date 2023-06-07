@@ -1,5 +1,4 @@
 import React from 'react';
-import DogSearchFilter from '../components/DogSearchFilter';
 import DogSearchList from '../components/DogSearchList';
 import { useQuery } from '@apollo/client';
 import { QUERY_ME } from '../utils/queries';
@@ -10,7 +9,6 @@ const Search = () => {
 
   return (
     <div>
-      <DogSearchFilter />
       <DogSearchList userData={userData} refetchUser={refetch} />
     </div>
   );
