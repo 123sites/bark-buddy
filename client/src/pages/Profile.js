@@ -38,7 +38,6 @@ const Profile = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    // Call a function or make an API request to update each parameter
     if (newUsername) {
       try {
         const { data } = await updateUser({
@@ -51,11 +50,25 @@ const Profile = () => {
     }
 
     if (newPassword) {
-      console.log('Updating password:', newPassword);
+      try {
+        const { data } = await updateUser({
+          variables: { password: newPassword },
+        });
+        console.log('Password updated successfully!', data);
+      } catch (error) {
+        console.error('Failed to update password:', error);
+      }
     }
 
     if (newEmail) {
-      console.log('Updating email address:', newEmail);
+      try {
+        const { data } = await updateUser({
+          variables: { email: newEmail },
+        });
+        console.log('Email updated successfully!', data);
+      } catch (error) {
+        console.error('Failed to update email:', error);
+      }
     }
 
     setNewUsername('');

@@ -4,7 +4,7 @@ const Videos = () => {
   return (
     <div className="videoGallery">
       <div>
-        <div>
+        <div className="mt-3">
           {/* Title */}
           <h1 className="vTitles fw-bold shadow-lg m-0 text-center">
             Helpful YouTube Channels and Videos
