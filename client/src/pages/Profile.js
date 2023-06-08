@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 import { useMutation, useQuery } from '@apollo/client';
@@ -13,14 +14,12 @@ const Profile = () => {
   });
 
   const user = data?.me || data?.user || {};
-  console.log("user: ", user)
 
-  const [newUsername, setNewUsername] = useState('');  // Willis
-  const [newPassword, setNewPassword] = useState('');  // Willis
-  const [newEmail, setNewEmail] = useState(''); // Willis
+  const [newUsername, setNewUsername] = useState('');
+  const [newPassword, setNewPassword] = useState('');
+  const [newEmail, setNewEmail] = useState('');
 
   const [updateUser, { error }] = useMutation(UPDATE_USER);
-
 
   const handleUsernameChange = (event) => {
     setNewUsername(event.target.value);
@@ -34,51 +33,36 @@ const Profile = () => {
     setNewEmail(event.target.value);
   };
 
-
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if (newUsername) {
-      try {
-        const { data } = await updateUser({
+    try {
+      if (newUsername) {
+        await updateUser({
           variables: { username: newUsername },
         });
-        console.log('Username updated successfully!', data);
-      } catch (error) {
-        console.error('Failed to update username:', error);
       }
-    }
-
-    if (newPassword) {
-      try {
-        const { data } = await updateUser({
+      if (newPassword) {
+        await updateUser({
           variables: { password: newPassword },
         });
-        console.log('Password updated successfully!', data);
-      } catch (error) {
-        console.error('Failed to update password:', error);
       }
-    }
-
-    if (newEmail) {
-      try {
-        const { data } = await updateUser({
+      if (newEmail) {
+        await updateUser({
           variables: { email: newEmail },
         });
-        console.log('Email updated successfully!', data);
-      } catch (error) {
-        console.error('Failed to update email:', error);
       }
+
+      console.log('Profile updated successfully!');
+    } catch (error) {
+      console.error('Failed to update profile:', error);
     }
 
     setNewUsername('');
     setNewPassword('');
     setNewEmail('');
-
   };
 
-
-  // navigate to personal profile page if username is yours
   if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
     return <Navigate to="/me" />;
   }
@@ -90,53 +74,101 @@ const Profile = () => {
   if (!user?.username) {
     return (
       <h4>
-        You need to be logged in to create and view your favorites.
+        You need to be logged in to access your account settings.
         Use the navigation links above to sign up or log in!
       </h4>
     );
   }
 
   return (
-    <div>
-      <div className="flex-row justify-center mb-3">
-        <h2 className="col-12 col-md-10 bg-dark text-light p-3 mb-5">
-          Viewing {userParam ? `${user.username}'s` : 'your'} profile.
-        </h2>
+    <div style={containerStyle}>
+      <h2 style={headingStyle}>Account Settings</h2>
 
-        <div className="col-12 col-md-10 mb-5">
-          <div className="col-12 col-md-10 mb-5">
-            <form onSubmit={handleSubmit}>
-              <label>
-                New Username:
-                <input type="text" value={newUsername} onChange={handleUsernameChange} />
-              </label>
-              <br />
-              <label>
-                New Password:
-                <input type="password" value={newPassword} onChange={handlePasswordChange} />
-              </label>
-              <br />
-              <label>
-                New Email Address:
-                <input type="email" value={newEmail} onChange={handleEmailChange} />
-              </label>
-              <br />
-              <button type="submit">Save Changes</button>
-            </form>
-          </div>
-
+      <form onSubmit={handleSubmit} style={formStyle}>
+        <div style={inputGroupStyle}>
+          <label style={labelStyle}>Change Username:</label>
+          <input
+            type="text"
+            value={newUsername}
+            onChange={handleUsernameChange}
+            style={inputStyle}
+          />
         </div>
-        {!userParam && (
-          <div
-            className="col-12 col-md-10 mb-3 p-3"
-            style={{ border: '1px dotted #1a1a1a' }}
-          >
-
-          </div>
-        )}
-      </div>
+        <div style={inputGroupStyle}>
+          <label style={labelStyle}>Change Password:</label>
+          <input
+            type="password"
+            value={newPassword}
+            onChange={handlePasswordChange}
+            style={inputStyle}
+          />
+        </div>
+        <div style={inputGroupStyle}>
+          <label style={labelStyle}>Change Email Address:</label>
+          <input
+            type="email"
+            value={newEmail}
+            onChange={handleEmailChange}
+            style={inputStyle}
+          />
+        </div>
+        <button type="submit" style={submitButtonStyle}>
+          Save Changes
+        </button>
+      </form>
     </div>
   );
 };
 
 export default Profile;
+
+// Inline styles
+const containerStyle = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  marginTop: '2rem',
+};
+
+const headingStyle = {
+  margin: 0,
+  fontSize: '2rem',
+  marginBottom: '2rem',
+  color: '#5E239D', // Purple color
+};
+
+const formStyle = {
+  width: '100%',
+  maxWidth: '400px',
+};
+
+const inputGroupStyle = {
+  marginBottom: '1.5rem',
+};
+
+const labelStyle = {
+  display: 'block',
+  fontSize: '1.2rem',
+  fontWeight: 'bold',
+  marginBottom: '0.5rem',
+  color: '#5E239D', // Purple color
+};
+
+const inputStyle = {
+  padding: '0.5rem',
+  fontSize: '1rem',
+  borderRadius: '4px',
+  border: '1px solid #ccc',
+  width: '100%',
+};
+
+const submitButtonStyle = {
+  padding: '0.75rem 1rem',
+  fontSize: '1rem',
+  fontWeight: 'bold',
+  borderRadius: '4px',
+  border: 'none',
+  background: '#007bff',
+  color: '#fff',
+  cursor: 'pointer',
+};
