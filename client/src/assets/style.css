@@ -38,15 +38,22 @@
   background-color: var(--btn-shadow)
 }
 
-h1,
-.name-dark {
+/* h1,
+.name-light {
   color: var(--btn-shadow) !important;
   text-decoration: none;
   font-size: 40px !important;
 }
 
 h1,
-.name-light {
+.name-dark {
+  color: var(--btn-shadow) !important;
+  text-decoration: none;
+  font-size: 40px !important;
+} */
+
+h1,
+.name {
   color: var(--bg-snow) !important;
   text-decoration: none;
   font-size: 40px !important;

@@ -41,9 +41,10 @@ const Signup = () => {
   return (
     <main className="flex-row justify-center m-4">
       <div className="col-10 col-lg-7">
-        <div className="card">
-          <h4 className="card-header p-3 text-center text-light login-card-header">
+        <div className="card shadow-lg">
+          <h4 className="card-header shadow-lg p-3 text-center text-light login-card-header">
             Signup
+            <i className="fa-sharp fa-solid fa-right-to-bracket ml-3 door-open"></i>
           </h4>
           <div className="card-body shadow-lg">
             {data ? (
@@ -57,7 +58,7 @@ const Signup = () => {
                 onSubmit={handleFormSubmit}
               >
                 <input
-                  className="form-input"
+                  className="form-input shadow-lg"
                   placeholder="Your username"
                   name="username"
                   type="text"
@@ -65,7 +66,7 @@ const Signup = () => {
                   onChange={handleChange}
                 />
                 <input
-                  className="form-input"
+                  className="form-input shadow-lg"
                   placeholder="Your email"
                   name="email"
                   type="email"
@@ -73,7 +74,7 @@ const Signup = () => {
                   onChange={handleChange}
                 />
                 <input
-                  className="form-input"
+                  className="form-input shadow-lg"
                   placeholder="******"
                   name="password"
                   type="password"
