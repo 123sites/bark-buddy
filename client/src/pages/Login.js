@@ -49,7 +49,7 @@ const Login = (props) => {
             Login
             <i className="fa-sharp fa-solid fa-right-to-bracket ml-3 door-open"></i>
           </h4>
-          <div className="card-body flex shadow-lg">
+          <div className="card-body loginMessage flex shadow-lg fs-3 fw-bold text-center">
             {data ? (
               <p>
                 Success! You may now head{" "}
@@ -77,7 +77,7 @@ const Login = (props) => {
                   onChange={handleChange}
                 />
                 <button
-                  className="sbtn m-3 col-2 btn-block fw-bolder fs-5"
+                  className="sbtn m-3 col-2 btn-block fw-bold fs-5"
                   style={{ cursor: "pointer" }}
                   type="submit"
                 >
@@ -87,7 +87,7 @@ const Login = (props) => {
             )}
 
             {error && (
-              <div className="my-3 p-3 bg-danger rounded text-white">
+              <div className="error-message fs-5 my-3 p-3 fw-bold bg-danger rounded text-white">
                 {error.message}
               </div>
             )}

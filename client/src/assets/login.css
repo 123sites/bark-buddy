@@ -31,35 +31,6 @@
   background-color: var(--brand-primary) !important;
 }
 
-
-
-
-
-
-
-
-.login-card-light {
-  background: var(--bg-snow) !important;
+.loginMessage {
+  color: var(--brand-primary) !important;
 }
-
-.login-card-dark {
-  background: var(--btn-shadow) !important;
-}
-
-.login-card-header {
-  background: var(--brand-primary) !important;
-}
-
-/* .login-card-header-light {
-  background: var(--brand-primary) !important;
-} */
-
-/* .login-card-header-dark {
-  background: var(--brand-secondary) !important;
-} */
-
-.error {
-  color: var(--brand-tertiary);
-}
-
-.logout {}

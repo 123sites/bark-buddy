@@ -63,7 +63,7 @@ h1,
   color: var(--font-primary)
 }
 
-span-light,
+span,
 .copyright {
   color: var(--font-primary);
   font-weight: bold;
@@ -87,12 +87,29 @@ li {
   padding: 5px;
 }
 
-p-light {
+p {
   color: var(--brand-primary) !important;
 }
 
-p-dark {
+/* p-dark {
   color: var(--brand-secondary) !important;
+} */
+
+
+.login-card-light {
+  background: var(--bg-snow) !important;
+}
+
+.login-card-dark {
+  background: var(--btn-shadow) !important;
+}
+
+.login-card-header {
+  background: var(--brand-primary) !important;
+}
+
+.error {
+  color: var(--brand-tertiary);
 }
 
 .logo {
@@ -118,10 +135,12 @@ p-dark {
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px var(--btn-shadow);
+  transform: translateY(4px);
 }
 
 .btn:hover {
-  background-color: var(--btn-hover) !important
+  background-color: var(--btn-hover) !important;
+  transform: translateY(4px);
 }
 
 .btn:active {
@@ -140,6 +159,8 @@ p-dark {
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px var(--btn-shadow);
+  letter-spacing: 2px;
+  transform: translateY(4px);
 }
 
 /* .sbtn-dark {
@@ -154,6 +175,28 @@ p-dark {
   box-shadow: 0 9px var(--btn-shadow);
 } */
 
+.logout {
+  padding: 15px 25px;
+  text-align: center;
+  cursor: pointer;
+  outline: var(--border) !important;
+  color: var(--border) !important;
+  background-color: var(--brand-primary) !important;
+  border-radius: 15px;
+  box-shadow: 0 9px var(--btn-shadow);
+  transform: translateY(4px);
+}
+
+.logout:hover {
+  background-color: var(--btn-hover) !important;
+  transform: translateY(4px);
+}
+
+.logout:active {
+  background-color: var(--btn-active) !important;
+  box-shadow: 0 5px var(--btn-shadow);
+  transform: translateY(4px);
+}
 
 .manyDogs {
   width: 100%;
@@ -277,4 +320,8 @@ p-dark {
   background-color: var(--brand-primary) !important;
   color: var(--font-secondary) !important;
   /* border-radius: 5px; */
+}
+
+.error-message {
+  letter-spacing: 2px;
 }

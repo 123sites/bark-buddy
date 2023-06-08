@@ -3,7 +3,7 @@ import "../../assets/style.css";
 
 const Footer = () => {
   return (
-    <footer className="sticky-bottom text-center">
+    <footer className="text-center mt-3">
       <a
         target="_blank"
         rel="noopener noreferrer"
@@ -25,15 +25,15 @@ const Footer = () => {
       >
         <i className="fas fa-envelope"></i>
       </a>
-      <h4 className="made my-2 fw-bolder fs-7">
-        Made with{" "}
+      <h4 className="made my-3 fw-bolder fs-7">
+        🐶 The Bark Buddy Bootcamp Team{" "}
         <span
           className="emoji"
           role="img"
           aria-label="heart"
           aria-hidden="false"
         >
-          ❤️
+          🐶
         </span>
         {""}
       </h4>

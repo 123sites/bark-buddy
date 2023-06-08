@@ -29,7 +29,7 @@ const Header = () => {
                 alt="Bark Buddy logo with a dog paw inside the outline of a heart"
               />
               {/* Brand Name  */}
-              <h1 className="name navbar-expand-lg ml-2 fw-bold mb-0">
+              <h1 className="name navbar-brand navbar-expand-lg ml-2 fw-bold mb-0">
                 Bark Buddy
               </h1>
             </Link>
@@ -111,9 +111,10 @@ const Header = () => {
               </ul>
               {/* Profile Dropdown */}
               {Auth.loggedIn() ? (
-                <div>
+                <div classname="nav-item dropdown">
                   <a
-                    className="nav-link dropdown-toggle"
+                    class="nav-link dropdown-toggle"
+                    className="link d-inline fs-6 fw-bold"
                     href="#"
                     role="button"
                     data-bs-toggle="dropdown"
@@ -159,7 +160,10 @@ const Header = () => {
                 ""
               )}
               {Auth.loggedIn() ? (
-                <button className="col btn fw-bolder" onClick={logout}>
+                <button
+                  className="col p-3 logout border-warning fw-bolder"
+                  onClick={logout}
+                >
                   {" "}
                   logout
                 </button>
