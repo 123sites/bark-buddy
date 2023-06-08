@@ -42,14 +42,14 @@ const Login = (props) => {
   };
 
   return (
-    <main className="flex-row justify-center mb-5">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header p-3 text-center login-card-header">
+    <main className="flex-row justify-center">
+      <div className="col-10 col-lg-7 m-5">
+        <div className="card row">
+          <h4 className="card-header p-3 text-center text-light login-card-header">
             Login
-            <i class="fa-sharp fa-solid fa-right-to-bracket"></i>
+            <i className="fa-sharp fa-solid fa-right-to-bracket ml-3 door-open"></i>
           </h4>
-          <div className="card-body flex shadow-lg door-open">
+          <div className="card-body flex shadow-lg">
             {data ? (
               <p>
                 Success! You may now head{" "}
@@ -57,7 +57,7 @@ const Login = (props) => {
               </p>
             ) : (
               <form
-                className="d-flex flex-column justify-content-center align-items-center"
+                className="d-flex p-2 flex-column justify-content-center align-items-center"
                 onSubmit={handleFormSubmit}
               >
                 <input
@@ -77,7 +77,7 @@ const Login = (props) => {
                   onChange={handleChange}
                 />
                 <button
-                  className="sbtn col-2 btn-block fw-bolder fs-5"
+                  className="sbtn m-3 col-2 btn-block fw-bolder fs-5"
                   style={{ cursor: "pointer" }}
                   type="submit"
                 >
@@ -87,7 +87,7 @@ const Login = (props) => {
             )}
 
             {error && (
-              <div className="error my-3 p-3 fw-bolder fs-4 text-center">
+              <div className="my-3 p-3 bg-danger rounded text-white">
                 {error.message}
               </div>
             )}

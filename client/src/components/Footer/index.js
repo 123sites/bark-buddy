@@ -3,7 +3,7 @@ import "../../assets/style.css";
 
 const Footer = () => {
   return (
-    <footer className="text-center mt-5">
+    <footer className="sticky-bottom text-center">
       <a
         target="_blank"
         rel="noopener noreferrer"
@@ -25,7 +25,7 @@ const Footer = () => {
       >
         <i className="fas fa-envelope"></i>
       </a>
-      <h4 className="made my-3 fw-bolder fs-7">
+      <h4 className="made my-2 fw-bolder fs-7">
         Made with{" "}
         <span
           className="emoji"
@@ -38,7 +38,9 @@ const Footer = () => {
         {""}
       </h4>
       <p>
-        <span>Copyright © Ani, Chel, Grant, & Mike | ACGM, inc.</span>
+        <span className="copyright">
+          Copyright © Ani, Chel, Grant, & Mike | ACGM, inc.
+        </span>
       </p>
     </footer>
   );

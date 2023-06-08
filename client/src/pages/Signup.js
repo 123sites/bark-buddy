@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-import { useMutation } from '@apollo/client';
-import { ADD_USER } from '../utils/mutations';
-
-import Auth from '../utils/auth';
+import { useMutation } from "@apollo/client";
+import { ADD_USER } from "../utils/mutations";
+import "../assets/signup.css";
+import Auth from "../utils/auth";
 
 const Signup = () => {
   const [formState, setFormState] = useState({
-    username: '',
-    email: '',
-    password: '',
+    username: "",
+    email: "",
+    password: "",
   });
   const [addUser, { error, data }] = useMutation(ADD_USER);
 
@@ -39,18 +39,23 @@ const Signup = () => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
+    <main className="flex-row justify-center m-4">
+      <div className="col-10 col-lg-7">
         <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
-          <div className="card-body">
+          <h4 className="card-header p-3 text-center text-light login-card-header">
+            Signup
+          </h4>
+          <div className="card-body shadow-lg">
             {data ? (
               <p>
-                Success! You may now head{' '}
+                Success! You may now head{" "}
                 <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
-              <form onSubmit={handleFormSubmit}>
+              <form
+                className="d-flex p-2 flex-column justify-content-center align-items-center"
+                onSubmit={handleFormSubmit}
+              >
                 <input
                   className="form-input"
                   placeholder="Your username"
@@ -76,8 +81,8 @@ const Signup = () => {
                   onChange={handleChange}
                 />
                 <button
-                  className="btn btn-block btn-primary"
-                  style={{ cursor: 'pointer' }}
+                  className="sbtn m-3 col-2 btn-block fw-bolder fs-5"
+                  style={{ cursor: "pointer" }}
                   type="submit"
                 >
                   Submit
@@ -86,7 +91,7 @@ const Signup = () => {
             )}
 
             {error && (
-              <div className="my-3 p-3 bg-danger text-white">
+              <div className="my-3 p-3 bg-danger rounded text-white">
                 {error.message}
               </div>
             )}

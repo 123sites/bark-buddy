@@ -39,15 +39,15 @@
 }
 
 h1,
-.name-light {
-  color: var(--bg-snow);
+.name-dark {
+  color: var(--btn-shadow) !important;
   text-decoration: none;
   font-size: 40px !important;
 }
 
 h1,
-.name-dark {
-  color: var(--btn-shadow);
+.name-light {
+  color: var(--bg-snow) !important;
   text-decoration: none;
   font-size: 40px !important;
 }
@@ -56,13 +56,25 @@ h1,
   color: var(--font-primary)
 }
 
-span {
+span-light,
+.copyright {
+  color: var(--font-primary);
   font-weight: bold;
   font-size: 20px;
   letter-spacing: 2px;
   padding-top: 20px;
   padding-bottom: 7px;
 }
+
+/* span-dark,
+.copyright {
+  color: var(--font-shadow);
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 2px;
+  padding-top: 20px;
+  padding-bottom: 7px;
+} */
 
 li {
   padding: 5px;
@@ -123,13 +135,18 @@ p-dark {
   box-shadow: 0 9px var(--btn-shadow);
 }
 
-.login {
-  background: var(--brand-primary);
-}
+/* .sbtn-dark {
+  padding: 7px 7px;
+  text-align: center;
+  cursor: pointer;
+  outline: none !important;
+  color: var(--font-primary) !important;
+  background-color: var(--btn-shadow) !important;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px var(--btn-shadow);
+} */
 
-.error {
-  color: var(--brand-tertiary);
-}
 
 .manyDogs {
   width: 100%;

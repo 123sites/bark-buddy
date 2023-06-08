@@ -86,14 +86,14 @@ const Videos = () => {
           </div>
 
           <div className="container-fluid">
-            <div className="ax-w-screen-xl mx-auto">
+            <div className="row embed-responsive vContainer rounded shadow-lg">
               {/* <div className="embed-responsive vContainer rounded shadow-lg row"> */}
-              <div className="row flex-direction:row-reverse">
-                <div className="col mt-3">
+              <div className="row">
+                <div className="col-6 mt-3 justify-content:space-evenly">
                   <h2 className="row flex justify-content-center fs-4 fw-bolder">
                     Doggy Daycare #1
                   </h2>
-                  <div className="overflow-visible">
+                  <div>
                     <iframe
                       width="560"
                       height="315"
