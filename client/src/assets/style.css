@@ -34,23 +34,13 @@
   font-family: 'Inter', sans-serif;
 }
 
+body {
+  width: 100%;
+}
+
 .hamburger {
   background-color: var(--btn-shadow)
 }
-
-/* h1,
-.name-light {
-  color: var(--btn-shadow) !important;
-  text-decoration: none;
-  font-size: 40px !important;
-}
-
-h1,
-.name-dark {
-  color: var(--btn-shadow) !important;
-  text-decoration: none;
-  font-size: 40px !important;
-} */
 
 h1,
 .name {
@@ -73,16 +63,6 @@ span,
   padding-bottom: 7px;
 }
 
-/* span-dark,
-.copyright {
-  color: var(--font-shadow);
-  font-weight: bold;
-  font-size: 20px;
-  letter-spacing: 2px;
-  padding-top: 20px;
-  padding-bottom: 7px;
-} */
-
 li {
   padding: 5px;
 }
@@ -90,11 +70,6 @@ li {
 p {
   color: var(--brand-primary) !important;
 }
-
-/* p-dark {
-  color: var(--brand-secondary) !important;
-} */
-
 
 .login-card-light {
   background: var(--bg-snow) !important;
@@ -149,7 +124,8 @@ p {
   transform: translateY(4px);
 }
 
-.sbtn {
+.sbtn,
+.btn-shelter {
   padding: 7px 7px;
   text-align: center;
   cursor: pointer;
@@ -163,17 +139,18 @@ p {
   transform: translateY(4px);
 }
 
-/* .sbtn-dark {
-  padding: 7px 7px;
-  text-align: center;
-  cursor: pointer;
-  outline: none !important;
-  color: var(--font-primary) !important;
-  background-color: var(--btn-shadow) !important;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px var(--btn-shadow);
-} */
+.sbtn:hover,
+.btn-shelter:hover {
+  background-color: var(--btn-hover) !important;
+  transform: translateY(4px);
+}
+
+.sbtn:active,
+.btn-shelter:active {
+  background-color: var(--btn-active) !important;
+  box-shadow: 0 5px var(--btn-shadow);
+  transform: translateY(4px);
+}
 
 .logout {
   padding: 15px 25px;
@@ -322,6 +299,29 @@ p {
   /* border-radius: 5px; */
 }
 
+.donate-title {
+  display: flex;
+  color: var(--brand-primary);
+  justify-content: center;
+}
+
+.stripe-donate {
+  display: flex;
+  text-decoration: none;
+  color: var(--brand-primary);
+  justify-content: center;
+}
+
+.shelter-header {
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  color: var(--font-secondary) !important;
+  background-color: var(--brand-primary) !important;
+}
+
 .error-message {
   letter-spacing: 2px;
+  background-color: red !important;
+  color: var(--font-secondary) !important;
 }

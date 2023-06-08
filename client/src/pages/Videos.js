@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
+import "../assets/style.css";
 
 const Videos = () => {
   return (
     <section className="container-fluid">
-      <div className="">
+      <div className="container">
         <div className="">
           {/* <div className="videoGallery"> */}
           <div className="mt-3">
