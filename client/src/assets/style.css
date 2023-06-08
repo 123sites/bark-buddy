@@ -27,18 +27,29 @@
   --btn-hover-font: #5E239D;
 }
 
+* {
+  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
+}
+
+.hamburger {
+  background-color: var(--btn-shadow)
+}
+
 h1,
 .name-light {
   color: var(--bg-snow);
   text-decoration: none;
-  font-size: 55px;
+  font-size: 40px !important;
 }
 
 h1,
 .name-dark {
   color: var(--btn-shadow);
   text-decoration: none;
-  font-size: 55px;
+  font-size: 40px !important;
 }
 
 .made {
@@ -57,8 +68,12 @@ li {
   padding: 5px;
 }
 
-p {
+p-light {
   color: var(--brand-primary) !important;
+}
+
+p-dark {
+  color: var(--brand-secondary) !important;
 }
 
 .logo {
@@ -71,7 +86,7 @@ p {
 }
 
 .top-dark {
-  background-color: black !important;
+  background-color: rgb(24, 12, 43) !important;
 }
 
 .btn {
@@ -123,6 +138,8 @@ p {
 .videos {
   text-decoration: none !important;
   color: var(--font-primary) !important;
+  font-family: JetBrains Mono;
+  font-weight: bold;
 }
 
 .videos:hover {
@@ -130,12 +147,12 @@ p {
   background-color: var(--btn-active-bgwhite) !important;
   color: var(--btn-hover-font) !important;
   border-radius: 15px;
-  padding: 7px;
 }
 
 .vContainer {
   background-color: var(--cards) !important;
   color: var(--brand-primary) !important;
+  font-family: 'JetBrains Mono', monospace !important;
 }
 
 .link {
@@ -229,11 +246,11 @@ p {
   background-color: var(--brand-primary) !important;
   color: var(--font-secondary) !important;
   border-radius: 5px;
-  padding: 6px;
+  /* padding: 6px; */
 }
 
 .vText {
   background-color: var(--brand-primary) !important;
   color: var(--font-secondary) !important;
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }

@@ -22,11 +22,12 @@ const Header = () => {
         {/* DIV 1 */}
         <div className="row col">
           <div className="col">
-            <Link
-              className="navbar-brand text-light d-inline-flex mt-4 ml-4"
-              to="/"
-            >
-              <img src={Logo} className="logo" alt="" />
+            <Link className="navbar-brand text-light d-inline-flex" to="/">
+              <img
+                src={Logo}
+                className="logo"
+                alt="Bark Buddy logo with a dog paw inside the outline of a heart"
+              />
               {/* Brand Name  */}
               <h1 className="name navbar-expand-lg ml-2 fw-bold mb-0">
                 Bark Buddy
@@ -35,7 +36,8 @@ const Header = () => {
 
             {/* Hamburger */}
             <button
-              className="navbar-toggler"
+              class="navbar-toggler"
+              className="hamburger d-flex flex-row m-2"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent"
@@ -146,10 +148,10 @@ const Header = () => {
             <div>
               {!Auth.loggedIn() ? (
                 <>
-                  <Link className="" to="/login">
+                  <Link className="link fw-bolder p-2" to="/login">
                     Login
                   </Link>
-                  <Link className="fw-bolder" to="/signup">
+                  <Link className="link fw-bolder p-2" to="/signup">
                     Signup
                   </Link>
                 </>
@@ -165,13 +167,15 @@ const Header = () => {
                 ""
               )}
 
-              <button onClick={toggleTheme}>
-                {theme === "light" ? (
-                  <FontAwesomeIcon icon={faMoon} />
-                ) : (
-                  <FontAwesomeIcon icon={faSun} />
-                )}
-              </button>
+              <div className="d-inline-flex col-1 ml-2">
+                <button onClick={toggleTheme}>
+                  {theme === "light" ? (
+                    <FontAwesomeIcon icon={faMoon} />
+                  ) : (
+                    <FontAwesomeIcon icon={faSun} />
+                  )}
+                </button>
+              </div>
             </div>
           </div>
         </div>
