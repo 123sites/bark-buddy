@@ -28,13 +28,13 @@ const Favorites = () => {
 
         try {
             await removeDog({ variables: { dogId: dogId } });
-            refetch(); 
+            refetch();
         } catch (err) {
             console.log(err);
         }
     };
 
-    if (!Auth.loggedIn()){
+    if (!Auth.loggedIn()) {
         window.location.assign('/');
     }
 
@@ -46,11 +46,11 @@ const Favorites = () => {
         <>
             <div>
                 <Container>
-                    <h1>Your favorite pooches</h1>
+                    <h1 className='pt-4'>Your favorite pooches</h1>
                 </Container>
             </div>
             <Container>
-                <h2 className='pt-5'>
+                <h2 className='pt-3'>
                     {userData.dogs?.length
                         ? `Viewing ${userData.dogs.length} saved ${userData.dogs.length === 1 ? 'dog' : 'dogs'}:`
                         : 'No pooches saved to Favorites yet'}
@@ -65,12 +65,12 @@ const Favorites = () => {
                                             alt='doggy'
                                             variant='top' />
                                     ) : null}
-                                    <Card.Body>
+                                    <Card.Body className='d-flex flex-column'>
                                         <Card.Title>{dog?.name}</Card.Title>
                                         <Card.Text>Breed: {dog?.breed}</Card.Text>
                                         <Card.Text>Age: {dog?.age}</Card.Text>
                                         <Card.Text>Gender: {dog?.gender}</Card.Text>
-                                        <Button className='btn-danger'
+                                        <Button className='btn-danger mt-auto'
                                             data-id={dog?._id}
                                             onClick={(event) => handleRemoveDog(event)}>
                                             Remove pooch from Favorites
