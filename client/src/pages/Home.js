@@ -13,7 +13,7 @@ const Home = ({ handlePageChange }) => {
 
   return (
     <main>
-      <div className="homeBox">
+      <div className="container-fluid homeBox">
         <p className="homeTitle h1 p-4 fw-bolder text-center">
           What We Are All About!
         </p>

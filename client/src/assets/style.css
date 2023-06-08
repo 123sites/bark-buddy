@@ -28,8 +28,15 @@
 }
 
 h1,
-.name {
+.name-light {
   color: var(--bg-snow);
+  text-decoration: none;
+  font-size: 55px;
+}
+
+h1,
+.name-dark {
+  color: var(--btn-shadow);
   text-decoration: none;
   font-size: 55px;
 }
@@ -59,8 +66,12 @@ p {
   font-size: 30;
 }
 
-.top {
+.top-light {
   background-color: var(--brand-primary) !important;
+}
+
+.top-dark {
+  background-color: black !important;
 }
 
 .btn {
@@ -85,8 +96,24 @@ p {
   transform: translateY(4px);
 }
 
+.sbtn {
+  padding: 7px 7px;
+  text-align: center;
+  cursor: pointer;
+  outline: none !important;
+  color: var(--font-secondary) !important;
+  background-color: var(--brand-primary) !important;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px var(--btn-shadow);
+}
+
 .login {
   background: var(--brand-primary);
+}
+
+.error {
+  color: var(--brand-tertiary);
 }
 
 .manyDogs {

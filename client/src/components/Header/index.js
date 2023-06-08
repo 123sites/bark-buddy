@@ -14,38 +14,45 @@ const Header = () => {
     Auth.logout();
   };
   return (
-    <nav className={` top header ${theme}`}>
-      <div className="p-2">
-        <div className="row">
+    // Logo
+    <nav
+      className={`navbar navbar-expand-lg header sticky-lg-top top-${theme}`}
+    >
+      <div className="container-fluid">
+        {/* DIV 1 */}
+        <div className="row col">
           <div className="col">
-            <div className="row">
-              <div className="col">
-                <Link className="navbar-brand text-light d-inline-flex" to="/">
-                  <img src={Logo} className="logo" alt="" />
-                  <h1 className="name navbar-expand-lg ml-2 fw-bold mb-0">
-                    Bark Buddy
-                  </h1>
-                </Link>
-              </div>
-            </div>
-            <div
-              className="d-inline-block row p-3 collapse navbar-collapse navbar-expand-lg justify-content-center"
-              id="navbarScroll"
+            <Link
+              className="navbar-brand text-light d-inline-flex mt-4 ml-4"
+              to="/"
             >
-              <button
-                className="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarScroll"
-                aria-controls="navbarScroll"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span className="navbar-toggler-icon"></span>
-              </button>
-              <ul className="navbar-nav my-lg-0 navbar-nav-scroll">
-                {/* <ul className="navbar-nav me-auto mx-3 my-lg-0 navbar-nav-scroll"> */}
+              <img src={Logo} className="logo" alt="" />
+              {/* Brand Name  */}
+              <h1 className="name navbar-expand-lg ml-2 fw-bold mb-0">
+                Bark Buddy
+              </h1>
+            </Link>
+
+            {/* Hamburger */}
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+
+            <div
+              className="collapse navbar-collapse"
+              id="navbarSupportedContent"
+            >
+              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
+                  {/* Link 1 */}
                   <Link
                     className="nav-link link px-2 text-center fw-bolder"
                     to="/"
@@ -53,14 +60,17 @@ const Header = () => {
                     Home
                   </Link>
                 </li>
+                {/* Link 2 */}
                 <li className="nav-item">
                   <Link
                     className="nav-link link px-2 text-center fw-bolder"
                     to="/videos"
                   >
+                    {" "}
                     Videos
                   </Link>
                 </li>
+                {/* Link 3 */}
                 <li className="nav-item">
                   <Link
                     className="nav-link link p-2 text-center fw-bolder"
@@ -70,6 +80,7 @@ const Header = () => {
                   </Link>
                 </li>
                 <li className="nav-item">
+                  {/* Link 4 */}
                   <Link
                     className="nav-link link p-2 text-center fw-bolder"
                     to="/quiz"
@@ -77,6 +88,7 @@ const Header = () => {
                     Dog Quiz
                   </Link>
                 </li>
+                {/* Link 5 */}
                 <li className="nav-item">
                   <Link
                     className="nav-link link p-2 text-center fw-bolder"
@@ -85,6 +97,7 @@ const Header = () => {
                     Find a Shelter
                   </Link>
                 </li>
+                {/* Link 6 */}
                 <li className="nav-item">
                   <Link
                     className="nav-link link p-2 text-center fw-bolder"
@@ -93,77 +106,65 @@ const Header = () => {
                     Shelter Donation
                   </Link>
                 </li>
-
-                {Auth.loggedIn() ? (
-                  <li className="nav-item dropdown">
-                    <a
-                      className="nav-link link fw-bold p-2 fs-6 dropdown-toggle"
-                      href="#"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Profile
-                    </a>
-
-                    <ul className="dropdown-menu">
-                      <li>
-                        {" "}
-                        <Link
-                          className="dropdown-item ddText fw-bolder mx-3"
-                          to="/favorites"
-                        >
-                          Favorites
-                        </Link>
-                      </li>
-                      <li>
-                        {" "}
-                        <Link
-                          className="dropdown-item ddText mx-3 fw-bolder"
-                          to="/me"
-                        >
-                          {/* {Auth.getProfile().data.username}'s Profile */}
-                          Account
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
-                ) : (
-                  ""
-                )}
               </ul>
+              {/* Profile Dropdown */}
+              {Auth.loggedIn() ? (
+                <div>
+                  <a
+                    className="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Profile
+                  </a>
+                  <ul className="dropdown-menu">
+                    <li>
+                      {" "}
+                      <Link className="dropdown-item" to="/favorites">
+                        Favorites
+                      </Link>
+                    </li>
+                    <li>
+                      <hr className="dropdown-divider" />
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="/me">
+                        Account
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              ) : (
+                ""
+              )}
             </div>
           </div>
-          <div className="d-inline-flex col mr-5 align-items-center justify-content-end">
-            {!Auth.loggedIn() ? (
-              <>
-                <div>
-                  <Link className="link btn-lg m-2 fw-bolder" to="/login">
+
+          <div className="col d-flex justify-flex-end align-center">
+            <div>
+              {!Auth.loggedIn() ? (
+                <>
+                  <Link className="" to="/login">
                     Login
                   </Link>
-                </div>
-                <div>
-                  <Link
-                    className="link btn-lg my-3 mr-1 ml-3 fw-bolder"
-                    to="/signup"
-                  >
+                  <Link className="fw-bolder" to="/signup">
                     Signup
                   </Link>
-                </div>
-              </>
-            ) : (
-              ""
-            )}
-            {Auth.loggedIn() ? (
-              <div className="link col-1 mr-5 pr-5 fw-bolder" onClick={logout}>
-                {" "}
-                logout
-              </div>
-            ) : (
-              ""
-            )}
+                </>
+              ) : (
+                ""
+              )}
+              {Auth.loggedIn() ? (
+                <button className="col btn fw-bolder" onClick={logout}>
+                  {" "}
+                  logout
+                </button>
+              ) : (
+                ""
+              )}
 
-            <div className="d-inline-block pl-3 ml-4">
               <button onClick={toggleTheme}>
                 {theme === "light" ? (
                   <FontAwesomeIcon icon={faMoon} />
@@ -178,5 +179,4 @@ const Header = () => {
     </nav>
   );
 };
-
 export default Header;

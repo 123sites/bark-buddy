@@ -76,8 +76,8 @@ const Quiz = () => {
   };
 
   return (
-    <div className="quiz-container">
-      <h1>Find Your Perfect Bark Buddy</h1>
+    <div className="form quiz col-12 col-lg-7">
+      <h1 className="qTitle">Find Your Perfect Bark Buddy</h1>
       {currentStep === 1 && (
         <form onSubmit={nextStep}>
           <label>
@@ -92,7 +92,7 @@ const Quiz = () => {
             </select>
           </label>
           <br />
-          <button className="next-button" type="submit">
+          <button className="qbtn next-button" type="submit">
             Next
           </button>
         </form>
@@ -115,12 +115,12 @@ const Quiz = () => {
           </label>
           <br />
           {shouldShowPrevButton && (
-            <button className="prev-button" onClick={prevStep}>
+            <button className="qbtn prev-button" onClick={prevStep}>
               Previous
             </button>
           )}
           {dogAge ? (
-            <button className="next-button" type="submit">
+            <button className="qbtn next-button" type="submit">
               Next
             </button>
           ) : (
@@ -143,12 +143,12 @@ const Quiz = () => {
           </label>
           <br />
           {shouldShowPrevButton && (
-            <button className="prev-button" onClick={prevStep}>
+            <button className="qbtn prev-button" onClick={prevStep}>
               Previous
             </button>
           )}
           {energyLevel ? (
-            <button className="next-button" type="submit">
+            <button className="qbtn next-button" type="submit">
               Next
             </button>
           ) : (
@@ -174,13 +174,13 @@ const Quiz = () => {
           </label>
           <br />
           {shouldShowPrevButton && (
-            <button className="prev-button" onClick={prevStep}>
+            <button className="qbtn prev-button" onClick={prevStep}>
               Previous
             </button>
           )}
           {size ? (
             shouldShowFindBreedButton ? (
-              <button className="submit-button" type="submit">
+              <button className="qbtn submit-button" type="submit">
                 Find My Dog Breed
               </button>
             ) : (
@@ -196,7 +196,7 @@ const Quiz = () => {
           <h2>Result:</h2>
           <p>You should consider getting a {result}!</p>
           {shouldShowFindBreedButton && (
-            <button className="try-again-button" onClick={resetQuiz}>
+            <button className="qbtn try-again-button" onClick={resetQuiz}>
               Take Again
             </button>
           )}
