@@ -73,89 +73,84 @@ function DogSearchResult({ dog, userData, refetchUser }) {
   //console.log("dog._id: ", dog._id);
   return (
     <>
-      <Container>
-        <Col>
-          <Card className='h-100' key={dog?.id}>
-            <Card.Img src={dog?.profile_pic}
-              alt='doggy'
-              variant='top'
-            />
-            <Card.Body>
-              <Card.Title>{dog?.name}</Card.Title>
-              <Card.Text>Breed: {dog?.breed}</Card.Text>
-              <Card.Text>Age: {dog?.age}</Card.Text>
-              <Card.Text>Gender: {dog?.gender}</Card.Text>
 
-            </Card.Body>
-            {Auth.loggedIn() && (
-              <Button
-                disabled={userData?.dogs?.some((savedDog) => savedDog._id === dog._id)}
-                className='btn-info'
-                data-name={dog?.name}
-                data-breed={dog?.breed}
-                data-gender={dog?.gender}
-                data-age={dog?.age}
-                data-id={dog?._id}
-                data-profile_pic={dog?.profile_pic}
-                onClick={(event) => handleSaveDog(event)}>
-                {userData?.dogs.some((savedDog) => savedDog._id === dog._id)
-                  ? 'Pooch saved to Favorites already'
-                  : 'Save to Favorite Pooches'}
-              </Button>
-            )}
+      <Card className='h-100' key={dog?.id}>
+        <Card.Img src={dog?.profile_pic}
+          alt='doggy'
+          variant='top'
+        />
+        <Card.Body>
+          <Card.Title>{dog?.name}</Card.Title>
+          <Card.Text>Breed: {dog?.breed}</Card.Text>
+          <Card.Text>Age: {dog?.age}</Card.Text>
+          <Card.Text>Gender: {dog?.gender}</Card.Text>
 
-            <div>
-              {Auth.loggedIn() && (
-                <Button className='btn-info'
-                  onClick={handleModal} variant="primary" block>Adopt</Button>
-              )}
-            </div>
-            <Modal show={showModal} onHide={handleModal}>
-              <Modal.Header closeButton>
-                <Modal.Title>Adoption Form</Modal.Title>
-              </Modal.Header>
-              <Modal.Body>
-                <Form>
-                  <Form.Group controlId="formName">
-                    <Form.Label>Name</Form.Label>
-                    <Form.Control type="text" placeholder="Enter your full name" />
-                  </Form.Group>
-                  <Form.Group controlId="formEmail">
-                    <Form.Label>Email</Form.Label>
-                    <Form.Control type="text" placeholder="Enter your email address" />
-                  </Form.Group>
-                  <Form.Group controlId="formPhone">
-                    <Form.Label>Phone</Form.Label>
-                    <Form.Control type="text" placeholder="What is the best phone number to reach you?" />
-                  </Form.Group>
-                </Form>
-              </Modal.Body>
-              <Modal.Footer>
-                <Button variant="secondary" onClick={handleModal}>
-                  Close
-                </Button>
-                <Button variant="primary" onClick={handleSubmit}>
-                  Submit
-                </Button>
-              </Modal.Footer>
-            </Modal>
+        </Card.Body>
+        {Auth.loggedIn() && (
+          <Button
+            disabled={userData?.dogs?.some((savedDog) => savedDog._id === dog._id)}
+            className='btn-info'
+            data-name={dog?.name}
+            data-breed={dog?.breed}
+            data-gender={dog?.gender}
+            data-age={dog?.age}
+            data-id={dog?._id}
+            data-profile_pic={dog?.profile_pic}
+            onClick={(event) => handleSaveDog(event)}>
+            {userData?.dogs.some((savedDog) => savedDog._id === dog._id)
+              ? 'Pooch saved to Favorites already'
+              : 'Save to Favorite Pooches'}
+          </Button>
+        )}
 
-            <Modal show={submitted} onHide={() => setSubmitted(false)}>
-              <Modal.Header closeButton>
-                <Modal.Title>Thank You!</Modal.Title>
-              </Modal.Header>
-              <Modal.Body>
-                <p>Thank you for filling out the form. A rescue team member will reach out to you shortly!</p>
-              </Modal.Body>
-              <Modal.Footer>
-                <Button variant="secondary" onClick={() => setSubmitted(false)}>
-                  Close
-                </Button>
-              </Modal.Footer>
-            </Modal>
-          </Card>
-        </Col>
-      </Container>
+        {Auth.loggedIn() && (
+          <Button className='btn-info'
+            onClick={handleModal} variant="primary" block>Adopt</Button>
+        )}
+        <Modal show={showModal} onHide={handleModal}>
+          <Modal.Header closeButton>
+            <Modal.Title>Adoption Form</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Form>
+              <Form.Group controlId="formName">
+                <Form.Label>Name</Form.Label>
+                <Form.Control type="text" placeholder="Enter your full name" />
+              </Form.Group>
+              <Form.Group controlId="formEmail">
+                <Form.Label>Email</Form.Label>
+                <Form.Control type="text" placeholder="Enter your email address" />
+              </Form.Group>
+              <Form.Group controlId="formPhone">
+                <Form.Label>Phone</Form.Label>
+                <Form.Control type="text" placeholder="What is the best phone number to reach you?" />
+              </Form.Group>
+            </Form>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleModal}>
+              Close
+            </Button>
+            <Button variant="primary" onClick={handleSubmit}>
+              Submit
+            </Button>
+          </Modal.Footer>
+        </Modal>
+
+        <Modal show={submitted} onHide={() => setSubmitted(false)}>
+          <Modal.Header closeButton>
+            <Modal.Title>Thank You!</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <p>Thank you for filling out the form. A rescue team member will reach out to you shortly!</p>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={() => setSubmitted(false)}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      </Card>
     </>
   );
 }

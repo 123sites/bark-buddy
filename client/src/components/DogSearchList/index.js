@@ -28,6 +28,17 @@ function DogSearchList({ userData, refetchUser }) {
     setFilteredDogData(data?.dogs || []);
   }, [data]);
 
+  useEffect(() => {
+    const newDogArray = dogData?.dogs?.filter((dog) => {
+      return (
+        (selectedBreed === '' || selectedBreed === dog.breed) &&
+        (selectedAge === '' || selectedAge === dog.age) &&
+        (selectedGender === '' || selectedGender === dog.gender)
+      );
+    });
+    setFilteredDogData(newDogArray);
+  }, [selectedBreed, selectedAge, selectedGender])
+
   const handleClearFilters = () => {
     setSelectedBreed('');
     setSelectedAge('');
@@ -36,64 +47,26 @@ function DogSearchList({ userData, refetchUser }) {
   };
 
   const handleInputBreed = (event) => {
-    //console.log(event.target.value);
     const targettedAttribute = event.target.value;
     setSelectedBreed(targettedAttribute);
-    const newDogArray = dogData?.dogs?.filter((dog) => {
-      return (
-        (targettedAttribute === '' || targettedAttribute === dog.breed) &&
-        isMatchingAge(dog) &&
-        isMatchingGender(dog)
-      );
-    });
-    setFilteredDogData(newDogArray);
   };
 
   const handleInputAge = (event) => {
-    //console.log(event.target.value);
     const targettedAttribute = event.target.value;
     setSelectedAge(targettedAttribute);
-    const newDogArray = dogData?.dogs?.filter((dog) => {
-      return (
-        (selectedBreed === '' || selectedBreed === dog.breed) &&
-        (targettedAttribute === '' || targettedAttribute === dog.age) &&
-        (selectedGender === '' || selectedGender === dog.gender)
-      );
-    });
-    setFilteredDogData(newDogArray);
   };
 
   const handleInputGender = (event) => {
-    //console.log(event.target.value);
     const targettedAttribute = event.target.value;
     setSelectedGender(targettedAttribute);
-    const newDogArray = dogData?.dogs?.filter((dog) => {
-      return (
-        (selectedBreed === '' || selectedBreed === dog.breed) &&
-        (selectedAge === '' || selectedAge === dog.age) &&
-        (targettedAttribute === '' || targettedAttribute === dog.gender)
-      );
-    });
-    setFilteredDogData(newDogArray);
   };
 
-  const isMatchingBreed = (dog) => {
-    return selectedBreed === '' || selectedBreed === dog.breed;
-  };
 
-  const isMatchingAge = (dog) => {
-    return selectedAge === '' || selectedAge === dog.age;
-  };
+  const breeds = [...new Map(filteredDogData?.map((dog) => [dog.breed, dog])).values()];
 
-  const isMatchingGender = (dog) => {
-    return selectedGender === '' || selectedGender === dog.gender;
-  };
+  const ages = [...new Map(filteredDogData?.map((dog) => [dog.age, dog])).values()];
 
-  const breeds = [...new Map(dogData?.dogs?.map((dog) => [dog.breed, dog])).values()];
-
-  const ages = [...new Map(dogData?.dogs?.map((dog) => [dog.age, dog])).values()];
-
-  const genders = [...new Map(dogData?.dogs?.map((dog) => [dog.gender, dog])).values()];
+  const genders = [...new Map(filteredDogData?.map((dog) => [dog.gender, dog])).values()];
 
   return (
     <>
