@@ -115,7 +115,7 @@ const DogShelterSearch = () => {
                         <form onSubmit={handleSearch}>
                             <input
                                 className="form-input"
-                                placeholder="City, State, or Zip Code."
+                                placeholder="Please enter a State or Zip Code"
                                 name="search"
                                 type="text"
                                 value={searchTerm}
@@ -134,10 +134,10 @@ const DogShelterSearch = () => {
                             <ul>
 
 
-                                {searchResults.map((organization) => (
-                                    <li key={organization.id}>
-                                        <h2>{organization.name}</h2>
-                                        <p>{getFullAddress(organization.address)}</p>
+                                {searchResults.map((organizations) => (
+                                    <li key={organizations.id}>
+                                        <h2>{organizations.name}</h2>
+                                        <p>{getFullAddress(organizations.address)}</p>
                                     </li>
                                 ))}
                             </ul>
