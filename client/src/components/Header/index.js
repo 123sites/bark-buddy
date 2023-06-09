@@ -29,7 +29,9 @@ const Header = () => {
                 alt="Bark Buddy logo with a dog paw inside the outline of a heart"
               />
               {/* Brand Name  */}
-              <h1 className="name navbar-brand navbar-expand-lg ml-2 fw-bold mb-0">
+              <h1
+                className={`name-${theme} navbar-brand navbar-expand-lg ml-2 fw-bold mb-0`}
+              >
                 Bark Buddy
               </h1>
             </Link>
@@ -55,7 +57,7 @@ const Header = () => {
                 <li className="nav-item">
                   {/* Link 1 */}
                   <Link
-                    className="nav-link link px-2 text-center fw-bolder"
+                    className={`nav-link link-${theme} px-2 text-center fw-bolder`}
                     to="/"
                   >
                     Home
@@ -148,6 +150,7 @@ const Header = () => {
               {!Auth.loggedIn() ? (
                 <>
                   <Link className="link fw-bolder p-2" to="/login">
+                    {/* <Link className={`link-${theme} fw-bolder p-2" to="/login"`}> */}
                     Login
                   </Link>
                   <Link className="link fw-bolder p-2" to="/signup">

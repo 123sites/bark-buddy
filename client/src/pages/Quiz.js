@@ -77,12 +77,12 @@ const Quiz = () => {
 
   return (
     <div className="container quiz-container mt-5 rounded shadow-lg">
-      <h1 className="container-name row fs-2 fw-bolder">
+      <h1 className="container-name row fs-2 mt-2 fw-bolder">
         Find Your Perfect Bark Buddy
       </h1>
       {currentStep === 1 && (
         <form onSubmit={nextStep}>
-          <label className="row col-12 mt-5 justify-content-center">
+          <label className="row col-12 mt-4 justify-content-center">
             Dog Age:
             <select value={dogAge} onChange={(e) => setDogAge(e.target.value)}>
               <option value="" className="option-placeholder">
@@ -95,7 +95,7 @@ const Quiz = () => {
           </label>
           <br />
           <div>
-            <button className="next-button" type="submit">
+            <button className="next-button mb-4" type="submit">
               Next
             </button>
           </div>

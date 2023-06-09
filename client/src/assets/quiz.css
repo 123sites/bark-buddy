@@ -2,30 +2,50 @@
 :root {
     /* main body */
     --bg-snow: #FAF8FA;
+    --dark-bg-lav: #b883ec;
     /* colors: */
     --brand-primary: #5E239D;
+    --dark-primary-purple: #20003d;
     --brand-secondary: #8A4FFF;
+    --dark-secondary-purple: #3c096c;
     --brand-tertiary: #de3c4b;
+    --dark-orange: #291200;
     --border: #FBB94C;
+    --dark-border: #8f5800;
     /* font */
     --font-primary: #5E239D;
+    --dark-font-primary: #20003d;
     --font-secondary: #FAF8FA;
+    --dark-font-secondary: #b883ec;
     --font-tertiary: black;
     /* cards */
     --cards: #FBB94C;
+    --dark-cards: #8f5800;
     /* buttons */
     --btn: #faf8fa;
+    --dark-btn-lav: #b883ec;
     --btn: #5E239D;
+    --dark-button: #20003d;
     --btn-font: #5E239D;
+    --dark-font-button: #20003d;
     --btn-shadow: #7e7c80;
+    --dark-btn-shadow: #2b2b2c;
     /* active buttons */
     --btn-active-bgwhite: #FAF8FA;
+    --dark-btn-active-bglav: #b883ec;
     --btn-active-bgorange: #FBB94C;
+    --dark-btn-active: #8f5800;
     --btn-active-font: #5E239D;
+    --btn-active-font: #20003d;
     /* hover buttons */
     --btn-hover-bgwhite: #FAF8FA;
+    --dark-btn-hover-bglav: #b883ec;
     --btn-hover-bgorange: #FBB94C;
+    --dark-btn-hover-bgorange: #8f5800;
     --btn-hover-font: #5E239D;
+    --dark-btn-hover-font: #20003d;
+    /* additional dark purple */
+    --dark-purple: #3C096C;
 }
 
 h1 {
