@@ -82,6 +82,33 @@ const resolvers = {
       }
       throw new AuthenticationError('You need to be logged in!');
     },
+    updateUser: async (_, { username, email, password }, context) => {
+      if (context.user) {
+        const updatedFields = {};
+
+        if (username) {
+          updatedFields.username = username;
+        }
+
+        if (email) {
+          updatedFields.email = email;
+        }
+
+        if (password) {
+          updatedFields.password = password;
+        }
+
+        const updatedUser = await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $set: updatedFields },
+          { new: true }
+        ).populate('dogs');
+
+        return updatedUser;
+      }
+
+      throw new AuthenticationError('You need to be logged in!');
+    },
   },
 };
 
