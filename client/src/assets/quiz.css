@@ -51,7 +51,7 @@ form {
     flex-direction: column;
 }
 
-*/ label {
+label {
     display: inline-block;
     color: var(--font-primary);
     font-weight: bolder;
