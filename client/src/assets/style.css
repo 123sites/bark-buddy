@@ -36,17 +36,45 @@
 
 body {
   width: 100%;
+  background-image: url("../images/fur.avif");
+  background-size: cover;
 }
+
+body[data-theme="dark"] {
+  backdrop-filter: invert(1);
+}
+
+.homeBox-dark {
+  background-color: #240046;
+}
+
+.homeBox-light {
+  background-color: var(--border);
+  border-radius: 5px;
+  padding: 6px;
+}
+
+/* .app {
+  background-image: url("../images/fur.avif");
+  background-size: cover;
+}
+
+.app.dark {} */
 
 .hamburger {
   background-color: var(--btn-shadow)
 }
 
-h1,
-.name {
+h1 {
   color: var(--bg-snow) !important;
   text-decoration: none;
   font-size: 40px !important;
+}
+
+.name {
+  color: var(--bg-snow) !important;
+  text-decoration: none;
+  font-size: min(7vw, 3rem) !important;
 }
 
 .made {
@@ -201,7 +229,7 @@ p {
 
 .link {
   color: var(--font-secondary) !important;
-  font-size: 20px;
+  font-size: 17px;
   text-decoration: none;
   letter-spacing: 2px;
 }
@@ -278,12 +306,6 @@ p {
   color: var(--font-primary);
   margin: 10px;
   font-size: 30px;
-}
-
-.homeBox {
-  background-color: var(--border);
-  border-radius: 5px;
-  padding: 6px;
 }
 
 .vTitles {

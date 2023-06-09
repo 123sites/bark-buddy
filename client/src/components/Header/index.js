@@ -36,7 +36,7 @@ const Header = () => {
 
             {/* Hamburger */}
             <button
-              className="navbar-toggler hamburger d-flex flex-row m-2"
+              className="navbar-toggler hamburger d-flex d-lg-none flex-row m-2"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent"
@@ -169,7 +169,7 @@ const Header = () => {
                 ""
               )}
 
-              <div className="d-inline-flex col-1 ml-2">
+              <div className="d-inline-flex ml-2">
                 <button onClick={toggleTheme}>
                   {theme === "light" ? (
                     <FontAwesomeIcon icon={faMoon} />

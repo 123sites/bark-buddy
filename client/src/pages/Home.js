@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
+import { useContext } from "react"; //willis
+import { ThemeContext } from "../components/Theme/themeContext"; //willis
 import { useQuery } from "@apollo/client";
 import manyDogs from "../images/manyDogs.webp";
 // import DogQuiz from "../components/DogQuiz/quiz"
 
 const Home = ({ handlePageChange }) => {
+  const { toggleTheme, theme } = useContext(ThemeContext);
+
   const [currentPath, setCurrentPath] = useState("");
   // runs when a component renderes in the browser
   useEffect(() => {
@@ -13,7 +17,7 @@ const Home = ({ handlePageChange }) => {
 
   return (
     <main>
-      <div className="container-fluid homeBox">
+      <div className={`container-fluid homeBox body-${theme}`}>
         <p className="homeTitle h1 p-4 fw-bolder text-center">
           What We Are All About!
         </p>
