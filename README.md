@@ -4,11 +4,6 @@
 
 ## Description ✏️
 
-
-
-
-
-
 ## User Story 📖
 
 As a person who ............,
@@ -26,10 +21,11 @@ so I can......................
 
 ## Deployed Link 🔑
 
-You can view this through this link: 
+You can view this through this link:
 
 ## Tests 🧪
 
+User testing
 
 ## Usage &#128161;
 
@@ -44,10 +40,11 @@ This can be used for....................
 ## Credits 👈
 
 Our Team:
-   - Ani Toal
-   - Chel Freitas
-   - Grant Willis
-   - Mike Fazio
+
+- Ani Toal
+- Chel Freitas
+- Grant Willis
+- Mike Fazio
 
 ## License 📝
 
@@ -69,9 +66,3 @@ The MIT license is in the GitHub repository. Click to link to view it:
 ![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)
 ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
 ![Apollo-GraphQL](https://img.shields.io/badge/-ApolloGraphQL-311C87?style=for-the-badge&logo=apollo-graphql)
-
-
-## Bonus Features ✍
-- Is Installable
-- Service Worker
-- Web Manifest

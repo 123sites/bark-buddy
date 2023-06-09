@@ -3,7 +3,7 @@ import "../../assets/style.css";
 
 const Footer = () => {
   return (
-    <footer className="text-center mt-5">
+    <footer className="text-center mt-3">
       <a
         target="_blank"
         rel="noopener noreferrer"
@@ -26,19 +26,21 @@ const Footer = () => {
         <i className="fas fa-envelope"></i>
       </a>
       <h4 className="made my-3 fw-bolder fs-7">
-        Made with{" "}
+        🐶 The Bark Buddy Bootcamp Team{" "}
         <span
           className="emoji"
           role="img"
           aria-label="heart"
           aria-hidden="false"
         >
-          ❤️
+          🐶
         </span>
         {""}
       </h4>
       <p>
-        <span>Copyright © Ani, Chel, Grant, & Mike | ACGM, inc.</span>
+        <span className="copyright">
+          Copyright © Ani, Chel, Grant, & Mike | ACGM, inc.
+        </span>
       </p>
     </footer>
   );

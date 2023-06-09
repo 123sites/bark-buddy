@@ -1,0 +1,36 @@
+:root {
+  /* main body */
+  --bg-snow: #FAF8FA;
+  /* colors: */
+  --brand-primary: #5E239D;
+  --brand-secondary: #8A4FFF;
+  --brand-tertiary: #de3c4b;
+  --border: #FBB94C;
+  /* font */
+  --font-primary: #5E239D;
+  --font-secondary: #FAF8FA;
+  --font-tertiary: black;
+  /* cards */
+  --cards: #FBB94C;
+  /* buttons */
+  --btn: #faf8fa;
+  --btn: #5E239D;
+  --btn-font: #5E239D;
+  --btn-shadow: #7e7c80;
+  /* active buttons */
+  --btn-active-bgwhite: #FAF8FA;
+  --btn-active-bgorange: #FBB94C;
+  --btn-active-font: #5E239D;
+  /* hover buttons */
+  --btn-hover-bgwhite: #FAF8FA;
+  --btn-hover-bgorange: #FBB94C;
+  --btn-hover-font: #5E239D;
+}
+
+.login-card-header {
+  background-color: var(--brand-primary) !important;
+}
+
+.loginMessage {
+  color: var(--brand-primary) !important;
+}

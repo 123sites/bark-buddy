@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useMutation } from '@apollo/client';
-import { LOGIN_USER } from '../utils/mutations';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useMutation } from "@apollo/client";
+import { LOGIN_USER } from "../utils/mutations";
+import "../assets/login.css";
 
-import Auth from '../utils/auth';
+import Auth from "../utils/auth";
 
 const Login = (props) => {
-  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [formState, setFormState] = useState({ email: "", password: "" });
   const [login, { error, data }] = useMutation(LOGIN_USER);
 
   // update state based on form input changes
@@ -35,26 +36,32 @@ const Login = (props) => {
 
     // clear form values
     setFormState({
-      email: '',
-      password: '',
+      email: "",
+      password: "",
     });
   };
 
   return (
-    <main className="flex-row justify-center mb-5">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header p-3 justify-center">Login</h4>
-          <div className="card-body shadow-lg">
+    <main className="flex-row justify-center">
+      <div className="col-10 col-lg-7 m-5">
+        <div className="card row shadow-lg">
+          <h4 className="card-header shadow-lg p-3 text-center text-light login-card-header">
+            Login
+            <i className="fa-sharp fa-solid fa-right-to-bracket ml-3 door-open"></i>
+          </h4>
+          <div className="card-body loginMessage flex shadow-lg fs-3 fw-bold text-center">
             {data ? (
               <p>
-                Success! You may now head{' '}
+                Success! You may now head{" "}
                 <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
-              <form onSubmit={handleFormSubmit}>
+              <form
+                className="d-flex p-2 flex-column justify-content-center align-items-center"
+                onSubmit={handleFormSubmit}
+              >
                 <input
-                  className="form-input"
+                  className="form-input shadow-lg"
                   placeholder="Your email"
                   name="email"
                   type="email"
@@ -62,7 +69,7 @@ const Login = (props) => {
                   onChange={handleChange}
                 />
                 <input
-                  className="form-input"
+                  className="form-input shadow-lg"
                   placeholder="******"
                   name="password"
                   type="password"
@@ -70,8 +77,8 @@ const Login = (props) => {
                   onChange={handleChange}
                 />
                 <button
-                  className="btn btn-block fw-bolder fs-5"
-                  style={{ cursor: 'pointer' }}
+                  className="sbtn m-3 col-2 btn-block fw-bold fs-5"
+                  style={{ cursor: "pointer" }}
                   type="submit"
                 >
                   Submit
@@ -80,7 +87,7 @@ const Login = (props) => {
             )}
 
             {error && (
-              <div className="my-3 p-3 text-white">
+              <div className="error-message fs-5 my-3 p-3 fw-bold bg-danger rounded text-white">
                 {error.message}
               </div>
             )}

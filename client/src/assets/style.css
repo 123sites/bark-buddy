@@ -27,18 +27,35 @@
   --btn-hover-font: #5E239D;
 }
 
+* {
+  font-family: 'JetBrains Mono', monospace;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  width: 100%;
+}
+
+.hamburger {
+  background-color: var(--btn-shadow)
+}
+
 h1,
 .name {
-  color: var(--bg-snow);
+  color: var(--bg-snow) !important;
   text-decoration: none;
-  font-size: 55px;
+  font-size: 40px !important;
 }
 
 .made {
   color: var(--font-primary)
 }
 
-span {
+span,
+.copyright {
+  color: var(--font-primary);
   font-weight: bold;
   font-size: 20px;
   letter-spacing: 2px;
@@ -54,13 +71,33 @@ p {
   color: var(--brand-primary) !important;
 }
 
+.login-card-light {
+  background: var(--bg-snow) !important;
+}
+
+.login-card-dark {
+  background: var(--btn-shadow) !important;
+}
+
+.login-card-header {
+  background: var(--brand-primary) !important;
+}
+
+.error {
+  color: var(--brand-tertiary);
+}
+
 .logo {
   width: 100px;
   font-size: 30;
 }
 
-.top {
+.top-light {
   background-color: var(--brand-primary) !important;
+}
+
+.top-dark {
+  background-color: rgb(24, 12, 43) !important;
 }
 
 .btn {
@@ -73,10 +110,12 @@ p {
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px var(--btn-shadow);
+  transform: translateY(4px);
 }
 
 .btn:hover {
-  background-color: var(--btn-hover) !important
+  background-color: var(--btn-hover) !important;
+  transform: translateY(4px);
 }
 
 .btn:active {
@@ -85,8 +124,55 @@ p {
   transform: translateY(4px);
 }
 
-.login {
-  background: var(--brand-primary);
+.sbtn,
+.btn-shelter {
+  padding: 7px 7px;
+  text-align: center;
+  cursor: pointer;
+  outline: none !important;
+  color: var(--font-secondary) !important;
+  background-color: var(--brand-primary) !important;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px var(--btn-shadow);
+  letter-spacing: 2px;
+  transform: translateY(4px);
+}
+
+.sbtn:hover,
+.btn-shelter:hover {
+  background-color: var(--btn-hover) !important;
+  transform: translateY(4px);
+}
+
+.sbtn:active,
+.btn-shelter:active {
+  background-color: var(--btn-active) !important;
+  box-shadow: 0 5px var(--btn-shadow);
+  transform: translateY(4px);
+}
+
+.logout {
+  padding: 15px 25px;
+  text-align: center;
+  cursor: pointer;
+  outline: var(--border) !important;
+  color: var(--border) !important;
+  background-color: var(--brand-primary) !important;
+  border-radius: 15px;
+  box-shadow: 0 9px var(--btn-shadow);
+  transform: translateY(4px);
+}
+
+.logout:hover {
+  background-color: var(--btn-hover) !important;
+  transform: translateY(4px);
+}
+
+.logout:active {
+  background-color: var(--btn-active) !important;
+  box-shadow: 0 5px var(--btn-shadow);
+  transform: translateY(4px);
 }
 
 .manyDogs {
@@ -96,6 +182,8 @@ p {
 .videos {
   text-decoration: none !important;
   color: var(--font-primary) !important;
+  font-family: JetBrains Mono;
+  font-weight: bold;
 }
 
 .videos:hover {
@@ -103,12 +191,12 @@ p {
   background-color: var(--btn-active-bgwhite) !important;
   color: var(--btn-hover-font) !important;
   border-radius: 15px;
-  padding: 7px;
 }
 
 .vContainer {
   background-color: var(--cards) !important;
   color: var(--brand-primary) !important;
+  font-family: 'JetBrains Mono', monospace !important;
 }
 
 .link {
@@ -202,11 +290,38 @@ p {
   background-color: var(--brand-primary) !important;
   color: var(--font-secondary) !important;
   border-radius: 5px;
-  padding: 6px;
+  /* padding: 6px; */
 }
 
 .vText {
   background-color: var(--brand-primary) !important;
   color: var(--font-secondary) !important;
-  border-radius: 5px;
+  /* border-radius: 5px; */
+}
+
+.donate-title {
+  display: flex;
+  color: var(--brand-primary);
+  justify-content: center;
+}
+
+.stripe-donate {
+  display: flex;
+  text-decoration: none;
+  color: var(--brand-primary);
+  justify-content: center;
+}
+
+.shelter-header {
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  color: var(--font-secondary) !important;
+  background-color: var(--brand-primary) !important;
+}
+
+.error-message {
+  letter-spacing: 2px;
+  background-color: red !important;
+  color: var(--font-secondary) !important;
 }

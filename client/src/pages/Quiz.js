@@ -76,11 +76,13 @@ const Quiz = () => {
   };
 
   return (
-    <div className="quiz-container">
-      <h1>Find Your Perfect Bark Buddy</h1>
+    <div className="container quiz-container mt-5 rounded shadow-lg">
+      <h1 className="container-name row fs-2 fw-bolder">
+        Find Your Perfect Bark Buddy
+      </h1>
       {currentStep === 1 && (
         <form onSubmit={nextStep}>
-          <label>
+          <label className="row col-12 mt-5 justify-content-center">
             Dog Age:
             <select value={dogAge} onChange={(e) => setDogAge(e.target.value)}>
               <option value="" className="option-placeholder">
@@ -92,16 +94,19 @@ const Quiz = () => {
             </select>
           </label>
           <br />
-          <button className="next-button" type="submit">
-            Next
-          </button>
+          <div>
+            <button className="next-button" type="submit">
+              Next
+            </button>
+          </div>
         </form>
       )}
       {currentStep === 2 && (
         <form onSubmit={nextStep}>
-          <label>
+          <label className="row col-12 mt-5 justify-content-center">
             Energy Level:
             <select
+              className="col"
               value={energyLevel}
               onChange={(e) => setEnergyLevel(e.target.value)}
             >
@@ -115,22 +120,34 @@ const Quiz = () => {
           </label>
           <br />
           {shouldShowPrevButton && (
-            <button className="prev-button" onClick={prevStep}>
-              Previous
-            </button>
+            <div>
+              <button
+                className="prev-button col-6 mt-3 mb-4 fw-bolder"
+                onClick={prevStep}
+              >
+                Previous
+              </button>
+            </div>
           )}
           {dogAge ? (
-            <button className="next-button" type="submit">
-              Next
-            </button>
+            <div>
+              <button
+                className="next-button col-6 mt-3 mb-4 fw-bolder"
+                type="submit"
+              >
+                Next
+              </button>
+            </div>
           ) : (
-            <p>Please select Dog Age.</p>
+            <p className="dog-select-prompt fw-bolder justify-content-center">
+              Please select Dog Age.
+            </p>
           )}
         </form>
       )}
       {currentStep === 3 && (
         <form onSubmit={nextStep}>
-          <label>
+          <label className="row col-12 mt-5 justify-content-center">
             Size:
             <select value={size} onChange={(e) => setSize(e.target.value)}>
               <option value="" className="option-placeholder">
@@ -143,14 +160,24 @@ const Quiz = () => {
           </label>
           <br />
           {shouldShowPrevButton && (
-            <button className="prev-button" onClick={prevStep}>
-              Previous
-            </button>
+            <div>
+              <button
+                className="prev-button col-6 mb-4 fw-bolder"
+                onClick={prevStep}
+              >
+                Previous
+              </button>
+            </div>
           )}
           {energyLevel ? (
-            <button className="next-button" type="submit">
-              Next
-            </button>
+            <div>
+              <button
+                className="next-button col-6 mb-4 fw-bolder"
+                type="submit"
+              >
+                Next
+              </button>
+            </div>
           ) : (
             <p>Please select Energy Level.</p>
           )}
@@ -158,13 +185,16 @@ const Quiz = () => {
       )}
       {currentStep === 4 && (
         <form onSubmit={handleSubmit}>
-          <label>
+          <label className="row col-12 mt-5 justify-content-center">
             Fur Length:
             <select
               value={furLength}
               onChange={(e) => setFurLength(e.target.value)}
             >
-              <option value="" className="option-placeholder">
+              <option
+                value=""
+                className="option-placeholder justify-content-center"
+              >
                 Select Fur Length
               </option>
               <option value="short">Short</option>
@@ -174,20 +204,30 @@ const Quiz = () => {
           </label>
           <br />
           {shouldShowPrevButton && (
-            <button className="prev-button" onClick={prevStep}>
-              Previous
-            </button>
+            <div>
+              <button
+                className="prev-button col-6 mb-4 fw-bolder"
+                onClick={prevStep}
+              >
+                Previous
+              </button>
+            </div>
           )}
           {size ? (
             shouldShowFindBreedButton ? (
-              <button className="submit-button" type="submit">
-                Find My Dog Breed
-              </button>
+              <div>
+                <button
+                  className="submit-button col-6 fs-6 mb-4 fw-bolder"
+                  type="submit"
+                >
+                  Find Dog Breed
+                </button>
+              </div>
             ) : (
-              <p>Please select Fur Length.</p>
+              <p className="fw-bolder fs-5">Please select Fur Length.</p>
             )
           ) : (
-            <p>Please select Size.</p>
+            <p className="fw-bolder fs-5">Please select Size.</p>
           )}
         </form>
       )}
@@ -196,9 +236,11 @@ const Quiz = () => {
           <h2>Result:</h2>
           <p>You should consider getting a {result}!</p>
           {shouldShowFindBreedButton && (
-            <button className="try-again-button" onClick={resetQuiz}>
-              Take Again
-            </button>
+            <div>
+              <button className="try-again-button" onClick={resetQuiz}>
+                Take Again
+              </button>
+            </div>
           )}
         </div>
       )}
