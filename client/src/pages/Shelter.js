@@ -141,7 +141,7 @@ const DogShelterSearch = () => {
                 ))}
               </ul>
             ) : (
-              <div classname="container">
+              <div className="container">
                 <div className="row mt-4 justify-content-center text-center">
                   <p className="error-message row col-11 fw-bolder rounded flex-direction-column fs-4 justify-content-center text-center">
                     No results found.

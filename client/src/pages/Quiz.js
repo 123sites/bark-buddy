@@ -106,7 +106,7 @@ const Quiz = () => {
           <label className="row col-12 mt-5 justify-content-center">
             Energy Level:
             <select
-              classname="col"
+              className="col"
               value={energyLevel}
               onChange={(e) => setEnergyLevel(e.target.value)}
             >

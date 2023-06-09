@@ -36,8 +36,7 @@ const Header = () => {
 
             {/* Hamburger */}
             <button
-              class="navbar-toggler"
-              className="hamburger d-flex flex-row m-2"
+              className="navbar-toggler hamburger d-flex flex-row m-2"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent"
@@ -111,10 +110,9 @@ const Header = () => {
               </ul>
               {/* Profile Dropdown */}
               {Auth.loggedIn() ? (
-                <div classname="nav-item dropdown">
+                <div className="nav-item dropdown">
                   <a
-                    class="nav-link dropdown-toggle"
-                    className="link d-inline fs-6 fw-bold"
+                    className="nav-link dropdown-toggle link d-inline fs-6 fw-bold"
                     href="#"
                     role="button"
                     data-bs-toggle="dropdown"
