@@ -17,9 +17,13 @@ const Profile = () => {
 
   const [newUsername, setNewUsername] = useState('');
   const [newPassword, setNewPassword] = useState('');
+  const [newPasswordConfirm, setNewPasswordConfirm] = useState('');
+  const [showChangePassword, setShowChangePassword] = useState(false);
   const [newEmail, setNewEmail] = useState('');
 
   const [updateUser, { error }] = useMutation(UPDATE_USER);
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+
 
   const handleUsernameChange = (event) => {
     setNewUsername(event.target.value);
@@ -29,12 +33,24 @@ const Profile = () => {
     setNewPassword(event.target.value);
   };
 
+  const handlePasswordConfirmChange = (event) => {
+    setNewPasswordConfirm(event.target.value);
+  };
   const handleEmailChange = (event) => {
     setNewEmail(event.target.value);
   };
 
+  const closeSuccessMessage = () => {
+    setShowSuccessMessage(false);
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    if (newPassword !== newPasswordConfirm) {
+      console.error('New password and confirmation do not match!');
+      return;
+    }
 
     try {
       if (newUsername) {
@@ -52,14 +68,15 @@ const Profile = () => {
           variables: { email: newEmail },
         });
       }
-
-      console.log('Profile updated successfully!');
+      setShowSuccessMessage(true);
+      
     } catch (error) {
       console.error('Failed to update profile:', error);
     }
 
     setNewUsername('');
     setNewPassword('');
+    setNewPasswordConfirm('');
     setNewEmail('');
   };
 
@@ -101,8 +118,20 @@ const Profile = () => {
             value={newPassword}
             onChange={handlePasswordChange}
             style={inputStyle}
+            onClick={() => setShowChangePassword(true)}
           />
         </div>
+        {showChangePassword && (
+        <div style={inputGroupStyle}>
+          <label style={labelStyle}>Confirm New Password:</label>
+          <input
+            type="password"
+            value={newPasswordConfirm}
+            onChange={handlePasswordConfirmChange}
+            style={inputStyle}
+          />
+          </div>
+          )}
         <div style={inputGroupStyle}>
           <label style={labelStyle}>Change Email Address:</label>
           <input
@@ -112,9 +141,19 @@ const Profile = () => {
             style={inputStyle}
           />
         </div>
+        <div style={buttonContainerStyle}>
         <button type="submit" style={submitButtonStyle}>
           Save Changes
         </button>
+        </div>
+        {showSuccessMessage && (
+      <div style={successMessageStyle}>
+        <p>Your information has been successfully updated.</p>
+        <button style={exitButtonStyle} onClick={closeSuccessMessage}>
+          <i className="fas fa-times" />
+        </button>
+      </div>
+    )}
       </form>
     </div>
   );
@@ -134,7 +173,7 @@ const headingStyle = {
   margin: 0,
   fontSize: '2rem',
   marginBottom: '2rem',
-  color: '#5E239D', // Purple color
+  color: '#5E239D', 
 };
 
 const formStyle = {
@@ -162,6 +201,14 @@ const inputStyle = {
   width: '100%',
 };
 
+const buttonContainerStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  marginTop: '1rem',
+};
+
+
+
 const submitButtonStyle = {
   padding: '0.75rem 1rem',
   fontSize: '1rem',
@@ -169,6 +216,24 @@ const submitButtonStyle = {
   borderRadius: '4px',
   border: 'none',
   background: '#007bff',
+  color: '#fff',
+  cursor: 'pointer',
+};
+
+const successMessageStyle = {
+  backgroundColor: '#5E239D', 
+  color: '#fff',
+  padding: '1rem',
+  borderRadius: '4px',
+  marginTop: '1rem',
+};
+
+const exitButtonStyle = {
+  position: 'absolute',
+  top: '0.5rem',
+  right: '0.5rem',
+  background: 'none',
+  border: 'none',
   color: '#fff',
   cursor: 'pointer',
 };
