@@ -1,7 +1,8 @@
+
 import React, { useState } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
-import { useQuery } from '@apollo/client';
-// import PaymentComponent from '../components/Payments/Stripe'; // Willis
+import { useMutation, useQuery } from '@apollo/client';
+import { UPDATE_USER } from '../utils/mutations';
 import { QUERY_ME } from '../utils/queries';
 import Auth from '../utils/auth';
 
@@ -13,12 +14,16 @@ const Profile = () => {
   });
 
   const user = data?.me || data?.user || {};
-  console.log("user: ", user)
 
-  const [newUsername, setNewUsername] = useState('');  // Willis
-  const [newPassword, setNewPassword] = useState('');  // Willis
-  const [newEmail, setNewEmail] = useState(''); // Willis
-  const [paymentMethod, setPaymentMethod] = useState(''); // Willis
+  const [newUsername, setNewUsername] = useState('');
+  const [newPassword, setNewPassword] = useState('');
+  const [newPasswordConfirm, setNewPasswordConfirm] = useState('');
+  const [showChangePassword, setShowChangePassword] = useState(false);
+  const [newEmail, setNewEmail] = useState('');
+
+  const [updateUser, { error }] = useMutation(UPDATE_USER);
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+
 
   const handleUsernameChange = (event) => {
     setNewUsername(event.target.value);
@@ -28,58 +33,53 @@ const Profile = () => {
     setNewPassword(event.target.value);
   };
 
+  const handlePasswordConfirmChange = (event) => {
+    setNewPasswordConfirm(event.target.value);
+  };
   const handleEmailChange = (event) => {
     setNewEmail(event.target.value);
   };
 
-  const handlePaymentMethodChange = (event) => {
-    setPaymentMethod(event.target.value);
+  const closeSuccessMessage = () => {
+    setShowSuccessMessage(false);
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-// Call a function or make an API request to update each parameter
- if (newUsername) {
-  try {
-    const response = await fetch('/api/update-username', {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ username: newUsername }),
-    });
-
-    if (response.ok) {
-      console.log('Username updated successfully!');
-    } else {
-      console.log('Failed to update username.');
-    }
-  } catch (error) {
-    console.error('An error occurred while updating the username:', error);
-  }
+    if (newPassword !== newPasswordConfirm) {
+      console.error('New password and confirmation do not match!');
+      return;
     }
 
-    if (newPassword) {
-      console.log('Updating password:', newPassword);
-    }
-
-    if (newEmail) {
-      console.log('Updating email address:', newEmail);
-    }
-
-    if (paymentMethod) {
-      console.log('Saving payment method:', paymentMethod);
+    try {
+      if (newUsername) {
+        await updateUser({
+          variables: { username: newUsername },
+        });
+      }
+      if (newPassword) {
+        await updateUser({
+          variables: { password: newPassword },
+        });
+      }
+      if (newEmail) {
+        await updateUser({
+          variables: { email: newEmail },
+        });
+      }
+      setShowSuccessMessage(true);
+      
+    } catch (error) {
+      console.error('Failed to update profile:', error);
     }
 
     setNewUsername('');
     setNewPassword('');
+    setNewPasswordConfirm('');
     setNewEmail('');
-    setPaymentMethod('');
   };
 
-
-  // navigate to personal profile page if username is yours
   if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
     return <Navigate to="/me" />;
   }
@@ -91,58 +91,149 @@ const Profile = () => {
   if (!user?.username) {
     return (
       <h4>
-        You need to be logged in to create and view your favorites.
+        You need to be logged in to access your account settings.
         Use the navigation links above to sign up or log in!
       </h4>
     );
   }
 
   return (
-    <div>
-      <div className="flex-row justify-center mb-3">
-        <h2 className="col-12 col-md-10 bg-dark text-light p-3 mb-5">
-          Viewing {userParam ? `${user.username}'s` : 'your'} profile.
-        </h2>
+    <div style={containerStyle}>
+      <h2 style={headingStyle}>Account Settings</h2>
 
-        <div className="col-12 col-md-10 mb-5">
-          <div className="col-12 col-md-10 mb-5">
-            <form onSubmit={handleSubmit}>
-              <label>
-                New Username:
-                <input type="text" value={newUsername} onChange={handleUsernameChange} />
-              </label>
-              <br />
-              <label>
-                New Password:
-                <input type="password" value={newPassword} onChange={handlePasswordChange} />
-              </label>
-              <br />
-              <label>
-                New Email Address:
-                <input type="email" value={newEmail} onChange={handleEmailChange} />
-              </label>
-              <br />
-              <label>
-                Payment Method:
-                <input type="text" value={paymentMethod} onChange={handlePaymentMethodChange} />
-              </label>
-              <br />
-              <button type="submit">Save Changes</button>
-            </form>
-          </div>
-
+      <form onSubmit={handleSubmit} style={formStyle}>
+        <div style={inputGroupStyle}>
+          <label style={labelStyle}>Change Username:</label>
+          <input
+            type="text"
+            value={newUsername}
+            onChange={handleUsernameChange}
+            style={inputStyle}
+          />
         </div>
-        {!userParam && (
-          <div
-            className="col-12 col-md-10 mb-3 p-3"
-            style={{ border: '1px dotted #1a1a1a' }}
-          >
-
+        <div style={inputGroupStyle}>
+          <label style={labelStyle}>Change Password:</label>
+          <input
+            type="password"
+            value={newPassword}
+            onChange={handlePasswordChange}
+            style={inputStyle}
+            onClick={() => setShowChangePassword(true)}
+          />
+        </div>
+        {showChangePassword && (
+        <div style={inputGroupStyle}>
+          <label style={labelStyle}>Confirm New Password:</label>
+          <input
+            type="password"
+            value={newPasswordConfirm}
+            onChange={handlePasswordConfirmChange}
+            style={inputStyle}
+          />
           </div>
-        )}
+          )}
+        <div style={inputGroupStyle}>
+          <label style={labelStyle}>Change Email Address:</label>
+          <input
+            type="email"
+            value={newEmail}
+            onChange={handleEmailChange}
+            style={inputStyle}
+          />
+        </div>
+        <div style={buttonContainerStyle}>
+        <button type="submit" style={submitButtonStyle}>
+          Save Changes
+        </button>
+        </div>
+        {showSuccessMessage && (
+      <div style={successMessageStyle}>
+        <p>Your information has been successfully updated.</p>
+        <button style={exitButtonStyle} onClick={closeSuccessMessage}>
+          <i className="fas fa-times" />
+        </button>
       </div>
+    )}
+      </form>
     </div>
   );
 };
 
 export default Profile;
+
+// Inline styles
+const containerStyle = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  marginTop: '2rem',
+};
+
+const headingStyle = {
+  margin: 0,
+  fontSize: '2rem',
+  marginBottom: '2rem',
+  color: '#5E239D', 
+};
+
+const formStyle = {
+  width: '100%',
+  maxWidth: '400px',
+};
+
+const inputGroupStyle = {
+  marginBottom: '1.5rem',
+};
+
+const labelStyle = {
+  display: 'block',
+  fontSize: '1.2rem',
+  fontWeight: 'bold',
+  marginBottom: '0.5rem',
+  color: '#5E239D', // Purple color
+};
+
+const inputStyle = {
+  padding: '0.5rem',
+  fontSize: '1rem',
+  borderRadius: '4px',
+  border: '1px solid #ccc',
+  width: '100%',
+};
+
+const buttonContainerStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  marginTop: '1rem',
+};
+
+
+
+const submitButtonStyle = {
+  padding: '0.75rem 1rem',
+  fontSize: '1rem',
+  fontWeight: 'bold',
+  borderRadius: '4px',
+  border: 'none',
+  background: '#007bff',
+  color: '#fff',
+  cursor: 'pointer',
+};
+
+const successMessageStyle = {
+  backgroundColor: '#5E239D', 
+  color: '#fff',
+  padding: '1rem',
+  borderRadius: '4px',
+  marginTop: '1rem',
+};
+
+const exitButtonStyle = {
+  position: 'absolute',
+  top: '0.5rem',
+  right: '0.5rem',
+  background: 'none',
+  border: 'none',
+  color: '#fff',
+  cursor: 'pointer',
+};
