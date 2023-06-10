@@ -72,9 +72,9 @@ function DogSearchList({ userData, refetchUser }) {
       <Row>
         <Col md={2}>
           <div>
-            <div>
+            <div className="pt-5">
               <Container>
-                <h3 className="search-filter pt-4">Filters</h3>
+                <h3 className="search-filter pt-5 text-center">Filters</h3>
               </Container>
             </div>
             <br />
@@ -82,6 +82,7 @@ function DogSearchList({ userData, refetchUser }) {
             <select
               onChange={handleInputBreed}
               id="breedFilter"
+              className="search col-12 text-center"
               value={selectedBreed}
             >
               <option value="">Choose breed</option>
@@ -105,6 +106,7 @@ function DogSearchList({ userData, refetchUser }) {
             <select
               onChange={handleInputAge}
               id="ageFilter"
+              className="search col-12 mt-3 text-center"
               value={selectedAge}
             >
               <option value="">Choose age</option>
@@ -119,6 +121,7 @@ function DogSearchList({ userData, refetchUser }) {
             <select
               onChange={handleInputGender}
               id="genderFilter"
+              className="search col-12 mt-3 text-center"
               value={selectedGender}
             >
               <option value="">Choose gender</option>
@@ -130,8 +133,11 @@ function DogSearchList({ userData, refetchUser }) {
             </select>
             <br />
 
-            <Button variant="secondary" onClick={handleClearFilters}>
-              Clear all filters
+            <Button
+              variant="secondary col-12 mt-3"
+              onClick={handleClearFilters}
+            >
+              Clear all
             </Button>
           </div>
         </Col>
@@ -139,7 +145,7 @@ function DogSearchList({ userData, refetchUser }) {
         <Col md={10}>
           <div>
             <Container>
-              <h3 className="search-filter pt-4">
+              <h3 className="search-filter pt-4 text-center fw-bolder">
                 Bark buddies available to adopt:
               </h3>
               <br />

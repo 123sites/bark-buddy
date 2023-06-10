@@ -48,10 +48,6 @@
     --dark-purple: #3C096C;
 }
 
-h1 {
-    color: var(--font-primary);
-}
-
 .container-name {
     color: var(--font-primary) !important;
     justify-content: center;

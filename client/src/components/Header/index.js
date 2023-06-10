@@ -53,11 +53,11 @@ const Header = () => {
               className="collapse navbar-collapse"
               id="navbarSupportedContent"
             >
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <ul className="navbar-nav mb-2 mb-lg-0">
                 <li className="nav-item">
                   {/* Link 1 */}
                   <Link
-                    className={`nav-link link-${theme} px-2 text-center fw-bolder`}
+                    className={`nav-link link ${theme} px-2 text-center fw-bolder`}
                     to="/"
                   >
                     Home
@@ -66,7 +66,7 @@ const Header = () => {
                 {/* Link 2 */}
                 <li className="nav-item">
                   <Link
-                    className="nav-link link px-2 text-center fw-bolder"
+                    className={`nav-link link ${theme} px-2 text-center fw-bolder`}
                     to="/videos"
                   >
                     {" "}
@@ -76,7 +76,7 @@ const Header = () => {
                 {/* Link 3 */}
                 <li className="nav-item">
                   <Link
-                    className="nav-link link p-2 text-center fw-bolder"
+                    className={`nav-link link ${theme} px-2 text-center fw-bolder`}
                     to="/search"
                   >
                     Pick A Pooch
@@ -85,7 +85,7 @@ const Header = () => {
                 <li className="nav-item">
                   {/* Link 4 */}
                   <Link
-                    className="nav-link link p-2 text-center fw-bolder"
+                    className={`nav-link link ${theme} px-2 text-center fw-bolder`}
                     to="/quiz"
                   >
                     Dog Quiz
@@ -94,7 +94,7 @@ const Header = () => {
                 {/* Link 5 */}
                 <li className="nav-item">
                   <Link
-                    className="nav-link link p-2 text-center fw-bolder"
+                    className={`nav-link link ${theme} px-2 text-center fw-bolder`}
                     to="/shelter"
                   >
                     Find a Shelter
@@ -103,7 +103,7 @@ const Header = () => {
                 {/* Link 6 */}
                 <li className="nav-item">
                   <Link
-                    className="nav-link link p-2 text-center fw-bolder"
+                    className={`nav-link link ${theme} px-2 text-center fw-bolder`}
                     to="/donation"
                   >
                     Shelter Donation
@@ -161,13 +161,18 @@ const Header = () => {
                 ""
               )}
               {Auth.loggedIn() ? (
-                <button
-                  className="col p-3 logout border-warning fw-bolder"
-                  onClick={logout}
-                >
-                  {" "}
-                  logout
-                </button>
+                <>
+                  <Link className={`link ${theme} m-4 fw-bolder`} to="/me">
+                    {Auth.getProfile().data.username}'s Profile
+                  </Link>
+                  <button
+                    className="col p-3 logout border-warning fw-bolder"
+                    onClick={logout}
+                  >
+                    {" "}
+                    logout
+                  </button>
+                </>
               ) : (
                 ""
               )}

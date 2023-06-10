@@ -90,14 +90,12 @@ const Videos = () => {
             <div className="row embed-responsive vContainer rounded shadow-lg">
               {/* <div className="embed-responsive vContainer rounded shadow-lg row"> */}
               <div className="row">
-                <div className="col-6 mt-3 justify-content:space-evenly">
+                <div className="col video-div mt-3 justify-content:space-evenly">
                   <h2 className="row flex justify-content-center fs-4 fw-bolder">
                     Doggy Daycare #1
                   </h2>
-                  <div>
+                  <div className="ratio ratio-16x9">
                     <iframe
-                      width="560"
-                      height="315"
                       src="https://www.youtube.com/embed/JDmNGLPrEG8"
                       title="YouTube video player"
                       frameborder="0"
@@ -107,15 +105,13 @@ const Videos = () => {
                   </div>
                 </div>
 
-                <div className="col mt-3">
+                <div className="col video-div mt-3">
                   <h2 className="row flex justify-content-center fs-4 fw-bold">
-                    How to Choose the Perfect Dog For You
+                    Choosing the Perfect Dog
                   </h2>
                   <div className="d-inline">
-                    <div className="">
+                    <div className="ratio ratio-16x9">
                       <iframe
-                        width="560"
-                        height="315"
                         src="https://www.youtube.com/embed/ASxkyQKZE4k"
                         title="YouTube video player"
                         frameborder="0"
@@ -128,15 +124,13 @@ const Videos = () => {
               </div>
 
               <div className="row">
-                <div className="col mt-3">
+                <div className="col video-div mt-3">
                   <h2 className="row flex justify-content-center fs-4 fw-bold">
-                    Things You Need to Know - Dr. Mike
+                    Things You Need to Know
                   </h2>
                   <div className="d-inline">
-                    <div className="">
+                    <div className="ratio ratio-16x9">
                       <iframe
-                        width="560"
-                        height="315"
                         src="https://www.youtube.com/embed/peUVLEUj-AM"
                         title="YouTube video player"
                         frameborder="0"
@@ -147,15 +141,13 @@ const Videos = () => {
                   </div>
                 </div>
 
-                <div className="col mt-3">
+                <div className="col video-div mt-3">
                   <h2 className="row flex justify-content-center fs-4 fw-bold">
-                    Care for Your Dog - Kid Friendly Tutorial
+                    Care for Your Dog
                   </h2>
                   <div className="d-inline">
-                    <div className="">
+                    <div className="ratio ratio-16x9">
                       <iframe
-                        width="560"
-                        height="315"
                         src="https://www.youtube.com/embed/sKQwL2YYouo"
                         title="YouTube video player"
                         frameborder="0"
@@ -168,15 +160,13 @@ const Videos = () => {
               </div>
 
               <div className="row">
-                <div className="col mt-3">
+                <div className="col video-div mt-3">
                   <h2 className="row flex justify-content-center fs-4 fw-bold">
-                    3 Pro Tips When Washing Your Dog
+                    Washing Your Dog
                   </h2>
                   <div className="d-inline">
-                    <div className="">
+                    <div className="ratio ratio-16x9">
                       <iframe
-                        width="560"
-                        height="315"
                         src="https://www.youtube.com/embed/dyBeSS04GC4"
                         title="YouTube video player"
                         frameborder="0"
@@ -186,15 +176,13 @@ const Videos = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col mt-3">
+                <div className="col video-div mt-3">
                   <h2 className="row flex justify-content-center fs-4 fw-bold">
-                    How to Care For Your New Puppy
+                    Care For A New Puppy
                   </h2>
                   <div className="d-inline">
-                    <div className="">
+                    <div className="ratio ratio-16x9">
                       <iframe
-                        width="560"
-                        height="315"
                         src="https://www.youtube.com/embed/Tn3lZE0rRBs"
                         title="YouTube video player"
                         frameborder="0"
