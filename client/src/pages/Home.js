@@ -18,23 +18,25 @@ const Home = ({ handlePageChange }) => {
   return (
     <main>
       <div
-        className={`container-fluid mt-4 homeBox-${theme} vContainer-${theme}`}
+        className={`container-fluid mt-4 shadow-lg homeBox-${theme} vContainer-${theme}`}
       >
-        <p className={`homeTitle-${theme} fs-2 p-3 mb-0 fw-bolder text-center`}>
+        <h2
+          className={`homeTitle-${theme} fs-2 p-3 mb-0 fw-bolder text-center`}
+        >
           What We Are All About!
-        </p>
-        <p className={`homeText-${theme} fs-4 fw-bold text-center`}>
+        </h2>
+        <h5 className={`homeText-${theme} fs-4 fw-bold text-center`}>
           We can help you find the right dog for you! Simply take our online
           quiz!
-        </p>
-        <p
+        </h5>
+        <h2
           className={`homeTitle-${theme} fs-2 mb-0 mt-4 fw-bolder text-center`}
         >
           Member Benefits!
-        </p>
-        <p className={`homeText-${theme} fs-4 mb-4 fw-bold text-center`}>
+        </h2>
+        <h5 className={`homeText-${theme} fs-4 mb-4 fw-bold text-center`}>
           If you are a member, you can save the dogs you like to your favorites!
-        </p>
+        </h5>
         <div className="img-fluid col pb-2">
           <img
             src={manyDogs}

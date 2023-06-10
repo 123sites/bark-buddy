@@ -125,7 +125,7 @@ body[data-theme="dark"] {
 
 .nav-link.dark {
   color: var(--dark-font-secondary) !important;
-  font-size: 15px;
+  font-size: 14px;
   text-decoration: none;
   letter-spacing: 2px;
 }
@@ -188,7 +188,7 @@ body[data-theme="dark"] {
 
 .link {
   color: var(--font-secondary) !important;
-  font-size: 17px;
+  font-size: 14px;
   text-decoration: none;
   letter-spacing: 2px;
 }
@@ -219,7 +219,8 @@ body[data-theme="dark"] {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
   color: var(--brand-primary) !important;
   letter-spacing: 1px;
 }
@@ -342,8 +343,17 @@ li {
   min-width: 200px;
 }
 
-.video-container {
-  background-color: var(--border);
+.video-container,
+.donate-container {
+  background-color: var(--border) !important;
+  color: var(--font-secondary) !important;
+  border-radius: 5px;
+}
+
+.donate-title-box {
+  background-color: var(--brand-primary) !important;
+  color: var(var(--font-secondary)) !important;
+  border-radius: 5px;
 }
 
 .videos {
@@ -437,30 +447,34 @@ li {
 }
 
 .donate-title {
-  display: flex;
-  color: var(--brand-primary);
+  color: var(--font-secondary);
   justify-content: center;
 }
 
 .stripe-donate {
   display: flex;
   text-decoration: none;
-  color: var(--brand-primary);
+  color: var(--brand-primary) !important;
   justify-content: center;
+  font-weight: bolder;
 }
 
 .stripe-donate:hover,
 .stripe-donate:active {
   display: flex;
   text-decoration: none;
-  color: var(--btn-active-bgorange);
+  background-color: var(--bg-snow) !important;
+  color: var(--brand-primary) !important;
   justify-content: center;
+  font-weight: bolder;
+  border-radius: 10px;
 }
 
 .shelter-header {
   display: flex;
   font-weight: bold;
   justify-content: center;
+  border-radius: 10px;
   color: var(--font-secondary) !important;
   background-color: var(--brand-primary) !important;
 }

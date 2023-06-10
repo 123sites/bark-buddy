@@ -13,11 +13,11 @@ const Videos = () => {
             </h2>
             <div className="rounded">
               {/* Information */}
-              <h2 className="fs-5 p-4 shadow-lg fw-bolder lh-base fw-bold text-center">
+              <h5 className="p-4 shadow-lg fw-bolder lh-base fw-bold text-center">
                 These videos and channels will help you in your journey to find
                 the right dog for you and your family! Also, there are videos
                 that will help you to care for your new pet!
-              </h2>
+              </h5>
             </div>
           </div>
           {/* Channels */}

@@ -4,17 +4,23 @@
 
 ## Description ✏️
 
+There are many different dogs, but which one is for you? <br>
+Narrow down your search with a quick quiz and then browse for adoptable dogs through our Pick a Pooch search!<br>
+You can even find a shelter and donate!
+
 ## User Story 📖
 
-As a person who ............,
-I want to ................................,
-so I can......................
+As an individual looking for a dog,
+I want to choose the right dog,
+so everyone is happy!
 
 ## Table of Contents 📖
 
-- ![Installation](#installation)
+- ![Repository Link](#link)
 - ![Usage](#usage)
-- ![Badges](#badges)
+- ![Tests](#tests)
+- ![Usage](#usage)
+- ![Screenshot](#screenshot)
 - ![Credits](#credits)
 - ![License](#license)
 - ![Features](#features)
@@ -22,6 +28,7 @@ so I can......................
 ## Deployed Link 🔑
 
 You can view this through this link:
+[Repository link:](cf-bark-buddy.herokuapp.com)
 
 ## Tests 🧪
 
@@ -31,11 +38,18 @@ User testing
 
 [Repository link:](https://github.com/123sites/bark-buddy)
 
-This can be used for....................
+This can be used for anyone needing to find the right dog for them!
+Also, they can find a shelter and donate!
 
 ## Screenshot 🎯
 
-![alt text]()
+Light mode:
+
+![Light Mode:](./client/public/home-light-mode.png)
+
+Dark mode:
+
+![Dark Mode:](./client/public/home-dark-mode.png)
 
 ## Credits 👈
 
@@ -49,12 +63,17 @@ Our Team:
 ## License 📝
 
 The MIT license is in the GitHub repository. Click to link to view it:
-[MIT License](https://github.com/123sites/....................../blob/main/LICENSE)
+[MIT License](https://github.com/123sites/bark-buddy/blob/main/LICENSE)
 
 ## Features ✍
 
+- Uses a web manifest
+- Uses a service worker for offline functionality
+- Is installable
 - MERN Stack
 - Apollo Server
+- Coolors color palette
+- Light and dark mode
 
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)

@@ -57,7 +57,7 @@ const Header = () => {
                 <li className="nav-item">
                   {/* Link 1 */}
                   <Link
-                    className={`nav-link link ${theme} px-2 text-center fw-bolder`}
+                    className={`nav-link link ${theme} text-center fw-bolder`}
                     to="/"
                   >
                     Home
@@ -66,7 +66,7 @@ const Header = () => {
                 {/* Link 2 */}
                 <li className="nav-item">
                   <Link
-                    className={`nav-link link ${theme} px-2 text-center fw-bolder`}
+                    className={`nav-link link ${theme} fs-6 mx-1 text-center fw-bolder`}
                     to="/videos"
                   >
                     {" "}
@@ -76,7 +76,7 @@ const Header = () => {
                 {/* Link 3 */}
                 <li className="nav-item">
                   <Link
-                    className={`nav-link link ${theme} px-2 text-center fw-bolder`}
+                    className={`nav-link link ${theme} fs-6 mx-1 text-center fw-bolder`}
                     to="/search"
                   >
                     Pick A Pooch
@@ -85,7 +85,7 @@ const Header = () => {
                 <li className="nav-item">
                   {/* Link 4 */}
                   <Link
-                    className={`nav-link link ${theme} px-2 text-center fw-bolder`}
+                    className={`nav-link link ${theme} mx-1 text-center fw-bolder`}
                     to="/quiz"
                   >
                     Dog Quiz
@@ -94,7 +94,7 @@ const Header = () => {
                 {/* Link 5 */}
                 <li className="nav-item">
                   <Link
-                    className={`nav-link link ${theme} px-2 text-center fw-bolder`}
+                    className={`nav-link link ${theme} mx-1 text-center fw-bolder`}
                     to="/shelter"
                   >
                     Find a Shelter
@@ -103,10 +103,10 @@ const Header = () => {
                 {/* Link 6 */}
                 <li className="nav-item">
                   <Link
-                    className={`nav-link link ${theme} px-2 text-center fw-bolder`}
+                    className={`nav-link link ${theme} mx-1 text-center fw-bolder`}
                     to="/donation"
                   >
-                    Shelter Donation
+                    Donate
                   </Link>
                 </li>
               </ul>
@@ -114,7 +114,7 @@ const Header = () => {
               {Auth.loggedIn() ? (
                 <div className="nav-item dropdown">
                   <a
-                    className={`nav-link link ${theme} dropdown-toggle d-inline fs-6 fw-bold`}
+                    className={`nav-link link ${theme} dropdown-toggle d-inline fs-6 ml-1 fw-bold`}
                     href="#"
                     role="button"
                     data-bs-toggle="dropdown"
@@ -149,11 +149,9 @@ const Header = () => {
             <div>
               {!Auth.loggedIn() ? (
                 <>
-                  {/* <Link className="link fw-bolder p-2" to="/login"> */}
                   <Link className={`login-${theme} fw-bolder p-2`} to="/login">
                     Login
                   </Link>
-                  {/* <Link className="link fw-bolder p-2" to="/signup"> */}
                   <Link className={`login-${theme} fw-bolder p-2`} to="/signup">
                     Signup
                   </Link>
@@ -163,11 +161,14 @@ const Header = () => {
               )}
               {Auth.loggedIn() ? (
                 <>
-                  <Link className={`login-${theme} m-4 fw-bolder`} to="/me">
+                  <Link
+                    className={`login-${theme} mr-3 fs-6 fw-bolder`}
+                    to="/me"
+                  >
                     {Auth.getProfile().data.username}'s Profile
                   </Link>
                   <button
-                    className="col p-3 logout border-warning fw-bolder"
+                    className="col p-2 m-1 logout border-warning fw-bolder"
                     onClick={logout}
                   >
                     {" "}
