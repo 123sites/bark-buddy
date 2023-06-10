@@ -21,7 +21,7 @@ const Header = () => {
       <div className="container-fluid">
         {/* DIV 1 */}
         <div className="row col">
-          <div className="col-9">
+          <div className="col">
             <Link className="navbar-brand text-light d-inline-flex" to="/">
               <img
                 src={Logo}
@@ -114,7 +114,7 @@ const Header = () => {
               {Auth.loggedIn() ? (
                 <div className="nav-item dropdown">
                   <a
-                    className="nav-link dropdown-toggle link d-inline fs-6 fw-bold"
+                    className={`nav-link link ${theme} dropdown-toggle d-inline fs-6 fw-bold`}
                     href="#"
                     role="button"
                     data-bs-toggle="dropdown"
@@ -149,11 +149,12 @@ const Header = () => {
             <div>
               {!Auth.loggedIn() ? (
                 <>
-                  <Link className="link fw-bolder p-2" to="/login">
-                    {/* <Link className={`link-${theme} fw-bolder p-2" to="/login"`}> */}
+                  {/* <Link className="link fw-bolder p-2" to="/login"> */}
+                  <Link className={`login-${theme} fw-bolder p-2`} to="/login">
                     Login
                   </Link>
-                  <Link className="link fw-bolder p-2" to="/signup">
+                  {/* <Link className="link fw-bolder p-2" to="/signup"> */}
+                  <Link className={`login-${theme} fw-bolder p-2`} to="/signup">
                     Signup
                   </Link>
                 </>
@@ -162,7 +163,7 @@ const Header = () => {
               )}
               {Auth.loggedIn() ? (
                 <>
-                  <Link className={`link ${theme} m-4 fw-bolder`} to="/me">
+                  <Link className={`login-${theme} m-4 fw-bolder`} to="/me">
                     {Auth.getProfile().data.username}'s Profile
                   </Link>
                   <button

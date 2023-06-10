@@ -3,7 +3,7 @@ import "../../assets/style.css";
 
 const Footer = () => {
   return (
-    <footer className="text-center mt-3">
+    <footer className="text-center m-3">
       <a
         target="_blank"
         rel="noopener noreferrer"

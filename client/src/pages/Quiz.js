@@ -83,15 +83,20 @@ const Quiz = () => {
       {currentStep === 1 && (
         <form onSubmit={nextStep}>
           <label className="row col-12 mt-4 justify-content-center">
-            Dog Age:
-            <select value={dogAge} onChange={(e) => setDogAge(e.target.value)}>
-              <option value="" className="option-placeholder">
-                Select Age
-              </option>
-              <option value="puppy">Puppy</option>
-              <option value="adult">Adult</option>
-              <option value="senior">Senior</option>
-            </select>
+            <div className="row justify-content-center">
+              Dog Age:
+              <select
+                value={dogAge}
+                onChange={(e) => setDogAge(e.target.value)}
+              >
+                <option value="" className="option-placeholder text-center">
+                  Select Age
+                </option>
+                <option value="puppy">Puppy</option>
+                <option value="adult">Adult</option>
+                <option value="senior">Senior</option>
+              </select>
+            </div>
           </label>
           <br />
           <div>
@@ -106,16 +111,22 @@ const Quiz = () => {
           <label className="row col-12 mt-5 justify-content-center">
             Energy Level:
             <select
-              className="col"
+              className="col-6"
               value={energyLevel}
               onChange={(e) => setEnergyLevel(e.target.value)}
             >
-              <option value="" className="option-placeholder">
+              <option value="" className="option-placeholder text-center">
                 Select Energy Level
               </option>
-              <option value="energetic">Energetic</option>
-              <option value="calm">Calm</option>
-              <option value="senior">Senior</option>
+              <option value="energetic" className="text-center">
+                Energetic
+              </option>
+              <option value="calm" className="text-center">
+                Calm
+              </option>
+              <option value="senior" className="text-center">
+                Senior
+              </option>
             </select>
           </label>
           <br />
@@ -139,7 +150,7 @@ const Quiz = () => {
               </button>
             </div>
           ) : (
-            <p className="dog-select-prompt fw-bolder justify-content-center">
+            <p className="dog-select-prompt fw-bolder justify-content-center text-center">
               Please select Dog Age.
             </p>
           )}
@@ -147,7 +158,7 @@ const Quiz = () => {
       )}
       {currentStep === 3 && (
         <form onSubmit={nextStep}>
-          <label className="row col-12 mt-5 justify-content-center">
+          <label className="row col-12 mt-5 justify-content-center text-center">
             Size:
             <select value={size} onChange={(e) => setSize(e.target.value)}>
               <option value="" className="option-placeholder">
@@ -179,13 +190,13 @@ const Quiz = () => {
               </button>
             </div>
           ) : (
-            <p>Please select Energy Level.</p>
+            <p className="text-center">Please select Energy Level.</p>
           )}
         </form>
       )}
       {currentStep === 4 && (
         <form onSubmit={handleSubmit}>
-          <label className="row col-12 mt-5 justify-content-center">
+          <label className="row col-12 mt-5 p-3 ml-1 justify-content-center text-center">
             Fur Length:
             <select
               value={furLength}
@@ -193,7 +204,7 @@ const Quiz = () => {
             >
               <option
                 value=""
-                className="option-placeholder justify-content-center"
+                className="option-placeholder justify-content-center text-center"
               >
                 Select Fur Length
               </option>
@@ -224,10 +235,12 @@ const Quiz = () => {
                 </button>
               </div>
             ) : (
-              <p className="fw-bolder fs-5">Please select Fur Length.</p>
+              <p className="fw-bolder fs-5 text-center">
+                Please select Fur Length.
+              </p>
             )
           ) : (
-            <p className="fw-bolder fs-5">Please select Size.</p>
+            <p className="fw-bolder fs-5 text-center">Please select Size.</p>
           )}
         </form>
       )}

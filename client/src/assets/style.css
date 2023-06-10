@@ -144,6 +144,48 @@ body[data-theme="dark"] {
   border-radius: 17px;
 }
 
+.login-dark {
+  color: var(--dark-font-secondary) !important;
+  font-size: 15px;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.login-dark:hover {
+  color: var(--dark-btn-hover-bgorange) !important;
+  border: none;
+  border-radius: 17px;
+  letter-spacing: 2px;
+}
+
+.login-dark:active {
+  color: var(--dark-btn-active) !important;
+  letter-spacing: 2px;
+  border: none;
+  border-radius: 17px;
+}
+
+.login-light {
+  color: var(--bg-snow) !important;
+  font-size: 15px;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.login-light:hover {
+  color: var(--btn-hover-bgorange) !important;
+  border: none;
+  border-radius: 17px;
+  letter-spacing: 2px;
+}
+
+.login-light:active {
+  color: var(--btn-active-bgorange) !important;
+  letter-spacing: 2px;
+  border: none;
+  border-radius: 17px;
+}
+
 .link {
   color: var(--font-secondary) !important;
   font-size: 17px;

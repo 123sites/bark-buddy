@@ -4,10 +4,11 @@ import "../../assets/style.css";
 const stripe = () => {
   return (
     <div className="container-fluid">
-      <div className="row m-5">
-        <h2 className="donate-title mt-5 mb-3 fw-bolder fs-2">
+      <div className="row">
+        <h2 className="col-12 my-5 donate-title fw-bolder fs-2">
           <i class="fa-solid fa-circle-dollar-to-slot mr-5"></i>
-          Would you like to Donate $1?
+          Would you like to Donate at least $1 <br></br> to our Bark Buddy
+          charity foundation?
         </h2>
         <div>
           <a
