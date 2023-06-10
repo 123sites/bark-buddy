@@ -48,7 +48,7 @@
 }
 
 * {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'JetBrains Mono', monospace !important;
   font-family: 'Montserrat', sans-serif;
   font-family: 'Nunito Sans', sans-serif;
   font-family: 'Inter', sans-serif;
@@ -110,6 +110,7 @@ body[data-theme="dark"] {
   color: var(--font-primary) !important;
   text-decoration: none;
   font-size: 40px !important;
+
 }
 
 .homeBox-dark {
@@ -133,12 +134,12 @@ body[data-theme="dark"] {
   color: var(--dark-btn-hover-bgorange) !important;
   border: none;
   border-radius: 17px;
-
+  letter-spacing: 2px;
 }
 
 .nav-link.dark:active {
   color: var(--dark-btn-active) !important;
-
+  letter-spacing: 2px;
   border: none;
   border-radius: 17px;
 }
@@ -153,6 +154,7 @@ body[data-theme="dark"] {
 .link:hover {
   color: var(--btn-active-bgorange) !important;
   border: none;
+  letter-spacing: 2px;
   border-radius: 15px;
 }
 
@@ -160,6 +162,7 @@ body[data-theme="dark"] {
   color: var(--btn-active-bgorange) !important;
   border: none;
   border-radius: 15px;
+  letter-spacing: 2px;
 }
 
 .manyDogs-dark {
@@ -194,7 +197,7 @@ h4 {
 span,
 .copyright {
   color: var(--font-primary);
-  font-weight: bold;
+  font-weight: bold !important;
   letter-spacing: 2px;
   padding-top: 20px;
   padding-bottom: 7px;
@@ -297,11 +300,16 @@ li {
   min-width: 200px;
 }
 
+.video-container {
+  background-color: var(--border);
+}
+
 .videos {
   text-decoration: none !important;
   color: var(--font-primary) !important;
-  font-family: JetBrains Mono;
+  font-family: JetBrains Mono !important;
   font-weight: bold;
+  padding: 5px;
 }
 
 .videos:hover {

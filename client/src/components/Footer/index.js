@@ -25,7 +25,7 @@ const Footer = () => {
       >
         <i className="fas fa-envelope"></i>
       </a>
-      <h4 className="made my-3 fw-bolder fs-5">
+      <h4 className="made my-3 fw-bolder fs-7">
         🐶 The Bark Buddy Bootcamp Team{" "}
         <span
           className="emoji"
@@ -38,7 +38,7 @@ const Footer = () => {
         {""}
       </h4>
       <p>
-        <span className="copyright fs-5">
+        <span className="copyright">
           Copyright © Ani, Chel, Grant, & Mike | ACGM, inc.
         </span>
       </p>

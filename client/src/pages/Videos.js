@@ -5,21 +5,18 @@ const Videos = () => {
   return (
     <section className="container-fluid">
       <div className="container">
-        <div className="">
-          {/* <div className="videoGallery"> */}
-          <div className="mt-3">
+        <div>
+          <div className="mt-3 video-container">
             {/* Title */}
             <h2 className="vTitles fw-bold shadow-lg m-0 text-center">
-              {/* <h1 className="vTitles fw-bold shadow-lg m-0 text-center"> */}
               Helpful YouTube Channels and Videos
             </h2>
-            <div className="vContainer rounded fw-bold">
+            <div className="rounded">
               {/* Information */}
-              <h2 className="fs-5 p-4 shadow-lg lh-base fw-bold text-center">
+              <h2 className="fs-5 p-4 shadow-lg fw-bolder lh-base fw-bold text-center">
                 These videos and channels will help you in your journey to find
-                the right dog for you and your family!
-                <br></br>Also, there are videos that will help you to care for
-                your new pet!
+                the right dog for you and your family! Also, there are videos
+                that will help you to care for your new pet!
               </h2>
             </div>
           </div>
@@ -28,12 +25,11 @@ const Videos = () => {
             Channels to Check-out!
           </h2>
           <div className="mb-2">
-            <div className="vContainer shadow-lg h5 py-3 lh-base text-center justify-content-between">
-              {/* <div className="vContainer shadow-lg h5 p-3 fw-bold text-center"> */}
+            <div className="video-container shadow-lg h5 py-3 lh-base text-center justify-content-between">
               <a
                 href="https://www.youtube.com/@purina/videos"
                 rel="noreferrer"
-                className="videos "
+                className="videos"
                 target="_blank"
               >
                 Purina
@@ -79,7 +75,7 @@ const Videos = () => {
         </div>
 
         {/* Videos */}
-        <div>
+        <div className="video-container mb-3">
           <div>
             <h2 className="vTitles fw-bold m-0 shadow-lg text-center">
               Helpful Videos!
@@ -176,7 +172,7 @@ const Videos = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col video-div mt-3">
+                <div className="col video-div mt-3 mb-3">
                   <h2 className="row flex justify-content-center fs-4 fw-bold">
                     Care For A New Puppy
                   </h2>

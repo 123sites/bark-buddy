@@ -21,7 +21,7 @@ const Header = () => {
       <div className="container-fluid">
         {/* DIV 1 */}
         <div className="row col">
-          <div className="col">
+          <div className="col-9">
             <Link className="navbar-brand text-light d-inline-flex" to="/">
               <img
                 src={Logo}

@@ -28,11 +28,11 @@ const Home = ({ handlePageChange }) => {
           quiz!
         </p>
         <p
-          className={`homeTitle-${theme} fs-2 mb-0 mt-3 fw-bolder text-center`}
+          className={`homeTitle-${theme} fs-2 mb-0 mt-4 fw-bolder text-center`}
         >
           Member Benefits!
         </p>
-        <p className={`homeText-${theme} fs-4 mb-3 fw-bold text-center`}>
+        <p className={`homeText-${theme} fs-4 mb-4 fw-bold text-center`}>
           If you are a member, you can save the dogs you like to your favorites!
         </p>
         <div className="img-fluid col pb-2">
