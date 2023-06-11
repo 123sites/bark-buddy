@@ -67,21 +67,15 @@ function App() {
                 <Route path="/search" element={<Search />} />
                 <Route path="/favorites" element={<Favorites />} />
                 <Route path="/quiz" element={<Quiz />} />
-                <Route path="/videos" element={<Videos />} /> {/* willis */}
-                <Route path="/shelter" element={<Shelters />} /> {/*Faz*/}
-                {/* <Route path="/shelter" element = {<Shelter />}/> */}
+                <Route path="/videos" element={<Videos />} />
+                <Route path="/shelter" element={<Shelters />} />
                 <Route path="/donation" element={<Donate />} />
-                {/* <Route 
-                path="/dogs/:dogId" 
-                element={<Dog />}
-              /> */}
               </Routes>
             </div>
             <Footer />
           </div>
         </Router>
       </ThemeProvider>{" "}
-      {/* willis */}
     </ApolloProvider>
   );
 }

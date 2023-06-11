@@ -29,14 +29,16 @@ const Header = () => {
                 alt="Bark Buddy logo with a dog paw inside the outline of a heart"
               />
               {/* Brand Name  */}
-              <h1 className="name navbar-brand navbar-expand-lg ml-2 fw-bold mb-0">
+              <h1
+                className={`name-${theme} navbar-brand navbar-expand-lg ml-2 fw-bold mb-0`}
+              >
                 Bark Buddy
               </h1>
             </Link>
 
             {/* Hamburger */}
             <button
-              className="navbar-toggler hamburger d-flex flex-row m-2"
+              className="navbar-toggler hamburger d-flex d-lg-none flex-row m-2"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent"
@@ -51,11 +53,11 @@ const Header = () => {
               className="collapse navbar-collapse"
               id="navbarSupportedContent"
             >
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <ul className="navbar-nav mb-2 mb-lg-0">
                 <li className="nav-item">
                   {/* Link 1 */}
                   <Link
-                    className="nav-link link px-2 text-center fw-bolder"
+                    className={`nav-link link ${theme} text-center fw-bolder`}
                     to="/"
                   >
                     Home
@@ -64,7 +66,7 @@ const Header = () => {
                 {/* Link 2 */}
                 <li className="nav-item">
                   <Link
-                    className="nav-link link px-2 text-center fw-bolder"
+                    className={`nav-link link ${theme} fs-6 text-center fw-bolder`}
                     to="/videos"
                   >
                     {" "}
@@ -74,7 +76,7 @@ const Header = () => {
                 {/* Link 3 */}
                 <li className="nav-item">
                   <Link
-                    className="nav-link link p-2 text-center fw-bolder"
+                    className={`nav-link link ${theme} fs-6 text-center fw-bolder`}
                     to="/search"
                   >
                     Pick A Pooch
@@ -83,7 +85,7 @@ const Header = () => {
                 <li className="nav-item">
                   {/* Link 4 */}
                   <Link
-                    className="nav-link link p-2 text-center fw-bolder"
+                    className={`nav-link link ${theme} text-center fw-bolder`}
                     to="/quiz"
                   >
                     Dog Quiz
@@ -92,7 +94,7 @@ const Header = () => {
                 {/* Link 5 */}
                 <li className="nav-item">
                   <Link
-                    className="nav-link link p-2 text-center fw-bolder"
+                    className={`nav-link link ${theme} text-center fw-bolder`}
                     to="/shelter"
                   >
                     Find a Shelter
@@ -101,10 +103,10 @@ const Header = () => {
                 {/* Link 6 */}
                 <li className="nav-item">
                   <Link
-                    className="nav-link link p-2 text-center fw-bolder"
+                    className={`nav-link link ${theme} text-center fw-bolder`}
                     to="/donation"
                   >
-                    Shelter Donation
+                    Donate
                   </Link>
                 </li>
               </ul>
@@ -112,7 +114,7 @@ const Header = () => {
               {Auth.loggedIn() ? (
                 <div className="nav-item dropdown">
                   <a
-                    className="nav-link dropdown-toggle link d-inline fs-6 fw-bold"
+                    className={`nav-link link ${theme} dropdown-toggle d-inline fs-6 ml-1 fw-bold`}
                     href="#"
                     role="button"
                     data-bs-toggle="dropdown"
@@ -147,10 +149,10 @@ const Header = () => {
             <div>
               {!Auth.loggedIn() ? (
                 <>
-                  <Link className="link fw-bolder p-2" to="/login">
+                  <Link className={`login-${theme} fw-bolder p-2`} to="/login">
                     Login
                   </Link>
-                  <Link className="link fw-bolder p-2" to="/signup">
+                  <Link className={`login-${theme} fw-bolder p-2`} to="/signup">
                     Signup
                   </Link>
                 </>
@@ -158,18 +160,26 @@ const Header = () => {
                 ""
               )}
               {Auth.loggedIn() ? (
-                <button
-                  className="col p-3 logout border-warning fw-bolder"
-                  onClick={logout}
-                >
-                  {" "}
-                  logout
-                </button>
+                <>
+                  <Link
+                    className={`login-${theme} mr-3 fs-6 fw-bolder`}
+                    to="/me"
+                  >
+                    {Auth.getProfile().data.username}'s Profile
+                  </Link>
+                  <button
+                    className="col p-2 m-3 logout border-warning fw-bolder"
+                    onClick={logout}
+                  >
+                    {" "}
+                    logout
+                  </button>
+                </>
               ) : (
                 ""
               )}
 
-              <div className="d-inline-flex col-1 ml-2">
+              <div className="d-inline-flex ml-2">
                 <button onClick={toggleTheme}>
                   {theme === "light" ? (
                     <FontAwesomeIcon icon={faMoon} />

@@ -27,12 +27,7 @@ const Footer = () => {
       </a>
       <h4 className="made my-3 fw-bolder fs-7">
         🐶 The Bark Buddy Bootcamp Team{" "}
-        <span
-          className="emoji"
-          role="img"
-          aria-label="heart"
-          aria-hidden="false"
-        >
+        <span className="emoji" role="img" aria-label="dog" aria-hidden="false">
           🐶
         </span>
         {""}
