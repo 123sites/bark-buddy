@@ -1,6 +1,6 @@
 import React from "react";
 import "../../assets/style.css";
-
+import Dobby from "../../images/Dobby.png";
 const stripe = () => {
   return (
     <div className="container-fluid">
@@ -8,7 +8,7 @@ const stripe = () => {
         <div>
           <div className="row donate-title-box">
             <p className="col-12 donate-title d-flex mb-2 fw-bolder fs-1">
-              How you can help
+              How You Can Help
             </p>
           </div>
           <div className="row col-12">
@@ -26,15 +26,16 @@ const stripe = () => {
             alignItems: "center,",
           }}
         >
-          {/* <img src={Dobby}
-              alt="Beautiful Golden Retriever"
-              style={{
-                width: "200px",
-                height: "auto",
-                borderRadius: "50%",
-                boxShadow: "0 0 5px 2px grey",
-               }}
-              /> */}
+          <img
+            src={Dobby}
+            alt="Beautiful Golden Retriever"
+            style={{
+              width: "200px",
+              height: "auto",
+              borderRadius: "50%",
+              boxShadow: "0 0 5px 2px grey",
+            }}
+          />
         </div>
         <div className="row">
           <a
