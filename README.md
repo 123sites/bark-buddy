@@ -74,6 +74,7 @@ The MIT license is in the GitHub repository. Click to link to view it:
 - Apollo Server
 - Coolors color palette
 - Light and dark mode
+- Advanced CSS, using CSS variables
 
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
