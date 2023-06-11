@@ -75,9 +75,9 @@ const Videos = () => {
         </div>
 
         {/* Videos */}
-        <div className="video-container mb-3">
+        <div className="video-container">
           <div>
-            <h2 className="vTitles fw-bold m-0 shadow-lg text-center">
+            <h2 className="vTitles fw-bold shadow-lg text-center">
               Helpful Videos!
             </h2>
           </div>
@@ -86,26 +86,28 @@ const Videos = () => {
             <div className="row embed-responsive vContainer rounded shadow-lg">
               {/* <div className="embed-responsive vContainer rounded shadow-lg row"> */}
               <div className="row">
-                <div className="col video-div mt-3 justify-content:space-evenly">
+                <div className="col video-div">
                   <h2 className="row flex justify-content-center fs-4 fw-bolder">
                     Doggy Daycare #1
                   </h2>
-                  <div className="ratio ratio-16x9">
-                    <iframe
-                      src="https://www.youtube.com/embed/JDmNGLPrEG8"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                    ></iframe>
+                  <div className="ratio ratio-16x9 ml-2">
+                    <div className="ratio ratio-16x9">
+                      <iframe
+                        src="https://www.youtube.com/embed/JDmNGLPrEG8"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
                   </div>
                 </div>
 
-                <div className="col video-div mt-3">
-                  <h2 className="row flex justify-content-center fs-4 fw-bold">
-                    Choosing the Perfect Dog
+                <div className="col video-div">
+                  <h2 className="row flex justify-content-center mt-2 fs-4 ml-2 fw-bold">
+                    Choosing Your Dog
                   </h2>
-                  <div className="d-inline">
+                  <div className="ratio ratio-16x9 ml-2">
                     <div className="ratio ratio-16x9">
                       <iframe
                         src="https://www.youtube.com/embed/ASxkyQKZE4k"
@@ -121,10 +123,10 @@ const Videos = () => {
 
               <div className="row">
                 <div className="col video-div mt-3">
-                  <h2 className="row flex justify-content-center fs-4 fw-bold">
-                    Things You Need to Know
+                  <h2 className="row justify-content-center text-center fs-4 fw-bold">
+                    Need to Know
                   </h2>
-                  <div className="d-inline">
+                  <div className="ratio ratio-16x9 ml-2">
                     <div className="ratio ratio-16x9">
                       <iframe
                         src="https://www.youtube.com/embed/peUVLEUj-AM"
@@ -138,10 +140,10 @@ const Videos = () => {
                 </div>
 
                 <div className="col video-div mt-3">
-                  <h2 className="row flex justify-content-center fs-4 fw-bold">
-                    Care for Your Dog
+                  <h2 className="row flex justify-content-center ml-2 fs-4 fw-bold">
+                    Dog Care
                   </h2>
-                  <div className="d-inline">
+                  <div className="ratio ratio-16x9 ml-2">
                     <div className="ratio ratio-16x9">
                       <iframe
                         src="https://www.youtube.com/embed/sKQwL2YYouo"
@@ -160,7 +162,7 @@ const Videos = () => {
                   <h2 className="row flex justify-content-center fs-4 fw-bold">
                     Washing Your Dog
                   </h2>
-                  <div className="d-inline">
+                  <div className="ratio ratio-16x9 ml-2">
                     <div className="ratio ratio-16x9">
                       <iframe
                         src="https://www.youtube.com/embed/dyBeSS04GC4"
@@ -173,10 +175,10 @@ const Videos = () => {
                   </div>
                 </div>
                 <div className="col video-div mt-3 mb-3">
-                  <h2 className="row flex justify-content-center fs-4 fw-bold">
-                    Care For A New Puppy
+                  <h2 className="row justify-content-center fs-4 fw-bold">
+                    Puppy Care
                   </h2>
-                  <div className="d-inline">
+                  <div className="ratio ratio-16x9 ml-2">
                     <div className="ratio ratio-16x9">
                       <iframe
                         src="https://www.youtube.com/embed/Tn3lZE0rRBs"

@@ -55,7 +55,7 @@ function App() {
         {" "}
         {/* willis */}
         <Router>
-          <div className={`app min-100-vh`}>
+          <div className="min-100-vh">
             <Header />
             <div className="container">
               <Routes>
