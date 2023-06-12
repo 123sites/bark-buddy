@@ -28,7 +28,7 @@ so everyone is happy!
 ## Deployed Link 🔑
 
 You can view this through this link:
-[Repository link:](cf-bark-buddy.herokuapp.com)
+[Repository link:](https://cf-bark-buddy.herokuapp.com)
 
 ## Tests 🧪
 
