@@ -16,14 +16,14 @@ so everyone is happy!
 
 ## Table of Contents 📖
 
-- ![Repository Link](#link)
-- ![Usage](#usage)
-- ![Tests](#tests)
-- ![Usage](#usage)
-- ![Screenshot](#screenshot)
-- ![Credits](#credits)
-- ![License](#license)
-- ![Features](#features)
+- [Repository Link](#link)
+- [Usage](#usage)
+- [Tests](#tests)
+- [Usage](#usage)
+- [Screenshot](#screenshot)
+- [Credits](#credits)
+- [License](#license)
+- [Features](#features)
 
 ## Deployed Link 🔑
 
