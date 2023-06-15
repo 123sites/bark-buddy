@@ -16,19 +16,18 @@ so everyone is happy!
 
 ## Table of Contents 📖
 
-- ![Repository Link](#link)
-- ![Usage](#usage)
-- ![Tests](#tests)
-- ![Usage](#usage)
-- ![Screenshot](#screenshot)
-- ![Credits](#credits)
-- ![License](#license)
-- ![Features](#features)
+- [Repository Link](#link)
+- [Usage](#usage)
+- [Tests](#tests)
+- [Usage](#usage)
+- [Screenshot](#screenshot)
+- [Credits](#credits)
+- [License](#license)
+- [Features](#features)
 
 ## Deployed Link 🔑
 
-You can view this through this link:
-[Repository link:](cf-bark-buddy.herokuapp.com)
+[Link:](https://cf-bark-buddy.herokuapp.com)
 
 ## Tests 🧪
 
